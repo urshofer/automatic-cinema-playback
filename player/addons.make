@@ -1,0 +1,7 @@
+ofxGaplessVideoPlayer
+ofxJSON
+ofxNetwork
+ofxUI
+ofxXmlSettings
+ofxUnicode
+ofxFontStash
