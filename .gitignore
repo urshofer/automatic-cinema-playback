@@ -1,3 +1,5 @@
 player/bin/data/_movies
 player/bin/data/movies
 openframeworks/libs/openFrameworksCompiled/lib
+openframeworks/apps/myApps/ACP_osx/bin/ACPDebug.app
+openframeworks/apps/myApps/ACS_osx/bin/ACSDebug.app
