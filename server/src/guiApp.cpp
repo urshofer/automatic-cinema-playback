@@ -58,8 +58,18 @@ void ofApp::setup(){
 	ofSetVerticalSync(false);
     ofSetFrameRate(12);
     ofBackground(0);
-    cinetype_1.loadFont("CinetMed.ttf", 10);
-    cinetype_2.loadFont("CinetMed.ttf", 16);
+    
+    /* Load Fonts */
+    ofXml FXML;
+    if (!FXML.load("fonts.xml")) {
+        ofLogError() << "- Could not open xml configuration";
+        exit();
+    }
+    FXML.setTo("/fonts");
+    string guifont = FXML.getValue("gui");
+    
+    cinetype_1.loadFont(guifont, 10);
+    cinetype_2.loadFont(guifont, 16);
     cinetype_2.setLetterSpacing(0.95);
     
     

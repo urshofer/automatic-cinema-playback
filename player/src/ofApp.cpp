@@ -96,10 +96,20 @@ void ofApp::setup(){
 	#endif
     
     /* Load Font */
-    cinetype.loadFont("static/CinetMed.ttf", 120, 1.35, 512);
+    
+    ofXml FXML;
+    if (!FXML.load("static/fonts.xml")) {
+        ofLogError() << "- Could not open xml configuration";
+        exit();
+    }
+    FXML.setTo("/fonts");
+    string mainfont = FXML.getValue("text");
+    string guifont = FXML.getValue("gui");
+
+    cinetype.loadFont("static/" + mainfont, 120, 1.35, 512);
     cinetype.setKerning(true);
-    cinetype_1.loadFont("static/CinetMed.ttf", 20);
-    cinetype_2.loadFont("static/CinetMed.ttf", 10);
+    cinetype_1.loadFont("static/" + mainfont, 20);
+    cinetype_2.loadFont("static/" + mainfont, 10);
     cinetype_2.setLetterSpacing(0.95);
     
     /* Load Icon */
@@ -120,7 +130,7 @@ void ofApp::setup(){
     gui = new ofxUICanvas("Automatic Cinema Player");        //Creates a canvas at (0,0) using the default width
 
     gui->setPosition(ofGetWidth()/30,ofGetWidth()/30);
-//    gui->setFont("static/CinetGui.ttf");
+    gui->setFont("static/" + guifont);
 
     ofxUIColor cb = ofxUIColor( 0,0,0,128 );
     ofxUIColor co = ofxUIColor( 255,0,0 );

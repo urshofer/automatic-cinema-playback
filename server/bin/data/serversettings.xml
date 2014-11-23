@@ -5,11 +5,11 @@
 <!--
 	Login Username for the Automatic Cinema API
 -->
-<USER>1</USER>
+<USER>test</USER>
 <!--
 	Login Key for the Automatic Cinema API
 -->
-<PASS>1</PASS>
+<PASS>test</PASS>
 <!--
 	Network Port for local communication. If you change it,
     change the port of the player as well.

@@ -10,7 +10,6 @@
     <baseport>20000</baseport>
     <ip>226.1.1.2</ip>
     <channel>
-        <name>Mav</name>
-        <name>Text</name>
+        <name>Video</name>
     </channel>
 </settings>
