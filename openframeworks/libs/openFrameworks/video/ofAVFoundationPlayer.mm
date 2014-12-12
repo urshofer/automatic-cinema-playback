@@ -33,18 +33,19 @@ ofAVFoundationPlayer::~ofAVFoundationPlayer()
 }
 
 //--------------------------------------------------------------
-bool ofAVFoundationPlayer::loadMovie(string path)
+bool ofAVFoundationPlayer::load(string path)
 {
-//    if (bInitialized) {
-//        close();
-//    }
+ //   if (bInitialized) {
+   //     close();
+   // }
     
     @autoreleasepool {
-        if (!bInitialized) {
-            moviePlayer = [[AVFMovieRenderer alloc] init];
-            [moviePlayer setUseAlpha:(pixelFormat == OF_PIXELS_RGBA)];
-            [moviePlayer setUseTexture:YES];
-        }
+		if (!bInitialized) {
+			moviePlayer = [[AVFMovieRenderer alloc] init];
+			[moviePlayer setUseAlpha:(pixelFormat == OF_PIXELS_RGBA)];
+			[moviePlayer setUseTexture:YES];
+		}
+
 
         if (Poco::icompare(path.substr(0, 7), "http://")  == 0 ||
             Poco::icompare(path.substr(0, 8), "https://") == 0 ||
@@ -106,10 +107,10 @@ void ofAVFoundationPlayer::update()
         bHavePixelsChanged = bNewFrame;
         
         // Don't get the pixels every frame if it hasn't updated
-        //if (bHavePixelsChanged) {
-        //    [moviePlayer pixels:pixels.getPixels()];
-        //    bHavePixelsChanged = false;
-        //}
+      //  if (bHavePixelsChanged) {
+        //    [moviePlayer pixels:pixels.getData()];
+          //  bHavePixelsChanged = false;
+       // }
     }
 }
 
@@ -138,32 +139,26 @@ bool ofAVFoundationPlayer::isFrameNew() const
 }
 
 //--------------------------------------------------------------
-unsigned char * ofAVFoundationPlayer::getPixels()
-{
-    return getPixelsRef().getPixels();
-}
-
-//--------------------------------------------------------------
-const ofPixels & ofAVFoundationPlayer::getPixelsRef() const
+const ofPixels & ofAVFoundationPlayer::getPixels() const
 {
     if (!isLoaded() ){
-        ofLogError("ofAVFoundationPlayer::getPixelsRef()") << "Returning pixels that may be unallocated. Make sure to initialize the video player before calling getPixelsRef.";
+        ofLogError("ofAVFoundationPlayer::getPixels()") << "Returning pixels that may be unallocated. Make sure to initialize the video player before calling getPixels.";
     }
     return pixels;
 }
 
 //--------------------------------------------------------------
-ofPixels & ofAVFoundationPlayer::getPixelsRef()
+ofPixels & ofAVFoundationPlayer::getPixels()
 {
     if (!isLoaded() ){
-        ofLogError("ofAVFoundationPlayer::getPixelsRef()") << "Returning pixels that may be unallocated. Make sure to initialize the video player before calling getPixelsRef.";
+        ofLogError("ofAVFoundationPlayer::getPixels()") << "Returning pixels that may be unallocated. Make sure to initialize the video player before calling getPixels.";
     }
     return pixels;
 }
 
 
 //--------------------------------------------------------------
-ofTexture * ofAVFoundationPlayer::getTexture()
+ofTexture * ofAVFoundationPlayer::getTexturePtr()
 {
     //TODO: Allow AVF's direct to texture
     if (moviePlayer.textureAllocated) {
@@ -353,7 +348,7 @@ bool ofAVFoundationPlayer::setPixelFormat(ofPixelFormat newPixelFormat)
         // If we already have a movie loaded we need to reload
         // the movie with the new settings correctly allocated.
         if (isLoaded()) {
-            loadMovie(moviePath);
+            load(moviePath);
         }
     }
     return true;
