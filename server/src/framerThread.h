@@ -160,7 +160,6 @@ class framerThread : public ofThread{
 
 
 			Json::Value senddata;
-			#ifdef USE_NCURSES
 			loaderThread::_clip _cl = (loaderThread::_clip) {
 				 "",
 				 0, 
@@ -175,24 +174,7 @@ class framerThread : public ofThread{
 				 false, 
 				 false, 
 				 false
-			};			
-			#else
-			loaderThread::_clip _cl = (loaderThread::_clip) {
-				.id = "",
-				.duration = 0, 
-				.in = 0, 
-				.out = 0, 
-				.duration_asdouble = 0.0, 
-				.in_asdouble = 0.0, 
-				.out_asdouble = 0.0, 
-				.name = "", 
-				.type = "", 
-				.data_checksum = "", 
-				.reset = false, 
-				.gap_in = false, 
-				.gap_out = false
-			};
-			#endif
+			};				
 			/* refresh channel list */
 			std::vector <std::string> channels = LDR.getChannels();
 
