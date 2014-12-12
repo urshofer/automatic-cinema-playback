@@ -9,7 +9,5 @@
     <verbose>0</verbose>
     <baseport>20000</baseport>
     <ip>226.1.1.2</ip>
-    <channel>
-        <name>Video</name>
-    </channel>
+    <channel></channel>
 </settings>
