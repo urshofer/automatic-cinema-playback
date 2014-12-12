@@ -282,7 +282,7 @@ int testApp::start(){
 			bool first = true;
 			for ( unsigned int index = 0; index < returnval.size(); index++ )  {
 				if (!first) channel_collapsed += "<:>";
-				channel_collapsed += returnval[index]["_name"].asString();
+				channel_collapsed += returnval[index]["name"].asString();
 				first = false;
 			}
 		}
