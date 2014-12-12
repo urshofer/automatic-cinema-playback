@@ -229,7 +229,7 @@ class framerThread : public ofThread{
 						(*sactive).data         =
 						(*sactive).data_next 	= _cl;
                         (*sactive).force_reset = false;
-                        cout << "Resetting Slave Channel " << (*sactive).name << endl;
+//                        cout << "Resetting Slave Channel " << (*sactive).name << endl;
 
 					}
 					

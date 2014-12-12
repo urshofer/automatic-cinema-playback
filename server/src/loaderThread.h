@@ -260,7 +260,7 @@ class loaderThread : public ofThread{
 						all.push_back(channelData[index]["name"].asString());
 						//queue.push_back(_q);
 //						queue.emplace (channelData[index]["name"].asString(),_q);
-                        cout << "Channel " << channelData[index]["name"].asString() << " is " << _q.is_slave << endl;
+//                        cout << "Channel " << channelData[index]["name"].asString() << " is " << _q.is_slave << endl;
                         queue[channelData[index]["name"].asString()] = _q;
 					}
 				}
@@ -399,13 +399,13 @@ class loaderThread : public ofThread{
                                         if (nextData["element"]["reset"].asBool()) {
                                             /* We clear the Stack here */
                                             qactive->second.data.clear();
-                                            cout << "- Clear Stack for Master " << qactive->first << endl;
+//                                            cout << "- Clear Stack for Master " << qactive->first << endl;
                                         }
                                         /* Clear Slave Stacks after a Master Timeline has expired */
                                         for(queue_vector::iterator slave = queue.begin(); slave != queue.end(); ++slave) {
                                             if (slave->second.is_slave == true && slave->second.master == qactive->first) {
                                                 slave->second.data.clear();
-                                                cout << "- Clear Stack for Slave " << slave->first << endl;
+//                                                cout << "- Clear Stack for Slave " << slave->first << endl;
                                             }
                                         }
                                     }
@@ -424,7 +424,7 @@ class loaderThread : public ofThread{
 									unlock();
 								}
                                 else {
-                                    cout << "whoooooops" << endl;
+//                                    cout << "whoooooops" << endl;
                                 }
 //                                cout << " now " << endl;
                                 
