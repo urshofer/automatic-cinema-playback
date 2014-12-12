@@ -16,7 +16,7 @@ static const int OF_NO_TEXTURE=-1;
 
 class ofGLProgrammableRenderer: public ofBaseGLRenderer{
 public:
-	ofGLProgrammableRenderer(bool useShapeColor=true);
+	ofGLProgrammableRenderer(const ofAppBaseWindow * window);
 	~ofGLProgrammableRenderer();
 
 	void setup(const string & glslVersion);
@@ -30,8 +30,9 @@ public:
 	void setCurrentFBO(const ofFbo * fbo);
     
 	void update();
-	void draw(const ofMesh & vertexData, bool useColors=true, bool useTextures=true, bool useNormals = true) const;
-	void draw(const ofMesh & vertexData, ofPolyRenderMode renderType, bool useColors=true, bool useTextures = true, bool useNormals=true) const;
+	using ofBaseRenderer::draw;
+	void draw(const ofMesh & vertexData, bool useColors, bool useTextures, bool useNormals) const;
+	void draw(const ofMesh & vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals) const;
     void draw(const of3dPrimitive& model, ofPolyRenderMode renderType) const;
 	void draw(const ofPolyline & poly) const;
 	void draw(const ofPath & path) const;
@@ -90,7 +91,22 @@ public:
 	void multMatrix (const float * m);
 	void loadViewMatrix(const ofMatrix4x4 & m);
 	void multViewMatrix(const ofMatrix4x4 & m);
-	
+
+    /// \brief Queries the current OpenGL matrix state
+    ///
+    /// Returns the specified matrix as held by the renderer's current matrix
+    /// stack.
+    ///
+    /// You can query one of the following:
+    ///
+    /// [OF_MATRIX_MODELVIEW | OF_MATRIX_PROJECTION | OF_MATRIX_TEXTURE]
+    ///
+    /// Each query will return the state of the matrix as it was uploaded to
+    /// the shader currently bound.
+    ///
+    /// \param	matrixMode_ Which matrix mode to query
+    /// \note   If an invalid matrixMode is queried, this method will return the
+    ///         identity matrix, and print an error message.
 	ofMatrix4x4 getCurrentMatrix(ofMatrixMode matrixMode_) const;
 	ofMatrix4x4 getCurrentOrientationMatrix() const;
 	ofMatrix4x4 getCurrentViewMatrix() const;
@@ -125,15 +141,17 @@ public:
 	void setHexColor( int hexColor ); // hex, like web 0xFF0033;
     
 	// bg color
-	ofFloatColor & getBgColor();
-	bool bClearBg();
+	ofColor getBackgroundColor();
+	void setBackgroundColor(const ofColor & c);
 	void background(const ofColor & c);
 	void background(float brightness);
 	void background(int hexColor, float _a=255.0f);
 	void background(int r, int g, int b, int a=255);
-    
+
+	bool getBackgroundAuto();
 	void setBackgroundAuto(bool bManual);		// default is true
     
+	void clear();
 	void clear(float r, float g, float b, float a=0);
 	void clear(float brightness, float a=0);
 	void clearAlpha();
