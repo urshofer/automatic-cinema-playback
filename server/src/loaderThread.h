@@ -188,6 +188,23 @@ class loaderThread : public ofThread{
 
 		_clip requestData(string _channel)
 		{
+			#ifdef USE_NCURSES
+			_clip returnData = (_clip) {
+				 "",
+				 0, 
+				 0, 
+				 0, 
+				 0.0, 
+				 0.0, 
+				 0.0, 
+				 "", 
+				 "", 
+				 "", 
+				 false, 
+				 false, 
+				 false
+			};
+			#else
 			_clip returnData = (_clip) {
 				.id = "",
 				.duration = 0, 
@@ -203,6 +220,7 @@ class loaderThread : public ofThread{
 				.gap_in = false, 
 				.gap_out = false
 			};
+			#endif
 			map < string,_queue >::iterator qactive = queue.find(_channel);
 			if(qactive != queue.end())
 			{

@@ -1,4 +1,12 @@
-#ifdef TAGET_LINUX
+#if defined( __WIN32__ ) || defined( _WIN32 )
+#elif defined( __APPLE_CC__)
+#elif defined (__ANDROID__)
+#elif defined(__ARMEL__)
+#else
+	#define USE_NCURSES
+#endif
+
+#ifdef USE_NCURSES
 #include "testApp.h"
 /*
 
@@ -7,7 +15,6 @@
 */
 //========================================================================
 int main( ){
-    cout << "gere" << endl;
     testApp amcin;
     amcin.start();
 }
