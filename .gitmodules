@@ -1,0 +1,3 @@
+[submodule "openframeworks/addons/ofxGaplessVideoPlayer"]
+	path = openframeworks/addons/ofxGaplessVideoPlayer
+	url = git://github.com/urshofer/ofxGaplessVideo.git
