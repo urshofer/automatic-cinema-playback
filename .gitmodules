@@ -4,3 +4,15 @@
 [submodule "openframeworks/addons/ofxGaplessVideoPlayer"]
 	path = openframeworks/addons/ofxGaplessVideoPlayer
 	url = https://github.com/urshofer/ofxGaplessVideo
+[submodule "openframeworks/addons/ofxUnicode"]
+	path = openframeworks/addons/ofxUnicode
+	url = https://github.com/bakercp/ofxUnicode
+[submodule "openframeworks/addons/ofxFontStash"]
+	path = openframeworks/addons/ofxFontStash
+	url = https://github.com/armadillu/ofxFontStash
+[submodule "openframeworks/addons/ofxJSON"]
+	path = openframeworks/addons/ofxJSON
+	url = https://github.com/jefftimesten/ofxJSON
+[submodule "openframeworks/addons/ofxUI"]
+	path = openframeworks/addons/ofxUI
+	url = https://github.com/rezaali/ofxUI
