@@ -3,6 +3,8 @@ player/bin/data/movies
 openframeworks/libs/openFrameworksCompiled/lib
 openframeworks/apps/myApps/ACP_osx/bin/ACPDebug.app
 openframeworks/apps/myApps/ACS_osx/bin/ACSDebug.app
+openframeworks/apps/myApps/ACP_osx/bin/ACP.app
+openframeworks/apps/myApps/ACS_osx/bin/ACS.app
 player/bin/data/static/CinetMed.ttf
 player/bin/data/static/CinetGui.ttf
 server/bin/data/CinetMed.ttf
