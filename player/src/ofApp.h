@@ -27,7 +27,8 @@
         void drawWaitForConfig(string message);
         void loadXMLConfig();
         void drawSyncFiles(string filename);
-
+        void setupGUI(string guifont);
+        
 	public:
 		void setup();
 		void update();

@@ -44,12 +44,12 @@ void ofApp::loadXMLConfig() {
         ofLogVerbose() << "- Loaded Default";
 	}else{
         ofLogError() << "- Could not open xml configuration";
-        exit();
+        ofApp::exit();
 	}
 #else
     if (!XML.load("playersettings.xml")) {
         ofLogError() << "- Could not open xml configuration";
-        exit();
+        ofApp::exit();
     }
 #endif
     
@@ -63,7 +63,7 @@ void ofApp::loadXMLConfig() {
     config.multicastIp = XML.getValue("ip");
     config.fullscreen = XML.getBoolValue("fullscreen");
     config.verbose = XML.getBoolValue("verbose");
-    ofSetFullscreen(config.fullscreen);
+   // ofSetFullscreen(config.fullscreen);
     MO.setPreview(config.verbose);
     XML.setTo("channel");
     for (int i=0; i<XML.getNumChildren("name"); i++) {
@@ -83,6 +83,10 @@ void ofApp::loadXMLConfig() {
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+#ifdef TARGET_OSX
+    ofSetDataPathRoot("../Resources/data/");
+#endif
+    
     ofSetLogLevel(OF_LOG_ERROR);
 	ofEnableAntiAliasing();
     ofEnableAlphaBlending();
@@ -100,21 +104,19 @@ void ofApp::setup(){
     ofXml FXML;
     if (!FXML.load("static/fonts.xml")) {
         ofLogError() << "- Could not open xml configuration";
-        exit();
+        ofApp::exit();
     }
     FXML.setTo("/fonts");
     string mainfont = FXML.getValue("text");
     string guifont = FXML.getValue("gui");
-
     cinetype.loadFont("static/" + mainfont, 120, 1.35, 512);
     cinetype.setKerning(true);
-    cinetype_1.loadFont("static/" + mainfont, 20);
-    cinetype_2.loadFont("static/" + mainfont, 10);
+    cinetype_1.load("static/" + mainfont, 20);
+    cinetype_2.load("static/" + mainfont, 10);
     cinetype_2.setLetterSpacing(0.95);
-    
     /* Load Icon */
-    syncicon.loadImage("static/sync.png");
-    logoicon.loadImage("static/logo.png");
+    syncicon.load("static/sync.png");
+    logoicon.load("static/logo.png");
     
     /* Loading Configuration */
     loadXMLConfig();
@@ -126,12 +128,16 @@ void ofApp::setup(){
     MO.start();
     
     /* Gui Stuff */
+    setupGUI("static/" + guifont);
 
+    ofSleepMillis(500);
+    
+}
+
+
+void ofApp::setupGUI(string guifont) {
     gui = new ofxUICanvas("Automatic Cinema Player");        //Creates a canvas at (0,0) using the default width
-
-    gui->setPosition(ofGetWidth()/30,ofGetWidth()/30);
-    gui->setFont("static/" + guifont);
-
+//    gui->setFont(guifont);
     ofxUIColor cb = ofxUIColor( 0,0,0,128 );
     ofxUIColor co = ofxUIColor( 255,0,0 );
     ofxUIColor coh = ofxUIColor( 0,255,0,0 );
@@ -140,9 +146,8 @@ void ofApp::setup(){
     ofxUIColor cp = ofxUIColor( 0,0,0,0 );
     ofxUIColor cpo = ofxUIColor( 0,0,0,0 );
     gui->setUIColors( cb, co, coh, cf, cfh, cp, cpo );
-    gui->setPosition(ofGetWidth()/30,ofGetWidth()/30);
+    gui->setPosition(ofGetWidth()/30,ofGetHeight()/30);
     gui->setDimensions(ofGetWidth()-(ofGetWidth()/15),ofGetHeight()-(ofGetHeight()/15));
-    
     gui->setDrawWidgetPadding(false);
     gui->setPadding(3);
     gui->setGlobalSpacerHeight(0);
@@ -150,10 +155,9 @@ void ofApp::setup(){
 #ifdef TARGET_OF_IPHONE
 	gui->addButton("Close", true);
 #endif
-
+    
     gui->addSpacer();
     gui->addSpacer();
-
     gui->addLabel("Screen Setting");
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     gui->addToggle("Fullscreen",    config.fullscreen);
@@ -162,10 +166,8 @@ void ofApp::setup(){
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     gui->addToggle("Logo",          config.drawLogo);
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-    
     gui->addSpacer();
     gui->addSpacer();
-    
     gui->addLabel("Multicast IP");
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     gui->addTextInput("Multicast",         config.multicastIp);
@@ -174,10 +176,8 @@ void ofApp::setup(){
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     gui->addTextInput("Port",       ofToString(config.baseport));
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-    
     gui->addSpacer();
     gui->addSpacer();
-
     gui->addLabel("Supported Media");
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     gui->addToggle("Video",         config.hasVideo);
@@ -186,22 +186,24 @@ void ofApp::setup(){
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
     gui->addToggle("Text",          config.hasText);
 	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-    
     ofAddListener(gui->newGUIEvent, this, &ofApp::guiEvent);
-
-    gui->toggleVisible();
-    ofSleepMillis(500);
-    
+    gui->disable();
 }
 
 // Listeners
 //--------------------------------------------------------------
 void ofApp::guiEvent(ofxUIEventArgs &e)
 {
+    
 #ifdef TARGET_OF_IPHONE
     if(e.getName() == "Close" && e.getKind()==OFX_UI_WIDGET_BUTTON)
     {
-        gui->toggleVisible();
+        if (gui->isEnabled()) {
+            gui->disable();
+        }
+        else {
+            gui->enable();
+        }
     }
 #endif
 
@@ -311,7 +313,7 @@ void ofApp::update(){
     if (CN.isConfigured() && waitforconfig) {
         if (CN.isError()) {
             std::cout  << "- Error Parsing Configuration message from Server." << endl;
-            exit();
+            ofApp::exit();
         }
         else {
             config.serverconfig = CN.getConfiguration();
@@ -423,8 +425,11 @@ void ofApp::draw(){
 
 #ifdef TARGET_OF_IPHONE
 void ofApp::touchDown(ofTouchEventArgs & touch){
-    if (!gui->isVisible()) {
-        gui->toggleVisible();
+    if (gui->isEnabled()) {
+        gui->disable();
+    }
+    else {
+        gui->enable();
     }
 }
 
@@ -433,16 +438,21 @@ void ofApp::touchDown(ofTouchEventArgs & touch){
 void ofApp::keyPressed(int key){
     switch (key) {
         case ' ':
-            gui->toggleVisible();
+            if (gui->isEnabled()) {
+                gui->disable();
+            }
+            else {
+                gui->enable();
+            }
             break;
     }
 }
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
     if (ofGetElapsedTimeMillis()>1000) {
-        gui->setPosition(w/30,w/30);
-        gui->setDimensions(w-(w/15),h-(w/15));
         if (gui->isVisible()) {
+            gui->setPosition(w/30,w/30);
+            gui->setDimensions(w-(w/15),h-(w/15));
             gui->draw();
         }
     }
@@ -461,7 +471,8 @@ void ofApp::mouseMoved(int x, int y ){
 //--------------------------------------------------------------
 void ofApp::exit() {
 	std::cout  << "+ Exiting now" << endl;
-    delete gui;
+    if (gui->isEnabled())
+        delete gui;
     // stop the threads
 	if (MO.isThreadRunning()) {
 		MO.stopThread();
@@ -491,7 +502,7 @@ void ofApp::exit() {
         
 	}
 	std::cout  << "Bye Bye!" << endl;
-	ofExit();
+    std::exit(0);
 }
 
 

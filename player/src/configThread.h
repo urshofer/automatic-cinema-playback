@@ -64,6 +64,7 @@ class configThread : public ofThread{
                 udpConfigsocket.Close();
                 if (lock()) {
                     ipSplit = ofSplitString(multiCastIPRaw, "|");
+                    std::cout  << "+ Loading Texttiming " << ipSplit[0] << "/Texttiming/" << ipSplit[1] << "..." << endl;
                     ofHttpResponse resp = ofLoadURL(ipSplit[0] + "/Texttiming/" + ipSplit[1]);
                     Json::Reader reader;
                     Json::Value root;

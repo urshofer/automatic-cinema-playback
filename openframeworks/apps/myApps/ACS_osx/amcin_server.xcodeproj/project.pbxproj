@@ -10,7 +10,9 @@
 		6474CBF619BCE019003C94E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6474CBF019BCE00B003C94E2 /* AVFoundation.framework */; };
 		6474CBF719BCE019003C94E2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6474CBF119BCE00B003C94E2 /* CoreMedia.framework */; };
 		6474CBF819BCE019003C94E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6474CBF219BCE00B003C94E2 /* QuartzCore.framework */; };
-		9E12CDAB19D0740600AAA6BB /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E12CDAA19D0740600AAA6BB /* GStreamer.framework */; };
+		9E0A411B1AA8BE3200C8CB86 /* fonts.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E0A41181AA8BE2900C8CB86 /* fonts.xml */; };
+		9E0A411C1AA8BE3400C8CB86 /* Roboto-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E0A41191AA8BE2900C8CB86 /* Roboto-Medium.ttf */; };
+		9E0A411D1AA8BE3700C8CB86 /* serversettings.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E0A411A1AA8BE2900C8CB86 /* serversettings.xml */; };
 		9E44399519D2B9920033D685 /* ofxTCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E44398419D2B9920033D685 /* ofxTCPClient.cpp */; };
 		9E44399619D2B9920033D685 /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E44398619D2B9920033D685 /* ofxTCPManager.cpp */; };
 		9E44399719D2B9930033D685 /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E44398819D2B9920033D685 /* ofxTCPServer.cpp */; };
@@ -62,6 +64,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9E0A41161AA8BE1000C8CB86 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data;
+			dstSubfolderSpec = 7;
+			files = (
+				9E0A411B1AA8BE3200C8CB86 /* fonts.xml in CopyFiles */,
+				9E0A411C1AA8BE3400C8CB86 /* Roboto-Medium.ttf in CopyFiles */,
+				9E0A411D1AA8BE3700C8CB86 /* serversettings.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,7 +92,9 @@
 		6474CBF019BCE00B003C94E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6474CBF119BCE00B003C94E2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		6474CBF219BCE00B003C94E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		9E12CDAA19D0740600AAA6BB /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../../../../../../../../Library/Frameworks/GStreamer.framework; sourceTree = "<group>"; };
+		9E0A41181AA8BE2900C8CB86 /* fonts.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fonts.xml; sourceTree = "<group>"; };
+		9E0A41191AA8BE2900C8CB86 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		9E0A411A1AA8BE2900C8CB86 /* serversettings.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = serversettings.xml; sourceTree = "<group>"; };
 		9E44398019D2B9920033D685 /* Instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
 		9E44398219D2B9920033D685 /* ofxNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
 		9E44398319D2B9920033D685 /* ofxNetworkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetworkUtils.h; sourceTree = "<group>"; };
@@ -155,7 +171,6 @@
 				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
 				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
 				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
-				9E12CDAB19D0740600AAA6BB /* GStreamer.framework in Frameworks */,
 				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
 				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
@@ -168,6 +183,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E0A41171AA8BE2900C8CB86 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9E0A41181AA8BE2900C8CB86 /* fonts.xml */,
+				9E0A41191AA8BE2900C8CB86 /* Roboto-Medium.ttf */,
+				9E0A411A1AA8BE2900C8CB86 /* serversettings.xml */,
+			);
+			name = data;
+			path = bin/data;
+			sourceTree = "<group>";
+		};
 		9E44397E19D2B9920033D685 /* ofxNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,7 +335,6 @@
 		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9E12CDAA19D0740600AAA6BB /* GStreamer.framework */,
 				6474CBF019BCE00B003C94E2 /* AVFoundation.framework */,
 				6474CBF119BCE00B003C94E2 /* CoreMedia.framework */,
 				6474CBF219BCE00B003C94E2 /* QuartzCore.framework */,
@@ -363,6 +388,7 @@
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				9EC1AB5E19D07FDB0053B19D /* addons.make */,
+				9E0A41171AA8BE2900C8CB86 /* data */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
@@ -407,6 +433,7 @@
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
 				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
 				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				9E0A41161AA8BE1000C8CB86 /* CopyFiles */,
 			);
 			buildRules = (
 			);

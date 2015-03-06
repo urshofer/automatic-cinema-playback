@@ -55,6 +55,10 @@ string ofApp::curlConnect(string _url, string _post){
 	
 //--------------------------------------------------------------
 void ofApp::setup(){
+#ifdef TARGET_OSX
+    ofSetDataPathRoot("../Resources/data/");
+#endif
+    
 	ofSetVerticalSync(false);
     ofSetFrameRate(12);
     ofBackground(0);
