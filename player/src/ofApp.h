@@ -23,11 +23,13 @@
     private:
 
         ofxUICanvas *gui;
-
+        ofImage *bg;
+        string                  guifont;
+        
         void drawWaitForConfig(string message);
         void loadXMLConfig();
         void drawSyncFiles(string filename);
-        void setupGUI(string guifont);
+        void setupGUI(string guifont, bool drawchannels);
         
 	public:
 		void setup();
@@ -55,7 +57,8 @@
         ofxFontStash            cinetype;
         ofTrueTypeFont          cinetype_1,cinetype_2;
         ofImage                 syncicon,logoicon;
-    
+
+        
         struct _baseconfig {
             vector<string> channel;
             bool hasAudio;

@@ -22,6 +22,7 @@
 		9E443A2519D2CE3C0033D685 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E443A2419D2CE3C0033D685 /* libcurl.dylib */; };
 		9E4DBAA41A0D0036003941B1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DBA9D1A0D0036003941B1 /* main.cpp */; };
 		9E4DBAA51A0D0036003941B1 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4DBA9E1A0D0036003941B1 /* ofApp.cpp */; };
+		9E9141EE1AACB58200860A8C /* gui.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E9141ED1AACB57400860A8C /* gui.png */; };
 		9ECF64531AA0D13B00380B3C /* fontstash.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF61521AA0D13200380B3C /* fontstash.c */; };
 		9ECF64541AA0D13B00380B3C /* stb_truetype.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF61541AA0D13200380B3C /* stb_truetype.c */; };
 		9ECF64551AA0D13B00380B3C /* ofxFontStash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF61591AA0D13200380B3C /* ofxFontStash.cpp */; };
@@ -136,6 +137,7 @@
 			dstPath = data/static;
 			dstSubfolderSpec = 7;
 			files = (
+				9E9141EE1AACB58200860A8C /* gui.png in CopyFiles */,
 				9E0081431AA8C049005AB86C /* fonts.xml in CopyFiles */,
 				9E0081461AA8C056005AB86C /* not-found.mov in CopyFiles */,
 				9E0081491AA8C05F005AB86C /* Roboto-Medium.ttf in CopyFiles */,
@@ -181,6 +183,7 @@
 		9E4DBAA11A0D0036003941B1 /* syncThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = syncThread.h; path = ../../../../../player/src/syncThread.h; sourceTree = "<group>"; };
 		9E4DBAA21A0D0036003941B1 /* threadedLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadedLoader.h; path = ../../../../../player/src/threadedLoader.h; sourceTree = "<group>"; };
 		9E4DBAA31A0D0036003941B1 /* threadedSoundplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadedSoundplayer.h; path = ../../../../../player/src/threadedSoundplayer.h; sourceTree = "<group>"; };
+		9E9141ED1AACB57400860A8C /* gui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gui.png; path = ../../../../../../../player/bin/data/static/gui.png; sourceTree = "<group>"; };
 		9EC1AB5E19D07FDB0053B19D /* addons.make */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
 		9ECF61521AA0D13200380B3C /* fontstash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fontstash.c; sourceTree = "<group>"; };
 		9ECF61531AA0D13200380B3C /* fontstash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fontstash.h; sourceTree = "<group>"; };
@@ -396,6 +399,7 @@
 		9E0081371AA8BFD5005AB86C /* static */ = {
 			isa = PBXGroup;
 			children = (
+				9E9141ED1AACB57400860A8C /* gui.png */,
 				9E0081381AA8BFD5005AB86C /* fonts.xml */,
 				9E0081391AA8BFD5005AB86C /* logo.png */,
 				9E00813A1AA8BFD5005AB86C /* not-found.m4v */,

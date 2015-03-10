@@ -14,7 +14,7 @@
 #include <curl/curl.h>
 #include "json/json.h"
 #include "ofxXmlSettings.h"
-
+#include "ofxUI.h"
 #include "Poco/MD5Engine.h"
 #include "Poco/DigestStream.h"
 #include "Poco/StreamCopier.h"
@@ -67,6 +67,12 @@ public:
     /* Settings */
     string sessionid, device, multicastip, user, pass, url, serverip, broadcastip, apiurl;
     int port, framerate, preroll;
+    bool configured;
+    ofxUICanvas *gui;
+    ofImage *bg;
+    void guiEvent(ofxUIEventArgs &e);
+    void setupGUI(string guifont);
+        
         
     /* Json Stuff */
     Json::Reader getdata;

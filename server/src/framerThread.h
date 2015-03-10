@@ -362,7 +362,7 @@ class framerThread : public ofThread{
 					Json::FastWriter writer;
 					string send = writer.write( senddata["s"] );
 					if (send.size()>5) {
-						udpConnection.Send(send.c_str(),send.size());	
+						udpConnection.SendAll(send.c_str(),send.size());
 						if (lock()) {
 							state = ofToString(nowTime/1000) + ": " + send;
 							unlock();

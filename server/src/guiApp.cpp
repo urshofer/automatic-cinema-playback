@@ -45,11 +45,109 @@ string ofApp::curlConnect(string _url, string _post){
 		curl_easy_setopt(curl, CURLOPT_ENCODING, "UTF-8" );
 		curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false);
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writer);
+		curl_easy_setopt(curl, CURLOPT_TIMEOUT, 5);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &buffer);
 		curl_easy_perform(curl);
 		curl_easy_cleanup(curl);
 	}
 	return buffer;
+}
+
+void ofApp::setupGUI(string guifont) {
+    gui = new ofxUICanvas();        //Creates a canvas at (0,0) using the default width
+    gui->setFont(ofToDataPath(guifont));
+    gui->setFontSize(OFX_UI_FONT_SMALL, 8);
+    gui->setFontSize(OFX_UI_FONT_MEDIUM, 10);
+    gui->setFontSize(OFX_UI_FONT_LARGE, 10);
+    ofxUIColor cb = ofxUIColor( 0,0,0,0 );
+    ofxUIColor co = ofxUIColor( 128 );
+    ofxUIColor coh = ofxUIColor( 0 );
+    ofxUIColor cf = ofxUIColor( 128 );
+    ofxUIColor cfh = ofxUIColor( 0 );
+    ofxUIColor cp = ofxUIColor( 128 );
+    ofxUIColor cpo = ofxUIColor( 128 );
+    gui->setUIColors( cb, co, coh, cf, cfh, cp, cpo );
+    gui->setPosition((ofGetWidth()-509)/2,(ofGetHeight()-309)/2);
+    gui->setDimensions(509,609);
+    gui->setPadding(3);
+    gui->setGlobalSpacerHeight(0);
+	gui->setWidgetFontSize(OFX_UI_FONT_SMALL);
+    gui->addSpacer(0,65);
+	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+    gui->addTextInput("Server",         apiurl,305,10,150,10,OFX_UI_FONT_SMALL);
+	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+    gui->addTextInput("User",       ofToString(user),305,10,150,0,OFX_UI_FONT_SMALL);
+	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+    gui->addTextInput("Password",       ofToString(pass),305,10,150,0,OFX_UI_FONT_SMALL);
+	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+    gui->addSpacer();
+    gui->addTextInput("Multicast",       ofToString(multicastip),305,10,150,0,OFX_UI_FONT_SMALL);
+	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+    gui->addTextInput("Port",       ofToString(port),250,10,150,0,OFX_UI_FONT_SMALL);
+	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+    gui->addSpacer();
+    gui->addButton("Save", true, 15,15,155,10);
+	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+    gui->resetPlacer();
+    gui->addImage("BG", bg, 503, 303);
+    ofAddListener(gui->newGUIEvent, this, &ofApp::guiEvent);
+}
+
+// Listeners
+//--------------------------------------------------------------
+void ofApp::guiEvent(ofxUIEventArgs &e)
+{
+    
+    if(e.getName() == "Server")
+    {
+        ofxUITextInput *ti = (ofxUITextInput *) e.widget;
+        apiurl = ti->getTextString();
+    }
+    if(e.getName() == "Password")
+    {
+        ofxUITextInput *ti = (ofxUITextInput *) e.widget;
+        pass = ti->getTextString();
+    }
+    if(e.getName() == "User")
+    {
+        ofxUITextInput *ti = (ofxUITextInput *) e.widget;
+        user = ti->getTextString();
+    }
+    if(e.getName() == "Multicast")
+    {
+        ofxUITextInput *ti = (ofxUITextInput *) e.widget;
+        multicastip = ti->getTextString();
+    }
+    if(e.getName() == "Port")
+    {
+        ofxUITextInput *ti = (ofxUITextInput *) e.widget;
+        port = ofToInt(ti->getTextString());
+    }
+    if(e.getName() == "Save")
+    {
+        /* Store XML File */
+        XML.setValue("IP", multicastip);					// Multicast Group IP
+        XML.setValue("USER", user);
+        XML.setValue("PASS", pass);
+        XML.setValue("PORT", port);
+        XML.setValue("URL", apiurl);
+        XML.saveFile();
+
+        ofxUIButton *ti = (ofxUIButton *) e.widget;
+        if (ti->getValue()) {
+            MD5Engine md5;
+            md5.update(pass);
+            ofLogError() << "- Reconnect to " << apiurl;
+            if (getdata.parse( curlConnect(apiurl + "/Login", "username=" + user + "&password=" + DigestEngine::digestToHex(md5.digest()) ), returnval )) {
+                sessionid = returnval.asString();
+                gui->disable();
+            }
+            else {
+                ofLogError() << "- Could not connect to API Server and Log In";
+            }
+        }
+    }
+    
 }
 
 	
@@ -67,15 +165,18 @@ void ofApp::setup(){
     ofXml FXML;
     if (!FXML.load("fonts.xml")) {
         ofLogError() << "- Could not open xml configuration";
-        exit();
+        std::exit(0);
     }
     FXML.setTo("/fonts");
     string guifont = FXML.getValue("gui");
-    
-    cinetype_1.loadFont(guifont, 10);
-    cinetype_2.loadFont(guifont, 16);
+    ofLogError() << "- Loading font " << guifont;
+    cinetype_1.load(guifont, 10);
+    cinetype_2.load(guifont, 16);
     cinetype_2.setLetterSpacing(0.95);
     
+    /* Widget Background */
+    bg = new ofImage();
+    bg->load("gui.png");
     
 
 	/* Load Configuration */
@@ -86,56 +187,69 @@ void ofApp::setup(){
 	port	= (int)XML.getValue("PORT", __PORT__);
     
 	/* Getting own ip of the selected net device */
-	apiurl	= XML.getValue("URL", "http://localhost/Api");
+	apiurl	= XML.getValue("URL", "http://localhost:3000");
     
 	/* Logging in at the API */
     
     MD5Engine md5;
     md5.update(pass);
 	if (getdata.parse( curlConnect(apiurl + "/Login", "username=" + user + "&password=" + DigestEngine::digestToHex(md5.digest()) ), returnval )) {sessionid = returnval.asString();}
-	else {std::cout << "Could not connect to API Server and Log In\n"; ofExit();}
-    
-	/* Loading Framerate */
-	if (getdata.parse( curlConnect(apiurl + "/Rate/" + sessionid, ""), returnval ))  {framerate = returnval.asInt();}
-	else {std::cout << "Could not Load Framerate\n"; ofExit();}
-    
-	/* Loading Framerate */
-	if (getdata.parse( curlConnect(apiurl + "/Preroll/" + sessionid, ""), returnval ))  {preroll = returnval.asInt(); }
-	else {std::cout << "Could not Load Preroll\n"; ofExit();}
-    
-	/* Loading Channels */
-	string channel_collapsed = "";
-	if (getdata.parse( curlConnect(apiurl + "/Channels/" + sessionid, ""), returnval )) {
-		if (returnval.isArray()) {
-			bool first = true;
-			for ( unsigned int index = 0; index < returnval.size(); index++ )  {
-				if (!first) channel_collapsed += "<:>";
-				channel_collapsed += returnval[index]["name"].asString();
-				first = false;
-			}
-		}
-	}
-	
-	/* Starting Broadcast Thread: Sending configuration paramters to the clients */
-	BRD.start(port, multicastip, sessionid, apiurl, framerate, preroll, channel_collapsed);
-    
-	/* Framer Thread: Runs as accurately as possible at the given framerate */
-	FRM.start(framerate, multicastip, port, sessionid, apiurl);
+	else {
+        ofLogError() << "- Could not connect to API Server and Log In";
+        setupGUI(guifont);
+    }
+    configured = false;
 }
 
 //--------------------------------------------------------------
 void ofApp::exit(){
     BRD.stop();
 	FRM.stop();
+    std::exit(0);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    if (sessionid != "") {
+        if (!configured) {
+            /* Loading Framerate */
+            if (getdata.parse( curlConnect(apiurl + "/Rate/" + sessionid, ""), returnval ))  {framerate = returnval.asInt();}
+            else {std::cout << "Could not Load Framerate\n"; ofExit();}
+            
+            /* Loading Framerate */
+            if (getdata.parse( curlConnect(apiurl + "/Preroll/" + sessionid, ""), returnval ))  {preroll = returnval.asInt(); }
+            else {std::cout << "Could not Load Preroll\n"; ofExit();}
+            
+            /* Loading Channels */
+            string channel_collapsed = "";
+            if (getdata.parse( curlConnect(apiurl + "/Channels/" + sessionid, ""), returnval )) {
+                if (returnval.isArray()) {
+                    bool first = true;
+                    for ( unsigned int index = 0; index < returnval.size(); index++ )  {
+                        if (!first) channel_collapsed += "<:>";
+                        channel_collapsed += returnval[index]["name"].asString();
+                        first = false;
+                    }
+                }
+            }
+            
+            /* Starting Broadcast Thread: Sending configuration paramters to the clients */
+            BRD.start(port, multicastip, sessionid, apiurl, framerate, preroll, channel_collapsed);
+            
+            /* Framer Thread: Runs as accurately as possible at the given framerate */
+            FRM.start(framerate, multicastip, port, sessionid, apiurl);
+            
+            configured = true;
+        }
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    if (!configured) {
 
+        return;
+    }
     float w = ofGetWidth();
     float h = ofGetHeight();
     ofColor c[3] = {ofColor(255,45,85,128),ofColor(85,255,45,128),ofColor(45,85,255,128)};

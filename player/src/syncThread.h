@@ -147,21 +147,29 @@ class syncThread : public ofThread{
 
     
         void configNet(string multicastIp, int _port) {
-            stopThread();
-            waitForThread();
-
+            if (udpConnection.HasSocket()) {
+                ofLogError() << "+ NET: closing Port";
+                udpConnection.Close();
+            }
+            
+            if (isThreadRunning()) {
+                ofLogError() << "+ NET: stopping Thread";
+                stopThread();
+                waitForThread();
+                ofLogError() << "+ NET: stopped Thread";
+            }
             char * mIp = new char[multicastIp.size() + 1];
             copy(multicastIp.begin(), multicastIp.end(), mIp);
             mIp[multicastIp.size()] = '\0';
-            if (udpConnection.Close()) {
-                udpConnection.Create();
-                udpConnection.BindMcast(mIp, _port);
-                udpConnection.SetNonBlocking(false);
-                udpConnection.SetReuseAddress(true);
+
+            ofLogError() << "+ NET: Settig up net " << multicastIp << ":" << _port;
+            udpConnection.Create();
+            udpConnection.BindMcast(mIp, _port);
+            udpConnection.SetNonBlocking(false);
+            udpConnection.SetReuseAddress(true);
+            if (udpConnection.HasSocket()) {
+                startThread();   // blocking, verbose
             }
-            
-            startThread();
-            
         }
 	
 		
@@ -183,7 +191,9 @@ class syncThread : public ofThread{
 		   	udpConnection.BindMcast(mIp, _port);
 		   	udpConnection.SetNonBlocking(false);
             udpConnection.SetReuseAddress(true);
-            startThread();   // blocking, verbose
+            if (udpConnection.HasSocket()) {
+                startThread();   // blocking, verbose
+            }
         }
     
     void updateConfig(vector<string> _channel, bool _hasVideo, bool _hasAudio, bool _hasText) {
@@ -197,14 +207,17 @@ class syncThread : public ofThread{
     }
 
         void stop(){
-			udpConnection.Close();	
+            if (udpConnection.HasSocket()) {
+                udpConnection.Close();
+            }
             stopThread();
         }
 
 		void threadedFunction(){
+            ofLogError() << "+ NET: Starting Thread";
 			while (isThreadRunning()) {
-				char udpMessage[100000];
-				udpConnection.Receive(udpMessage,100000);
+				char udpMessage[1000];
+				udpConnection.Receive(udpMessage,1000);
 				string message=udpMessage;
 				if(message.length() > 5){
 					parseJSON(message);

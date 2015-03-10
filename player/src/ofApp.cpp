@@ -63,7 +63,6 @@ void ofApp::loadXMLConfig() {
     config.multicastIp = XML.getValue("ip");
     config.fullscreen = XML.getBoolValue("fullscreen");
     config.verbose = XML.getBoolValue("verbose");
-   // ofSetFullscreen(config.fullscreen);
     MO.setPreview(config.verbose);
     XML.setTo("channel");
     for (int i=0; i<XML.getNumChildren("name"); i++) {
@@ -108,7 +107,7 @@ void ofApp::setup(){
     }
     FXML.setTo("/fonts");
     string mainfont = FXML.getValue("text");
-    string guifont = FXML.getValue("gui");
+    guifont = FXML.getValue("gui");
     cinetype.loadFont("static/" + mainfont, 120, 1.35, 512);
     cinetype.setKerning(true);
     cinetype_1.load("static/" + mainfont, 20);
@@ -117,6 +116,10 @@ void ofApp::setup(){
     /* Load Icon */
     syncicon.load("static/sync.png");
     logoicon.load("static/logo.png");
+
+    /* Widget Background */
+    bg = new ofImage();
+    bg->load("static/gui.png");
     
     /* Loading Configuration */
     loadXMLConfig();
@@ -126,68 +129,92 @@ void ofApp::setup(){
    
     /* Starting UP Movie Thread */
     MO.start();
-    
-    /* Gui Stuff */
-    setupGUI("static/" + guifont);
 
+    /* Gui Stuff */
+    setupGUI("static/" + guifont, false);
+    
     ofSleepMillis(500);
     
 }
 
 
-void ofApp::setupGUI(string guifont) {
-    gui = new ofxUICanvas("Automatic Cinema Player");        //Creates a canvas at (0,0) using the default width
-//    gui->setFont(guifont);
-    ofxUIColor cb = ofxUIColor( 0,0,0,128 );
-    ofxUIColor co = ofxUIColor( 255,0,0 );
-    ofxUIColor coh = ofxUIColor( 0,255,0,0 );
-    ofxUIColor cf = ofxUIColor( 0,255,0 );
-    ofxUIColor cfh = ofxUIColor( 255 );
-    ofxUIColor cp = ofxUIColor( 0,0,0,0 );
-    ofxUIColor cpo = ofxUIColor( 0,0,0,0 );
-    gui->setUIColors( cb, co, coh, cf, cfh, cp, cpo );
-    gui->setPosition(ofGetWidth()/30,ofGetHeight()/30);
-    gui->setDimensions(ofGetWidth()-(ofGetWidth()/15),ofGetHeight()-(ofGetHeight()/15));
-    gui->setDrawWidgetPadding(false);
-    gui->setPadding(3);
-    gui->setGlobalSpacerHeight(0);
-    
-#ifdef TARGET_OF_IPHONE
-	gui->addButton("Close", true);
-#endif
-    
-    gui->addSpacer();
-    gui->addSpacer();
-    gui->addLabel("Screen Setting");
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addToggle("Fullscreen",    config.fullscreen);
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addToggle("Verbose",       config.verbose);
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addToggle("Logo",          config.drawLogo);
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-    gui->addSpacer();
-    gui->addSpacer();
-    gui->addLabel("Multicast IP");
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addTextInput("Multicast",         config.multicastIp);
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-    gui->addLabel("Port");
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addTextInput("Port",       ofToString(config.baseport));
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-    gui->addSpacer();
-    gui->addSpacer();
-    gui->addLabel("Supported Media");
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addToggle("Video",         config.hasVideo);
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addToggle("Audio",         config.hasAudio);
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
-    gui->addToggle("Text",          config.hasText);
-	gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-    ofAddListener(gui->newGUIEvent, this, &ofApp::guiEvent);
-    gui->disable();
+void ofApp::setupGUI(string guifont, bool drawchannels = false) {
+    if (!drawchannels) {
+        gui = new ofxUICanvas();        //Creates a canvas at (0,0) using the default width
+        gui->setFont(ofToDataPath(guifont));
+        gui->setFontSize(OFX_UI_FONT_SMALL, 8);
+        gui->setFontSize(OFX_UI_FONT_MEDIUM, 10);
+        gui->setFontSize(OFX_UI_FONT_LARGE, 10);
+        ofxUIColor cb = ofxUIColor( 0,0,0,0 );
+        ofxUIColor co = ofxUIColor( 128,128,128,128 );
+        ofxUIColor coh = ofxUIColor( 0 );
+        ofxUIColor cf = ofxUIColor( 80 );
+        ofxUIColor cfh = ofxUIColor( 0 );
+        ofxUIColor cp = ofxUIColor( 128,128,128,128 );
+        ofxUIColor cpo = ofxUIColor( 128,128,128,20 );
+        gui->setUIColors( cb, co, coh, cf, cfh, cp, cpo );
+        gui->setPosition((ofGetWidth()-509)/2,(ofGetHeight()-350)/2);
+        gui->setDimensions(509,609);
+        gui->setPadding(3);
+        gui->setGlobalSpacerHeight(0);
+        gui->setWidgetFontSize(OFX_UI_FONT_SMALL);
+        
+        gui->addSpacer(0,62);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+        gui->addToggle("Fullscreen",    config.fullscreen, 10, 10, 155, 0);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
+        gui->addToggle("Verbose",       config.verbose, 10 ,10);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
+        gui->addToggle("Logo",          config.drawLogo, 10 ,10);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        gui->addSpacer();
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+        gui->addTextInput("Multicast",         config.multicastIp, 305,10,150,0);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+        gui->addTextInput("Port",       ofToString(config.baseport),305,10,150,0);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        gui->addSpacer(0,6);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+        gui->addToggle("Video",         config.hasVideo, 10, 10, 155, 0);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
+        gui->addToggle("Audio",         config.hasAudio, 10 ,10);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_RIGHT);
+        gui->addToggle("Text",          config.hasText, 10 ,10);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        ofAddListener(gui->newGUIEvent, this, &ofApp::guiEvent);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        gui->addSpacer(0,38);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+        gui->addButton("Close", true, 15,15,155,10);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        gui->resetPlacer();
+        gui->addImage("BG", bg, 503, 350);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        gui->disable();
+    }
+    else {
+        gui->removeWidget("BG");
+        gui->resetPlacer();
+        gui->addSpacer(0,187);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN, OFX_UI_ALIGN_FREE);
+        vector<string> avail_channels = ofSplitString(config.serverconfig[4], "<:>");
+        ofxUIDropDownList *ddl;
+        ddl = gui->addDropDownList("Channel Settings", avail_channels,305,150,0);
+        ddl->setAllowMultiple(true);
+        vector<ofxUILabelToggle *> &selected = ddl->getToggles();
+        for(int i = 0; i < selected.size(); i++)
+        {
+            bool toggle;
+            if(std::find(config.channel.begin(), config.channel.end(), selected[i]->getName())!=config.channel.end()) toggle = true;
+            else toggle = false;
+            selected[i]->setValue(toggle);
+        }
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        gui->resetPlacer();
+        gui->addImage("BG", bg, 503, 350);
+        gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
+        gui->disable();
+    }
 }
 
 // Listeners
@@ -195,7 +222,6 @@ void ofApp::setupGUI(string guifont) {
 void ofApp::guiEvent(ofxUIEventArgs &e)
 {
     
-#ifdef TARGET_OF_IPHONE
     if(e.getName() == "Close" && e.getKind()==OFX_UI_WIDGET_BUTTON)
     {
         if (gui->isEnabled()) {
@@ -205,7 +231,6 @@ void ofApp::guiEvent(ofxUIEventArgs &e)
             gui->enable();
         }
     }
-#endif
 
     if(e.getName() == "Video" && e.getKind()==OFX_UI_WIDGET_TOGGLE)
     {
@@ -308,6 +333,7 @@ void ofApp::guiEvent(ofxUIEventArgs &e)
 //--------------------------------------------------------------
 void ofApp::update(){
     /* Waiting for Config */
+
     static bool waitforconfig = true;
 
     if (CN.isConfigured() && waitforconfig) {
@@ -326,24 +352,10 @@ void ofApp::update(){
             std::cout  << "  MS per Line  : " << config.serverconfig[5] << endl;
             std::cout  << "  Line p Scrn  : " << config.serverconfig[6] << endl;
 
+
+            /* Gui Stuff */
+            setupGUI("static/" + guifont, true);
             
-            /* Updating GUI */
-            gui->setWidgetPosition(OFX_UI_WIDGET_POSITION_DOWN);
-            gui->addSpacer();
-            vector<string> avail_channels = ofSplitString(config.serverconfig[4], "<:>");
-            ofxUIDropDownList *ddl;
-            ddl = gui->addDropDownList("Channel Settings", avail_channels);
-            ddl->setAllowMultiple(true);
-
-            vector<ofxUILabelToggle *> &selected = ddl->getToggles();
-            for(int i = 0; i < selected.size(); i++)
-            {
-                bool toggle;
-                if(std::find(config.channel.begin(), config.channel.end(), selected[i]->getName())!=config.channel.end()) toggle = true;
-                else toggle = false;
-                selected[i]->setValue(toggle);
-            }
-
             // Network Ready. Start to Synchronize Clips with (Web)Server
             TO.start(config.serverconfig[0],config.serverconfig[1]);
             std::cout  << "+ Clip Synchronisation Thread started"  << endl;
@@ -355,6 +367,11 @@ void ofApp::update(){
             // Clip Trigger Thread
             SC.start(config.multicastIp, config.baseport, config.channel, TO, MO, SN, SU, config.hasVideo, config.hasAudio, config.hasText);
             std::cout  << "+ Trigger Listener Thread started" << endl;
+            
+            /* Check Screen Size */
+            if (config.fullscreen && ofGetWindowMode()!=OF_FULLSCREEN) {
+                ofSetFullscreen(config.fullscreen);
+            }
             
             waitforconfig = false;
         }
@@ -409,7 +426,7 @@ void ofApp::draw(){
 
         ofPopStyle();
     }
-    
+
     #ifdef TARGET_OF_IPHONE
     if (config.verbose) {
         ofPushStyle();
