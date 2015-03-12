@@ -71,15 +71,22 @@ class framerThread : public ofThread{
 		int framerate, port;
 		loaderThread	LDR;
 		string sessionid, apiurl, multicastip, stack, state;
-		ofxUDPManager udpConnection;		
+		ofxUDPManager udpConnection;
+    
 
 		//--------------------------
 		framerThread(){
 		}
     
         verbose_info getInfo() {
-//			ofScopedLock lock(mutex);
-			return verbose;
+            verbose_info _v;
+            if( lock() ){
+                _v = verbose;
+                unlock();
+             }
+            return _v;
+			//ofScopedLock lock(mutex);
+			//return verbose;
         }
 
 		string loaderstate() {
@@ -87,16 +94,23 @@ class framerThread : public ofThread{
 		}
 
 		string getState() {
+/*            string _state;
+			if( lock() ){
+				_state = state;
+				unlock();
+			}
+			return _state;*/
 			ofScopedLock lock(mutex);
 			return state;
 		}
 
 		string getStack() {
-/*			string _stack;
+/*            string _stack;
 			if( lock() ){
 				_stack = stack;
 				unlock();
-			}*/
+			}
+			return _stack;*/
 			ofScopedLock lock(mutex);
 			return stack;
 		}

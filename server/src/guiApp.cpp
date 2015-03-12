@@ -257,7 +257,7 @@ void ofApp::draw(){
 	// Print Trigger Stack
     ofSetColor(255,255,255,210);
     
-    drawWaitForConfig("Automatic Cinema Server");
+    drawWaitForConfig("Automatic Cinema Controller");
 
     framerThread::verbose_info v = FRM.getInfo();
     

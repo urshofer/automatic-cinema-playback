@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "ACP.app"
-               BlueprintName = "ACP"
+               BuildableName = "AC Player.app"
+               BlueprintName = "AC Player"
                ReferencedContainer = "container:threadedVideo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "ACP.app"
-            BlueprintName = "ACP"
+            BuildableName = "AC Player.app"
+            BlueprintName = "AC Player"
             ReferencedContainer = "container:threadedVideo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +52,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "ACP.app"
-            BlueprintName = "ACP"
+            BuildableName = "AC Player.app"
+            BlueprintName = "AC Player"
             ReferencedContainer = "container:threadedVideo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +70,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "ACP.app"
-            BlueprintName = "ACP"
+            BuildableName = "AC Player.app"
+            BlueprintName = "AC Player"
             ReferencedContainer = "container:threadedVideo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
