@@ -265,7 +265,7 @@
 		9E4DBA961A0CFE39003941B1 /* testApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = testApp.cpp; path = ../../../../../server/src/testApp.cpp; sourceTree = "<group>"; };
 		9E4DBA971A0CFE39003941B1 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = ../../../../../server/src/testApp.h; sourceTree = "<group>"; };
 		9E9141EA1AAC955400860A8C /* gui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gui.png; path = ../../../../../../server/bin/data/gui.png; sourceTree = "<group>"; };
-		9EBC30171AACD4AF00B6DA80 /* ACSDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACSDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBC30171AACD4AF00B6DA80 /* ACSDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ACSDebug.app; path = "AC ControllerDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC1AB5E19D07FDB0053B19D /* addons.make */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
 		9EE36C5819D4A9F700E54B35 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		9EE36C5919D4A9F700E54B35 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
