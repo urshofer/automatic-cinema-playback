@@ -262,7 +262,7 @@ void ofApp::draw(){
     framerThread::verbose_info v = FRM.getInfo();
     
     int offset_y = 65;
-    for(std::vector <framerThread::_verbose>::size_type i = 0; i != v.size(); i++) {
+    for(std::vector <framerThread::verbose_item>::size_type i = 0; i != v.size(); i++) {
         cinetype_1.drawString(v[i].channel, 10, offset_y);
         ofPushStyle();
         ofFill();

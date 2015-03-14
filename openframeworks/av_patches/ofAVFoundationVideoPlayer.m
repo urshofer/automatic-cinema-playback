@@ -144,7 +144,7 @@ static const NSString * ItemStatusContext;
 - (BOOL)updateURL:(NSURL*)url async:(BOOL)bAsync {
 	
 	bLoaded = false;
-	bReady = NO;
+	
 	
 	// Just swap the asset here...
 	self.asset = [AVURLAsset URLAssetWithURL:url options:nil];
@@ -182,7 +182,7 @@ static const NSString * ItemStatusContext;
 			}
 			return;
 		}
-		
+
 		BOOL bOk = [self createAssetReaderWithTimeRange:CMTimeRangeMake(kCMTimeZero, duration)];
 		if(bOk == NO) {
 			NSLog(@"problem with creating asset reader.");
@@ -191,6 +191,7 @@ static const NSString * ItemStatusContext;
 			}
 			return;
 		}
+
 		NSArray * videoTracks = [self.asset tracksWithMediaType:AVMediaTypeVideo];
 		if([videoTracks count] == 0) {
 			NSLog(@"no video tracks found.");
@@ -205,16 +206,16 @@ static const NSString * ItemStatusContext;
 		videoWidth = [track naturalSize].width;
 		videoHeight = [track naturalSize].height;
 		
-	//	NSLog(@"video ***replaced*** at %i x %i", videoWidth, videoHeight);
+		NSLog(@"video ***replaced*** at %i x %i", videoWidth, videoHeight);
 		
 		[self setVideoSize:CGSizeMake(videoWidth, videoHeight)];
 		
 		self.playerItem = [AVPlayerItem playerItemWithURL:url];
+		
 		[self.player replaceCurrentItemWithPlayerItem:self.playerItem];
 
 		
 		bLoaded = true;
-		bReady = true;
 		
 		
 		if(bAsync == NO){

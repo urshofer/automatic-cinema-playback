@@ -327,8 +327,10 @@ class loaderThread : public ofThread{
                 
                 /* Cycle thru all Master Channels
                    Find Element in Queue: qactive */
-		
-                channel_time_post = "";
+                if (lock()) {
+                    channel_time_post = "";
+                    unlock();
+                }
 
 				for(queue_vector::iterator qactive = queue.begin(); qactive != queue.end(); ++qactive) {
                     

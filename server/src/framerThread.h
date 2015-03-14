@@ -18,7 +18,7 @@ class framerThread : public ofThread{
 		/* Channel List */
 
     
-        struct _verbose
+        struct verbose_item
         {
             string          channel;
             string 			thisclip;
@@ -30,7 +30,7 @@ class framerThread : public ofThread{
             unsigned int    nextin;
             unsigned int    waiting;
         };
-		typedef std::vector < _verbose >	verbose_info;
+		typedef std::vector < verbose_item >	verbose_info;
         verbose_info        verbose;
     
 
@@ -208,14 +208,22 @@ class framerThread : public ofThread{
 				_c.force_reset	= false;
 				chstate.push_back(_c);
 			}
-			
+
+            Json::Value::UInt store_index;
+            string _stack;
+            string _channel_time_post;
+            verbose_info _verbose;
+            
 			while (isThreadRunning()!= 0) {
 				/* Reset Send Data */
-				Json::Value::UInt store_index=0;
-				senddata.clear();
-				string _stack = "";
-                string channel_time_post = "";
-                verbose_info __verbose;
+                if (lock()) {
+                    store_index=0;
+                    senddata.clear();
+                    _stack = "";
+                    _channel_time_post = "";
+                    _verbose.clear();
+                    unlock();
+                }
 				/* Cycle Thru States */
 				for(channel_state::iterator sactive = chstate.begin(); sactive != chstate.end(); ++sactive) {
                     
@@ -227,8 +235,8 @@ class framerThread : public ofThread{
 					unsigned long currentTime = nowTime - (*sactive).time;
 
                     /* Update channel time */
-                    channel_time_post += channel_time_post != "" ? ", " : "";
-                    channel_time_post += "\"" + (*sactive).name + "\": " + ofToString(currentTime);
+                    _channel_time_post += _channel_time_post != "" ? ", " : "";
+                    _channel_time_post += "\"" + (*sactive).name + "\": " + ofToString(currentTime);
                     
 					/* 
                         Action for Reset: 
@@ -349,7 +357,7 @@ class framerThread : public ofThread{
 //						(*sactive).data = _cl;
 //					}
 				
-                    _verbose verbosenow;
+                    verbose_item verbosenow;
                     verbosenow.channel  = (*sactive).name;
                     verbosenow.thisclip = (*sactive).data.name;
                     verbosenow.nextclip = (*sactive).data_next.name;
@@ -359,7 +367,7 @@ class framerThread : public ofThread{
                     verbosenow.position = (*sactive).data.in < currentTime?currentTime - (*sactive).data.in:0;
                     verbosenow.waiting  = (*sactive).data_next.in?(*sactive).data_next.in - currentTime:0;
                     verbosenow.nextin   = (*sactive).data_next.in>(*sactive).data.in+((*sactive).data.duration/2)?(*sactive).data_next.in - ((*sactive).data.in+((*sactive).data.duration/2)):0;
-                    __verbose.push_back(verbosenow);
+                    _verbose.push_back(verbosenow);
                     
 					_stack += "# Channel " + (*sactive).name + " (" + ((*sactive).is_slave?"slave":"master") + ")" + "\n";
 					_stack += "Playing   " + ofToString(currentTime/1000) +" s\n";
@@ -385,17 +393,17 @@ class framerThread : public ofThread{
 					}
 				}
 
-				/* Frame Advancing and timer Adjustement */
-				ofSleepMillis(5);
-				//nowTime = (unsigned long)((double)gst_clock_get_time(gstclock) / (double)1000000);
-                nowTime = ofGetElapsedTimeMillis();
 				if (lock()) {
 					stack = _stack;
-                    verbose = __verbose;
-					unlock();
+                    verbose = _verbose;
+                    LDR.storeChannelTime(_channel_time_post);
+                    unlock();
 				}
-                LDR.storeChannelTime(channel_time_post);
-			}
+                /* Frame Advancing and timer Adjustement */
+                ofSleepMillis(5);
+                nowTime = ofGetElapsedTimeMillis();
+
+            }
 //			stop();
 		}
 
