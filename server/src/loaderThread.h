@@ -111,13 +111,45 @@ class loaderThread : public ofThread{
 			logFile(buffer + "\n--\n", "test.log");
 			return buffer;
 		}
-		
-		char * url_escape(string _url) {
-			curl = curl_easy_init();
-			char *encodedURL = curl_easy_escape(curl,_url.c_str(), strlen(_url.c_str()));								
-			curl_easy_cleanup(curl);							
-			return encodedURL;
-		}
+    
+    string char2hex( char dec )
+    {
+        char dig1 = (dec&0xF0)>>4;
+        char dig2 = (dec&0x0F);
+        if ( 0<= dig1 && dig1<= 9) dig1+=48;    //0,48inascii
+        if (10<= dig1 && dig1<=15) dig1+=97-10; //a,97inascii
+        if ( 0<= dig2 && dig2<= 9) dig2+=48;
+        if (10<= dig2 && dig2<=15) dig2+=97-10;
+        
+        string r;
+        r.append( &dig1, 1);
+        r.append( &dig2, 1);
+        return r;
+    }
+    
+    string url_escape(const string &c)
+    {
+        
+        string escaped="";
+        int max = c.length();
+        for(int i=0; i<max; i++)
+        {
+            if ( (48 <= c[i] && c[i] <= 57) ||//0-9
+                (65 <= c[i] && c[i] <= 90) ||//abc...xyz
+                (97 <= c[i] && c[i] <= 122) || //ABC...XYZ
+                (c[i]=='~' || c[i]=='!' || c[i]=='*' || c[i]=='(' || c[i]==')' || c[i]=='\'')
+                )
+            {
+                escaped.append( &c[i], 1);
+            }
+            else
+            {
+                escaped.append("%");
+                escaped.append( char2hex(c[i]) );//converts char 255 to string "ff"
+            }
+        }
+        return escaped;
+    }
 		
 		
 		bool isReset(string _channel) {
@@ -243,9 +275,9 @@ class loaderThread : public ofThread{
                     for ( unsigned int index = 0; index < channelData.size(); index++ )  {
 						pair <string,vector<Json::Value > > channel;
 					
-						char *encodedURL = url_escape(channelData[index]["name"].asString());
+//						char *encodedURL = url_escape(channelData[index]["name"].asString());
 					
-						masterslaveJson.parse( curlConnect(apiurl + "/HasMaster/" + sessionid + "/" + ofToString(encodedURL), ""), masterslaveData );
+						masterslaveJson.parse( curlConnect(apiurl + "/HasMaster/" + sessionid + "/" + url_escape(channelData[index]["name"].asString()), ""), masterslaveData );
 
 						_queue _q;
 //						_q.name = channelData[index]["name"].asString();
@@ -334,7 +366,7 @@ class loaderThread : public ofThread{
 
 				for(queue_vector::iterator qactive = queue.begin(); qactive != queue.end(); ++qactive) {
                     
-                    char *encodedURL = url_escape(qactive->first);
+//                    char *encodedURL = url_escape(qactive->first);
 
 					
 					/* Check if less than 5 Elements or a Reset happened */
@@ -343,7 +375,7 @@ class loaderThread : public ofThread{
                         
 //                        cout << "Loading... " << apiurl  << "/Next/" << sessionid << "/" << ofToString(encodedURL) << " ";
 						/* GetNext */
-						string getNext = curlConnect(apiurl + "/Next/" + sessionid + "/" + ofToString(encodedURL), "");
+						string getNext = curlConnect(apiurl + "/Next/" + sessionid + "/" + url_escape(qactive->first), "");
 						if (nextJson.parse( getNext, nextData )) {
 
 //                            cout << getNext << endl;
