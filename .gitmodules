@@ -16,9 +16,6 @@
 [submodule "openframeworks/openFrameworks"]
 	path = openframeworks/openFrameworks
 	url = https://github.com/openframeworks/openFrameworks
-[submodule "openframeworks/addons/ofxThreadedVideoPlayer"]
-	path = openframeworks/addons/ofxThreadedVideoPlayer
-	url = https://github.com/local-projects/ofxThreadedVideoPlayer
 [submodule "openframeworks/addons/ofxGStreamer"]
 	path = openframeworks/addons/ofxGStreamer
 	url = https://github.com/arturoc/ofxGStreamer
