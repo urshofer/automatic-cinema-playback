@@ -1,7 +1,7 @@
 ofxNetwork
 ofxJSON
 ofxXmlSettings
-ofxGaplessVideoPlayer
+ofxGaplessVideo
 ofxUnicode
 ofxFontStash
 ofxUI
