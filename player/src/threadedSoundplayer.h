@@ -39,7 +39,7 @@ public:
    
    void loadSound(string movieFile) {
        if (!enabled) {
-           return false;
+           return;
        }
        if (lock()) {
            appendend = movieFile;
@@ -52,7 +52,7 @@ public:
    
    void appendSound(string movieFile) {
        if (!enabled) {
-           return false;
+           return;
        }
         if (lock()) {
             appendend = movieFile;
@@ -66,7 +66,7 @@ public:
    
    void triggerSound(string movieFile) {
        if (!enabled) {
-           return false;
+           return;
        }
        if (lock()) {
            forceStart = true;
