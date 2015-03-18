@@ -6,3 +6,4 @@ openframeworks/apps/myApps/ACS_osx/bin/*.app
 player/bin/data/static/CinetMed.ttf
 player/bin/data/static/CinetGui.ttf
 server/bin/data/CinetMed.ttf
+.DS_Store
