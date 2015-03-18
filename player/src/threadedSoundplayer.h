@@ -1,5 +1,6 @@
 #ifndef _THREADED_SOUND
 #define _THREADED_SOUND
+#define MAX_SOUND 5
 
 #include "ofMain.h"
 
@@ -7,11 +8,13 @@ class threadedSoundplayer : public ofThread{
 
 private:
 
-	ofSoundPlayer  		sound[10];			// 10 simultanoues sound layers are enough
+	ofSoundPlayer  		sound[MAX_SOUND];			// 10 simultanoues sound layers are enough
 	int					currentSound;	
 	int					runningSound;
 	bool 				enabled;
-
+    bool                forceStart;
+    string              appendend;
+    
 public:
 
    //--------------------------
@@ -22,8 +25,10 @@ public:
 		}
 		currentSound = 0;
 		runningSound = -1;
-		for ( unsigned int _index = 0; _index < 10; _index++ )  {
-			sound[_index].setVolume(0.3f);		
+        appendend = "";
+        forceStart = false;
+		for ( unsigned int _index = 0; _index < MAX_SOUND; _index++ )  {
+			sound[_index].setVolume(1.0f);
 			sound[_index].setMultiPlay(false);
 		}
 		startThread();
@@ -33,26 +38,40 @@ public:
    // Load: Add to Playlist and play immediately
    
    void loadSound(string movieFile) {
-       ofScopedLock lock(mutex);
-	   currentSound = currentSound<10?currentSound+1:0;
-	   sound[currentSound].loadSound(movieFile, true);
-	   triggerSound(movieFile);
+       if (!enabled) {
+           return false;
+       }
+       if (lock()) {
+           appendend = movieFile;
+           forceStart = true;
+           unlock();
+       }
    }
    
    // Append: Add to playlist
    
    void appendSound(string movieFile) {
-		ofScopedLock lock(mutex);
-		runningSound = currentSound;
-		currentSound = currentSound<10?currentSound+1:0;   	
-		sound[currentSound].loadSound(movieFile, true);
+       if (!enabled) {
+           return false;
+       }
+        if (lock()) {
+            appendend = movieFile;
+            forceStart = false;
+            unlock();
+        }
+        ofLogError("SoundThread") << "appendSound";
    }
 
    // Trigger: Start Playback
    
    void triggerSound(string movieFile) {
-		ofScopedLock lock(mutex);
-		sound[currentSound].play();	
+       if (!enabled) {
+           return false;
+       }
+       if (lock()) {
+           forceStart = true;
+           unlock();
+       }
    }
 
    //--------------------------
@@ -65,7 +84,24 @@ public:
    //--------------------------
 	void threadedFunction(){
 		while (isThreadRunning()) {
-			ofSoundUpdate();
+            if (lock()) {
+                if (appendend != "") {
+                    currentSound = currentSound<MAX_SOUND-1?currentSound+1:0;
+                    ofLogError("SoundThread") << "Loading into " << currentSound;
+                    sound[currentSound].load(appendend, true);
+                    appendend = "";
+                }
+                
+                ofSoundUpdate();
+                if (forceStart) {
+                    if (sound[currentSound].isLoaded()) {
+                        sound[currentSound].play();
+                    }
+                    forceStart = false;
+                    ofLogError("SoundThread") << "Triggered";
+                }
+                unlock();
+            }
 			ofSleepMillis(25);
 		}
 	}	

@@ -363,6 +363,11 @@ void ofApp::update(){
             // Subtitle Thread Started
             SU.start(config.hasText, config.serverconfig[5], config.serverconfig[6]);
             std::cout  << "+ Subtitle Thread started"  << endl;
+
+            // Sound Thread Started
+            SN.start(config.hasAudio);
+            std::cout  << "+ Sound Thread started"  << endl;
+            
             
             // Clip Trigger Thread
             SC.start(config.multicastIp, config.baseport, config.channel, TO, MO, SN, SU, config.hasVideo, config.hasAudio, config.hasText);
