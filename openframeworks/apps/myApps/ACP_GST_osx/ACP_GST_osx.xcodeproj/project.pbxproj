@@ -1,0 +1,1819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04C82720B149CE576B8CBB06 /* ofxUIToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48CCCEA0C681DE8B4945111B /* ofxUIToggle.cpp */; };
+		084025DA517D8329301FE1B6 /* ofxUIEventArgs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8896AC3BECAAA504E3828F4 /* ofxUIEventArgs.cpp */; };
+		125506CD3E5F428AAFE5CC65 /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F399B91E98DC31CDA6DDACB4 /* ofxTCPManager.cpp */; };
+		1587708E3CAC72997E43504E /* ofxUIRangeSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2813E36CEFD8D1C1B70E600 /* ofxUIRangeSlider.cpp */; };
+		1DAAC3FB4B98B08AE63F4687 /* ofxUISuperCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38EBD5650A3BF5A499B07525 /* ofxUISuperCanvas.cpp */; };
+		22030CBDCC25D815E7ED6757 /* ofxUIFPSSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E592342D8B7FB73A6F64D /* ofxUIFPSSlider.cpp */; };
+		222C3AB10FA3158602718602 /* ofxUIMultiImageButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17E06821FB98542FDB806E50 /* ofxUIMultiImageButton.cpp */; };
+		26874B150C8535AEA0F24C8C /* ofxUIImageSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2689C5C8A97002C218125F2F /* ofxUIImageSlider.cpp */; };
+		3D4EA8E172D3E4A30FEFA969 /* ofxUIImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 938F5A098A216B403906129C /* ofxUIImage.cpp */; };
+		43BADBB2FE0F17D34B57A705 /* ofxUIScrollableCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFD3387AA9EFA53E1B4F087B /* ofxUIScrollableCanvas.cpp */; };
+		4B3ED367CA852D522E2EE996 /* ofxUI2DPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1553D7111BCBE7834BCC0784 /* ofxUI2DPad.cpp */; };
+		522FFFB6EB3DA57CCB07EF9A /* stb_truetype.c in Sources */ = {isa = PBXBuildFile; fileRef = DC55FEC740DD28FBDD2D4406 /* stb_truetype.c */; };
+		52AFF80A869790144ACCC9BA /* ofxUISpectrum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7177CC1E771E1E857F8CB48 /* ofxUISpectrum.cpp */; };
+		59C5F2F5D7254C33C00F97CB /* ofxUIRectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 828EDF7F6C239EA7B17F32F0 /* ofxUIRectangle.cpp */; };
+		5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */; };
+		5A479B04DF062DE7431FD3BF /* ofUnicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF3CACAAE84A581E4AFA9FA7 /* ofUnicode.cpp */; };
+		5AE95ADB5549701423B6DA48 /* ofxUITabBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A64B8AA7481267CD4A76C16B /* ofxUITabBar.cpp */; };
+		60012C723B05938A3D388335 /* ofxUIValuePlotter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D902D60E5CCFA9F2554BC7C /* ofxUIValuePlotter.cpp */; };
+		63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */; };
+		66CA411C5A9664E27326BF36 /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C085E327DAB912CFA2A443D /* ofxTCPServer.cpp */; };
+		7252706DA14C1BE63950ADDA /* ofxUIFPS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEB61645EF9120F5BACB7462 /* ofxUIFPS.cpp */; };
+		740A58CBFDFE578C83A349AF /* ofxUISlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B77977749C1835A9472B /* ofxUISlider.cpp */; };
+		7B388D550037229D99E7F52A /* ofxFontStash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A535D3474A0EAB684CAC5D /* ofxFontStash.cpp */; };
+		7BE46522B64E24FAEDE1A25D /* ofxUICanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E71733956CD601886837BE2E /* ofxUICanvas.cpp */; };
+		7C3DC84C9BFCBD2866DB2B6C /* ofxUILabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7D83EF74FC7508D9146FA63 /* ofxUILabel.cpp */; };
+		7D393646FB859A930EF58917 /* ofxUIButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F8238006E98A8E39851968C /* ofxUIButton.cpp */; };
+		7F2CD93F681F3C1547B3BF2C /* ofxUIImageButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6280B5FA1CEA20450916E49 /* ofxUIImageButton.cpp */; };
+		801397981E78A4CBDE809376 /* fontstash.c in Sources */ = {isa = PBXBuildFile; fileRef = D5AE78144E3980BD0B4445D7 /* fontstash.c */; };
+		82845E1F8C90E1F5A99D9868 /* ofxUIWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08A9C84B3CA68561BE01FF37 /* ofxUIWidget.cpp */; };
+		852A1567B07E60FFD3CE6828 /* ofxGaplessVideoplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4639743735BBEB743C70DE6 /* ofxGaplessVideoplayer.cpp */; };
+		933A2227713C720CEFF80FD9 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */; };
+		960D20B191346612D5C05A6A /* ofxTCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF88F02779DD820913ACEA06 /* ofxTCPClient.cpp */; };
+		9A83D1B3FB64456BC907667F /* ofxUIMinimalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7216430113F333B8351ED /* ofxUIMinimalSlider.cpp */; };
+		9BE4AE0AA2B8C436BDFE9D4D /* ofxUIDragableLabelButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFD5D3C9D38E29DB72B32254 /* ofxUIDragableLabelButton.cpp */; };
+		9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 832BDC407620CDBA568B713D /* tinyxmlerror.cpp */; };
+		9D99424B122DE3C1D83A3670 /* ofGstVideoGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F198996ED5C849097CC1ABB5 /* ofGstVideoGrabber.cpp */; };
+		9EFEB9AE1AB83F2400659E65 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EFEB9A71AB83F2400659E65 /* main.cpp */; };
+		9EFEB9AF1AB83F2400659E65 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EFEB9A81AB83F2400659E65 /* ofApp.cpp */; };
+		9EFEB9C21AB8414300659E65 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B11AB8414300659E65 /* AVFoundation.framework */; };
+		9EFEB9C31AB8414300659E65 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B21AB8414300659E65 /* CoreMedia.framework */; };
+		9EFEB9C41AB8414300659E65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B31AB8414300659E65 /* QuartzCore.framework */; };
+		9EFEB9C51AB8414300659E65 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B41AB8414300659E65 /* Accelerate.framework */; };
+		9EFEB9C61AB8414300659E65 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B51AB8414300659E65 /* AppKit.framework */; };
+		9EFEB9C71AB8414300659E65 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B61AB8414300659E65 /* Cocoa.framework */; };
+		9EFEB9C81AB8414300659E65 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B71AB8414300659E65 /* IOKit.framework */; };
+		9EFEB9C91AB8414300659E65 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B81AB8414300659E65 /* AGL.framework */; };
+		9EFEB9CA1AB8414300659E65 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9B91AB8414300659E65 /* ApplicationServices.framework */; };
+		9EFEB9CB1AB8414300659E65 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9BA1AB8414300659E65 /* AudioToolbox.framework */; };
+		9EFEB9CC1AB8414300659E65 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9BB1AB8414300659E65 /* CoreAudio.framework */; };
+		9EFEB9CD1AB8414300659E65 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9BC1AB8414300659E65 /* CoreFoundation.framework */; };
+		9EFEB9CE1AB8414300659E65 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9BD1AB8414300659E65 /* CoreServices.framework */; };
+		9EFEB9CF1AB8414300659E65 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9BE1AB8414300659E65 /* OpenGL.framework */; };
+		9EFEB9D01AB8414300659E65 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9BF1AB8414300659E65 /* QuickTime.framework */; };
+		9EFEB9D11AB8414300659E65 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9C01AB8414300659E65 /* CoreVideo.framework */; };
+		9EFEB9D21AB8414300659E65 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFEB9C11AB8414300659E65 /* QTKit.framework */; };
+		9EFEBB0F1AB8441C00659E65 /* fonts.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB061AB8441000659E65 /* fonts.xml */; };
+		9EFEBB101AB8441F00659E65 /* gui.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB071AB8441000659E65 /* gui.png */; };
+		9EFEBB111AB8442100659E65 /* logo.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB081AB8441000659E65 /* logo.png */; };
+		9EFEBB121AB8442200659E65 /* not-found.m4v in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB091AB8441000659E65 /* not-found.m4v */; };
+		9EFEBB131AB8442400659E65 /* not-found.mov in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB0A1AB8441000659E65 /* not-found.mov */; };
+		9EFEBB141AB8442500659E65 /* not-found.mp4 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB0B1AB8441000659E65 /* not-found.mp4 */; };
+		9EFEBB151AB8442700659E65 /* Roboto-Gui.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB0C1AB8441000659E65 /* Roboto-Gui.ttf */; };
+		9EFEBB161AB8442800659E65 /* Roboto-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB0D1AB8441000659E65 /* Roboto-Medium.ttf */; };
+		9EFEBB171AB8442A00659E65 /* sync.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB0E1AB8441000659E65 /* sync.png */; };
+		9EFEBB191AB8444800659E65 /* playersettings.xml in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EFEBB041AB8441000659E65 /* playersettings.xml */; };
+		9F5C6DD965B4F3A6DB5B88F8 /* ofxUI2DGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 02FF3B8D243CFB85AE0909EB /* ofxUI2DGraph.cpp */; };
+		AD7CCE180C5BEF646A1B62E1 /* ofUTF8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45FD7CA9F83C2CD563A7A5F4 /* ofUTF8.cpp */; };
+		ADE7C2AFC51E3F7E5E389026 /* ofxUISortableList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5613D5D24B00D8AD909F7E6A /* ofxUISortableList.cpp */; };
+		AE281BEBF3A00F1FC37F3DA0 /* ofxUIWaveform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9345327AA463407B3DADBADE /* ofxUIWaveform.cpp */; };
+		B0F2688D773B5C8FB13237F8 /* ofTextConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1B7E7C1C21FE45AB73E04 /* ofTextConverter.cpp */; };
+		BEDFEE7400C58EA4E412B757 /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2B099E6BD1199664C48B177 /* ofxJSONElement.cpp */; };
+		BFEFCE32DAFE10A8EB519F6C /* ofxUISpacer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30CBAAEC78A0E9EBBB10A05A /* ofxUISpacer.cpp */; };
+		C30B3A2A37F8F32EE7318718 /* ofxUILabelToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76AF3B44E0E2FA8BFBD5F592 /* ofxUILabelToggle.cpp */; };
+		C381F2B7CFD84C0E540EB4BC /* ofxUIBiLabelSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876BBA9542E267584885CAD8 /* ofxUIBiLabelSlider.cpp */; };
+		C961BE22AB9A8CCF037FC18F /* ofxUITextArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBE31D52BCB0CE44B9D154F0 /* ofxUITextArea.cpp */; };
+		CE5D89B9893EAA12F511DCAC /* ofxUIWidgetWithLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AD807D1AF254F978AB20B1C /* ofxUIWidgetWithLabel.cpp */; };
+		D60E54E7FD6E19BC8636E0D2 /* ofxUIRadio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D33A3E929B0B5D9C002E30E /* ofxUIRadio.cpp */; };
+		DF0C851B244C4C867CEA8806 /* ofxUICircleSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2556100026B425E8370BCF75 /* ofxUICircleSlider.cpp */; };
+		E2564CF7DDB3713772BB682E /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35BB9BB90DBABFD3B39F8DB6 /* ofxUDPManager.cpp */; };
+		E3A1109F67D711D6C256031E /* ofxUIToggleMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 702A2528CA64B397E9B91ABE /* ofxUIToggleMatrix.cpp */; };
+		E3D59A6B55F05669B3FBF8BD /* ofxUINumberDialer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D6768C572B6CA49227C29EA /* ofxUINumberDialer.cpp */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		EA6B03BE577F2E744640A557 /* ofGstVideoPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 161677514B5A7F41CC4D5133 /* ofGstVideoPlayer.cpp */; };
+		EFF44E8E264F0AD343D1E018 /* ofGstUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EF80366647ACFEB44E48FA6 /* ofGstUtils.cpp */; };
+		F19063B0EC4D063E8E2588EC /* ofxGStreamer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACDA7C81A6F82A656A6940BC /* ofxGStreamer.cpp */; };
+		F1E8DE8734BA6F69A5112FA8 /* ofxUIBaseDraws.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28155024C27152A66926B553 /* ofxUIBaseDraws.cpp */; };
+		F392A99D83698FC099127880 /* ofxUIDropDownList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31517A9D3D67D9C054954DC5 /* ofxUIDropDownList.cpp */; };
+		F440B307990F8F5CE40B9111 /* ofxUIMovingGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7965EE214E4C332003852642 /* ofxUIMovingGraph.cpp */; };
+		F8D05F7C7F785CE323983B47 /* ofxUITextInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C7032F68D99A145A53CB6F /* ofxUITextInput.cpp */; };
+		F9C20834354ACC8337320B8C /* ofxUIMultiImageToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C5ED4467DFF0AC3482E9362 /* ofxUIMultiImageToggle.cpp */; };
+		FB84AAF8D1B7A95266DB5C09 /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21BDE665988474F1B1F4D302 /* jsoncpp.cpp */; };
+		FB8AA9FA6535767BE31806BC /* ofxUIImageToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B848522CCA3A75ABD56752C9 /* ofxUIImageToggle.cpp */; };
+		FBD0CD0AFE3849C14E829CAF /* ofxUIImageSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F60B902BFFD95E99AAB34 /* ofxUIImageSampler.cpp */; };
+		FE0F1DB69ACCD163E9DA2A15 /* ofxUIRotarySlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64F3DE24F191ECED9DBE903C /* ofxUIRotarySlider.cpp */; };
+		FFD1EBFCA24DFB4E4427B4FE /* ofxUILabelButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9A4454B00CCFD7265D3CA85 /* ofxUILabelButton.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9EFEBB181AB8443B00659E65 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data;
+			dstSubfolderSpec = 7;
+			files = (
+				9EFEBB191AB8444800659E65 /* playersettings.xml in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/static;
+			dstSubfolderSpec = 7;
+			files = (
+				9EFEBB0F1AB8441C00659E65 /* fonts.xml in CopyFiles */,
+				9EFEBB121AB8442200659E65 /* not-found.m4v in CopyFiles */,
+				9EFEBB131AB8442400659E65 /* not-found.mov in CopyFiles */,
+				9EFEBB161AB8442800659E65 /* Roboto-Medium.ttf in CopyFiles */,
+				9EFEBB171AB8442A00659E65 /* sync.png in CopyFiles */,
+				9EFEBB151AB8442700659E65 /* Roboto-Gui.ttf in CopyFiles */,
+				9EFEBB101AB8441F00659E65 /* gui.png in CopyFiles */,
+				9EFEBB141AB8442500659E65 /* not-found.mp4 in CopyFiles */,
+				9EFEBB111AB8442100659E65 /* logo.png in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01DCC0911400F9ACF5B65578 /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		02677FA320D6C63B228A7562 /* ofxUIWidgetWithLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWidgetWithLabel.h; path = ../../../addons/ofxUI/src/ofxUIWidgetWithLabel.h; sourceTree = SOURCE_ROOT; };
+		02FF3B8D243CFB85AE0909EB /* ofxUI2DGraph.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUI2DGraph.cpp; path = ../../../addons/ofxUI/src/ofxUI2DGraph.cpp; sourceTree = SOURCE_ROOT; };
+		0515C14AC6601810E14A06E9 /* unchecked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = unchecked.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/include/utf8/unchecked.h; sourceTree = SOURCE_ROOT; };
+		06C7032F68D99A145A53CB6F /* ofxUITextInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUITextInput.cpp; path = ../../../addons/ofxUI/src/ofxUITextInput.cpp; sourceTree = SOURCE_ROOT; };
+		08A9C84B3CA68561BE01FF37 /* ofxUIWidget.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIWidget.cpp; path = ../../../addons/ofxUI/src/ofxUIWidget.cpp; sourceTree = SOURCE_ROOT; };
+		093C39E85E4407D3C432539E /* ofxFontStash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxFontStash.h; path = ../../../addons/ofxFontStash/src/ofxFontStash.h; sourceTree = SOURCE_ROOT; };
+		0D6768C572B6CA49227C29EA /* ofxUINumberDialer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUINumberDialer.cpp; path = ../../../addons/ofxUI/src/ofxUINumberDialer.cpp; sourceTree = SOURCE_ROOT; };
+		0DE8B77977749C1835A9472B /* ofxUISlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISlider.cpp; path = ../../../addons/ofxUI/src/ofxUISlider.cpp; sourceTree = SOURCE_ROOT; };
+		11D8E2992E2E3FC07AE1D0E5 /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/core.h; sourceTree = SOURCE_ROOT; };
+		1553D7111BCBE7834BCC0784 /* ofxUI2DPad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUI2DPad.cpp; path = ../../../addons/ofxUI/src/ofxUI2DPad.cpp; sourceTree = SOURCE_ROOT; };
+		15C99204FF4D8D72AD034B63 /* ofxUINumberDialer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUINumberDialer.h; path = ../../../addons/ofxUI/src/ofxUINumberDialer.h; sourceTree = SOURCE_ROOT; };
+		161677514B5A7F41CC4D5133 /* ofGstVideoPlayer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofGstVideoPlayer.cpp; path = ../../../libs/openFrameworks/video/ofGstVideoPlayer.cpp; sourceTree = SOURCE_ROOT; };
+		1645F56257269CD0356320BD /* ofxJSON.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxJSON.h; path = ../../../addons/ofxJSON/src/ofxJSON.h; sourceTree = SOURCE_ROOT; };
+		17E06821FB98542FDB806E50 /* ofxUIMultiImageButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMultiImageButton.cpp; path = ../../../addons/ofxUI/src/ofxUIMultiImageButton.cpp; sourceTree = SOURCE_ROOT; };
+		1902452F5E510A2DBC1E5BD6 /* ofxUIMultiImageToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIMultiImageToggle.h; path = ../../../addons/ofxUI/src/ofxUIMultiImageToggle.h; sourceTree = SOURCE_ROOT; };
+		1C085E327DAB912CFA2A443D /* ofxTCPServer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPServer.cpp; path = ../../../addons/ofxNetwork/src/ofxTCPServer.cpp; sourceTree = SOURCE_ROOT; };
+		1C43CDB79BF40EA7424B9680 /* ofxUISuperCanvas.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISuperCanvas.h; path = ../../../addons/ofxUI/src/ofxUISuperCanvas.h; sourceTree = SOURCE_ROOT; };
+		1C5ED4467DFF0AC3482E9362 /* ofxUIMultiImageToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMultiImageToggle.cpp; path = ../../../addons/ofxUI/src/ofxUIMultiImageToggle.cpp; sourceTree = SOURCE_ROOT; };
+		1DFA26F2C6BBD1B8AC24C0B1 /* ofxNetworkUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetworkUtils.h; path = ../../../addons/ofxNetwork/src/ofxNetworkUtils.h; sourceTree = SOURCE_ROOT; };
+		1E29C7E8C47E3E2DB1C58766 /* ofxUIRectangle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIRectangle.h; path = ../../../addons/ofxUI/src/ofxUIRectangle.h; sourceTree = SOURCE_ROOT; };
+		1EE77CC72B6BF6921CD961C9 /* ofUTF8.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofUTF8.h; path = ../../../addons/ofxUnicode/src/ofUTF8.h; sourceTree = SOURCE_ROOT; };
+		21BDE665988474F1B1F4D302 /* jsoncpp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = jsoncpp.cpp; path = ../../../addons/ofxJSON/libs/jsoncpp/src/jsoncpp.cpp; sourceTree = SOURCE_ROOT; };
+		23FA31CAEA236B2C1E218497 /* ofxUIWidgets.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWidgets.h; path = ../../../addons/ofxUI/src/ofxUIWidgets.h; sourceTree = SOURCE_ROOT; };
+		2556100026B425E8370BCF75 /* ofxUICircleSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUICircleSlider.cpp; path = ../../../addons/ofxUI/src/ofxUICircleSlider.cpp; sourceTree = SOURCE_ROOT; };
+		26207A0EB54CBAAF59F96A82 /* checked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = checked.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/checked.h; sourceTree = SOURCE_ROOT; };
+		2689C5C8A97002C218125F2F /* ofxUIImageSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIImageSlider.cpp; sourceTree = SOURCE_ROOT; };
+		26A541233BC6F736E758F718 /* ofxJSONElement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxJSONElement.h; path = ../../../addons/ofxJSON/src/ofxJSONElement.h; sourceTree = SOURCE_ROOT; };
+		26EF3E71A07C6948EAF6709E /* ofxTCPManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTCPManager.h; path = ../../../addons/ofxNetwork/src/ofxTCPManager.h; sourceTree = SOURCE_ROOT; };
+		28155024C27152A66926B553 /* ofxUIBaseDraws.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIBaseDraws.cpp; path = ../../../addons/ofxUI/src/ofxUIBaseDraws.cpp; sourceTree = SOURCE_ROOT; };
+		2A290CAAF51BCF4C00277C55 /* ofTextConverter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofTextConverter.h; path = ../../../addons/ofxUnicode/src/ofTextConverter.h; sourceTree = SOURCE_ROOT; };
+		2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
+		2BE7216430113F333B8351ED /* ofxUIMinimalSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMinimalSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIMinimalSlider.cpp; sourceTree = SOURCE_ROOT; };
+		2C7CF000B7B4F782C187C353 /* json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = json.h; path = ../../../addons/ofxJSON/libs/jsoncpp/include/json/json.h; sourceTree = SOURCE_ROOT; };
+		2D394124F88F348AA4142DCF /* ofxUIImageToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageToggle.h; path = ../../../addons/ofxUI/src/ofxUIImageToggle.h; sourceTree = SOURCE_ROOT; };
+		2DD185513A2875EC8A078670 /* ofxUIBiLabelSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIBiLabelSlider.h; path = ../../../addons/ofxUI/src/ofxUIBiLabelSlider.h; sourceTree = SOURCE_ROOT; };
+		2E0D84EF6FDDA146459B2400 /* unchecked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = unchecked.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/unchecked.h; sourceTree = SOURCE_ROOT; };
+		2F519EB3B0DCD7378FB86ABE /* ofxUDPManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUDPManager.h; path = ../../../addons/ofxNetwork/src/ofxUDPManager.h; sourceTree = SOURCE_ROOT; };
+		30841703B7AC8487D16FB4AA /* ofxTCPServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTCPServer.h; path = ../../../addons/ofxNetwork/src/ofxTCPServer.h; sourceTree = SOURCE_ROOT; };
+		30CBAAEC78A0E9EBBB10A05A /* ofxUISpacer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISpacer.cpp; path = ../../../addons/ofxUI/src/ofxUISpacer.cpp; sourceTree = SOURCE_ROOT; };
+		31517A9D3D67D9C054954DC5 /* ofxUIDropDownList.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIDropDownList.cpp; path = ../../../addons/ofxUI/src/ofxUIDropDownList.cpp; sourceTree = SOURCE_ROOT; };
+		320D5EBCA33717CE18A5A084 /* checked.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = checked.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/include/utf8/checked.h; sourceTree = SOURCE_ROOT; };
+		32BD050A579633ADBCA5AF6B /* ofxUIWidget.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWidget.h; path = ../../../addons/ofxUI/src/ofxUIWidget.h; sourceTree = SOURCE_ROOT; };
+		334840CA6B3402C8C30CAC4E /* ofxUIOFWrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIOFWrapper.h; path = ../../../addons/ofxUI/src/ofxUIOFWrapper.h; sourceTree = SOURCE_ROOT; };
+		35BB9BB90DBABFD3B39F8DB6 /* ofxUDPManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUDPManager.cpp; path = ../../../addons/ofxNetwork/src/ofxUDPManager.cpp; sourceTree = SOURCE_ROOT; };
+		38EBD5650A3BF5A499B07525 /* ofxUISuperCanvas.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISuperCanvas.cpp; path = ../../../addons/ofxUI/src/ofxUISuperCanvas.cpp; sourceTree = SOURCE_ROOT; };
+		3C9066FB257B904A547019ED /* ofxUIDragableLabelButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIDragableLabelButton.h; path = ../../../addons/ofxUI/src/ofxUIDragableLabelButton.h; sourceTree = SOURCE_ROOT; };
+		4117B8C24D49837D3DF9C23B /* ofxUIToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIToggle.h; path = ../../../addons/ofxUI/src/ofxUIToggle.h; sourceTree = SOURCE_ROOT; };
+		427CFB8DEC529175DE5A1BE5 /* ofxGStreamer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGStreamer.h; path = ../../../addons/ofxGStreamer/src/ofxGStreamer.h; sourceTree = SOURCE_ROOT; };
+		45FD7CA9F83C2CD563A7A5F4 /* ofUTF8.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofUTF8.cpp; path = ../../../addons/ofxUnicode/src/ofUTF8.cpp; sourceTree = SOURCE_ROOT; };
+		470B5D2AC2F616D10B2E6025 /* ofxUISlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISlider.h; path = ../../../addons/ofxUI/src/ofxUISlider.h; sourceTree = SOURCE_ROOT; };
+		48CCCEA0C681DE8B4945111B /* ofxUIToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIToggle.cpp; path = ../../../addons/ofxUI/src/ofxUIToggle.cpp; sourceTree = SOURCE_ROOT; };
+		4AEA0D08C3B0323FEDC8D974 /* ofxUIImageSampler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageSampler.h; path = ../../../addons/ofxUI/src/ofxUIImageSampler.h; sourceTree = SOURCE_ROOT; };
+		4C9B919B991B4E45BC5DC0DB /* ofxUIRadio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIRadio.h; path = ../../../addons/ofxUI/src/ofxUIRadio.h; sourceTree = SOURCE_ROOT; };
+		4D902D60E5CCFA9F2554BC7C /* ofxUIValuePlotter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIValuePlotter.cpp; path = ../../../addons/ofxUI/src/ofxUIValuePlotter.cpp; sourceTree = SOURCE_ROOT; };
+		4ED7BC3AF72F6BE8F0917A30 /* ofxUIImage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImage.h; path = ../../../addons/ofxUI/src/ofxUIImage.h; sourceTree = SOURCE_ROOT; };
+		4EF80366647ACFEB44E48FA6 /* ofGstUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofGstUtils.cpp; path = ../../../libs/openFrameworks/video/ofGstUtils.cpp; sourceTree = SOURCE_ROOT; };
+		4FF2F2D5A01ADA37A9ADE20F /* ofxUICanvas.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUICanvas.h; path = ../../../addons/ofxUI/src/ofxUICanvas.h; sourceTree = SOURCE_ROOT; };
+		50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
+		531D8D09739D338239967B3A /* ofxUIDropDownList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIDropDownList.h; path = ../../../addons/ofxUI/src/ofxUIDropDownList.h; sourceTree = SOURCE_ROOT; };
+		5613D5D24B00D8AD909F7E6A /* ofxUISortableList.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISortableList.cpp; path = ../../../addons/ofxUI/src/ofxUISortableList.cpp; sourceTree = SOURCE_ROOT; };
+		5AD807D1AF254F978AB20B1C /* ofxUIWidgetWithLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIWidgetWithLabel.cpp; path = ../../../addons/ofxUI/src/ofxUIWidgetWithLabel.cpp; sourceTree = SOURCE_ROOT; };
+		5C48E3511951BB86FA9AA642 /* ofxUIMovingGraph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIMovingGraph.h; path = ../../../addons/ofxUI/src/ofxUIMovingGraph.h; sourceTree = SOURCE_ROOT; };
+		5E62D62D32EFCA8D05DDAD1A /* ofxUIWrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWrapper.h; path = ../../../addons/ofxUI/src/ofxUIWrapper.h; sourceTree = SOURCE_ROOT; };
+		60D80F2B6DD0B2BD8186BADD /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/include/utf8/core.h; sourceTree = SOURCE_ROOT; };
+		61313493CDB52744E22A604D /* json-forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "json-forwards.h"; path = "../../../addons/ofxJSON/libs/jsoncpp/include/json/json-forwards.h"; sourceTree = SOURCE_ROOT; };
+		6248640C06B47042BB5BD3F2 /* ofxUILabelToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUILabelToggle.h; path = ../../../addons/ofxUI/src/ofxUILabelToggle.h; sourceTree = SOURCE_ROOT; };
+		64C6F7AD018FFD34C7ABB6F2 /* ofxUI.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUI.h; path = ../../../addons/ofxUI/src/ofxUI.h; sourceTree = SOURCE_ROOT; };
+		64F3DE24F191ECED9DBE903C /* ofxUIRotarySlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIRotarySlider.cpp; path = ../../../addons/ofxUI/src/ofxUIRotarySlider.cpp; sourceTree = SOURCE_ROOT; };
+		653CFAE31336DAA04B1F1503 /* ofxUI2DGraph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUI2DGraph.h; path = ../../../addons/ofxUI/src/ofxUI2DGraph.h; sourceTree = SOURCE_ROOT; };
+		664D65407BE633C038FA9498 /* ofxUIFPSSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIFPSSlider.h; path = ../../../addons/ofxUI/src/ofxUIFPSSlider.h; sourceTree = SOURCE_ROOT; };
+		702A2528CA64B397E9B91ABE /* ofxUIToggleMatrix.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIToggleMatrix.cpp; path = ../../../addons/ofxUI/src/ofxUIToggleMatrix.cpp; sourceTree = SOURCE_ROOT; };
+		76AF3B44E0E2FA8BFBD5F592 /* ofxUILabelToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUILabelToggle.cpp; path = ../../../addons/ofxUI/src/ofxUILabelToggle.cpp; sourceTree = SOURCE_ROOT; };
+		7965EE214E4C332003852642 /* ofxUIMovingGraph.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMovingGraph.cpp; path = ../../../addons/ofxUI/src/ofxUIMovingGraph.cpp; sourceTree = SOURCE_ROOT; };
+		7E7E592342D8B7FB73A6F64D /* ofxUIFPSSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIFPSSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIFPSSlider.cpp; sourceTree = SOURCE_ROOT; };
+		8178EB9AA3C0268331AF3AF3 /* ofxUIToggleMatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIToggleMatrix.h; path = ../../../addons/ofxUI/src/ofxUIToggleMatrix.h; sourceTree = SOURCE_ROOT; };
+		828EDF7F6C239EA7B17F32F0 /* ofxUIRectangle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIRectangle.cpp; path = ../../../addons/ofxUI/src/ofxUIRectangle.cpp; sourceTree = SOURCE_ROOT; };
+		832BDC407620CDBA568B713D /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
+		856BF5AB0322D0689EE63829 /* ofxUIRangeSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIRangeSlider.h; path = ../../../addons/ofxUI/src/ofxUIRangeSlider.h; sourceTree = SOURCE_ROOT; };
+		87035EFE3D4427294D4D1338 /* ofxUIUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIUtils.h; path = ../../../addons/ofxUI/src/ofxUIUtils.h; sourceTree = SOURCE_ROOT; };
+		876BBA9542E267584885CAD8 /* ofxUIBiLabelSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIBiLabelSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIBiLabelSlider.cpp; sourceTree = SOURCE_ROOT; };
+		885850B62FAD08EB1D2F0BF4 /* ofxUIRotarySlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIRotarySlider.h; path = ../../../addons/ofxUI/src/ofxUIRotarySlider.h; sourceTree = SOURCE_ROOT; };
+		8B5F60B902BFFD95E99AAB34 /* ofxUIImageSampler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageSampler.cpp; path = ../../../addons/ofxUI/src/ofxUIImageSampler.cpp; sourceTree = SOURCE_ROOT; };
+		8BF1B7E7C1C21FE45AB73E04 /* ofTextConverter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofTextConverter.cpp; path = ../../../addons/ofxUnicode/src/ofTextConverter.cpp; sourceTree = SOURCE_ROOT; };
+		8F8238006E98A8E39851968C /* ofxUIButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIButton.cpp; path = ../../../addons/ofxUI/src/ofxUIButton.cpp; sourceTree = SOURCE_ROOT; };
+		9345327AA463407B3DADBADE /* ofxUIWaveform.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIWaveform.cpp; path = ../../../addons/ofxUI/src/ofxUIWaveform.cpp; sourceTree = SOURCE_ROOT; };
+		938F5A098A216B403906129C /* ofxUIImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImage.cpp; path = ../../../addons/ofxUI/src/ofxUIImage.cpp; sourceTree = SOURCE_ROOT; };
+		961DE8B564EF22E65C9480AE /* ofxUI2DPad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUI2DPad.h; path = ../../../addons/ofxUI/src/ofxUI2DPad.h; sourceTree = SOURCE_ROOT; };
+		973BD95D5ED93E71B227038E /* utf8.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = utf8.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8.h; sourceTree = SOURCE_ROOT; };
+		9B3F7D0AAB9DF619553ADA1B /* fontstash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = fontstash.h; path = ../../../addons/ofxFontStash/libs/fontstash/src/fontstash.h; sourceTree = SOURCE_ROOT; };
+		9D33A3E929B0B5D9C002E30E /* ofxUIRadio.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIRadio.cpp; path = ../../../addons/ofxUI/src/ofxUIRadio.cpp; sourceTree = SOURCE_ROOT; };
+		9EFEB9A61AB83F2400659E65 /* configThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = configThread.h; path = ../../../../../player/src/configThread.h; sourceTree = "<group>"; };
+		9EFEB9A71AB83F2400659E65 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../../../player/src/main.cpp; sourceTree = "<group>"; };
+		9EFEB9A81AB83F2400659E65 /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofApp.cpp; path = ../../../../../player/src/ofApp.cpp; sourceTree = "<group>"; };
+		9EFEB9A91AB83F2400659E65 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = ../../../../../player/src/ofApp.h; sourceTree = "<group>"; };
+		9EFEB9AA1AB83F2400659E65 /* subtitleThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = subtitleThread.h; path = ../../../../../player/src/subtitleThread.h; sourceTree = "<group>"; };
+		9EFEB9AB1AB83F2400659E65 /* syncThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = syncThread.h; path = ../../../../../player/src/syncThread.h; sourceTree = "<group>"; };
+		9EFEB9AC1AB83F2400659E65 /* threadedLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadedLoader.h; path = ../../../../../player/src/threadedLoader.h; sourceTree = "<group>"; };
+		9EFEB9AD1AB83F2400659E65 /* threadedSoundplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = threadedSoundplayer.h; path = ../../../../../player/src/threadedSoundplayer.h; sourceTree = "<group>"; };
+		9EFEB9B11AB8414300659E65 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9EFEB9B21AB8414300659E65 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9EFEB9B31AB8414300659E65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9EFEB9B41AB8414300659E65 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = ../../../../../../../../../../System/Library/Frameworks/Accelerate.framework; sourceTree = "<group>"; };
+		9EFEB9B51AB8414300659E65 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = ../../../../../../../../../../System/Library/Frameworks/AppKit.framework; sourceTree = "<group>"; };
+		9EFEB9B61AB8414300659E65 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../../../../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
+		9EFEB9B71AB8414300659E65 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = ../../../../../../../../../../System/Library/Frameworks/IOKit.framework; sourceTree = "<group>"; };
+		9EFEB9B81AB8414300659E65 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = ../../../../../../../../../../System/Library/Frameworks/AGL.framework; sourceTree = "<group>"; };
+		9EFEB9B91AB8414300659E65 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = ../../../../../../../../../../System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<group>"; };
+		9EFEB9BA1AB8414300659E65 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../../../../../../../System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
+		9EFEB9BB1AB8414300659E65 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = ../../../../../../../../../../System/Library/Frameworks/CoreAudio.framework; sourceTree = "<group>"; };
+		9EFEB9BC1AB8414300659E65 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../../../../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
+		9EFEB9BD1AB8414300659E65 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = ../../../../../../../../../../System/Library/Frameworks/CoreServices.framework; sourceTree = "<group>"; };
+		9EFEB9BE1AB8414300659E65 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
+		9EFEB9BF1AB8414300659E65 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = ../../../../../../../../../../System/Library/Frameworks/QuickTime.framework; sourceTree = "<group>"; };
+		9EFEB9C01AB8414300659E65 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = ../../../../../../../../../../System/Library/Frameworks/CoreVideo.framework; sourceTree = "<group>"; };
+		9EFEB9C11AB8414300659E65 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = ../../../../../../../../../../System/Library/Frameworks/QTKit.framework; sourceTree = "<group>"; };
+		9EFEB9D51AB8440F00659E65 /* 016fb895038edda1666d573952772674-bukarest-mango_nah_und_lift.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "016fb895038edda1666d573952772674-bukarest-mango_nah_und_lift.mov"; sourceTree = "<group>"; };
+		9EFEB9D61AB8440F00659E65 /* 03dae535be2b05738a2339ee7a939659-venus_grader_block_am_strand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "03dae535be2b05738a2339ee7a939659-venus_grader_block_am_strand.mov"; sourceTree = "<group>"; };
+		9EFEB9D71AB8440F00659E65 /* 05dbbe1f45de06a4420e393aaf4cbef6-punat_berg_stein1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "05dbbe1f45de06a4420e393aaf4cbef6-punat_berg_stein1.mov"; sourceTree = "<group>"; };
+		9EFEB9D81AB8440F00659E65 /* 05dfb496fff87b48b3c38438afda6d04-faehre_cres_leute2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "05dfb496fff87b48b3c38438afda6d04-faehre_cres_leute2.mov"; sourceTree = "<group>"; };
+		9EFEB9D91AB8440F00659E65 /* 064780affefcaf401a2bca17f72e1497-PLN_06_08_1_13.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "064780affefcaf401a2bca17f72e1497-PLN_06_08_1_13.mov"; sourceTree = "<group>"; };
+		9EFEB9DA1AB8440F00659E65 /* 06b69fe894c962f642418382662f69e3-bukarest-schoenes_muster.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "06b69fe894c962f642418382662f69e3-bukarest-schoenes_muster.mov"; sourceTree = "<group>"; };
+		9EFEB9DB1AB8440F00659E65 /* 07a862efd37a7ee61cc6e802fe77a0ae-turkei_rohbauten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "07a862efd37a7ee61cc6e802fe77a0ae-turkei_rohbauten.mov"; sourceTree = "<group>"; };
+		9EFEB9DC1AB8440F00659E65 /* 07e51994851c72ddaa3c7bc113435f60-Clip_33.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "07e51994851c72ddaa3c7bc113435f60-Clip_33.mov"; sourceTree = "<group>"; };
+		9EFEB9DD1AB8440F00659E65 /* 0818be5e28f86a665b65fcc54290c189-punat_berg_stein2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "0818be5e28f86a665b65fcc54290c189-punat_berg_stein2.mov"; sourceTree = "<group>"; };
+		9EFEB9DE1AB8440F00659E65 /* 084f55f429a1b897ca04c2c485c26d54-neptun_schrift_braserie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "084f55f429a1b897ca04c2c485c26d54-neptun_schrift_braserie.mov"; sourceTree = "<group>"; };
+		9EFEB9DF1AB8440F00659E65 /* 09177ecbab67c60a801a7802ed620c82-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "09177ecbab67c60a801a7802ed620c82-text.txt"; sourceTree = "<group>"; };
+		9EFEB9E01AB8440F00659E65 /* 0b89c5f86cc5426bd4657080c401d4fd-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "0b89c5f86cc5426bd4657080c401d4fd-text.txt"; sourceTree = "<group>"; };
+		9EFEB9E11AB8440F00659E65 /* 0ce37dc7f748e0be15541cbb1df0c8be-154e894099b3efb79914c316f488dea9.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "0ce37dc7f748e0be15541cbb1df0c8be-154e894099b3efb79914c316f488dea9.mov"; sourceTree = "<group>"; };
+		9EFEB9E21AB8440F00659E65 /* 0ce37dc7f748e0be15541cbb1df0c8be-venus_kioske_am_strand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "0ce37dc7f748e0be15541cbb1df0c8be-venus_kioske_am_strand.mov"; sourceTree = "<group>"; };
+		9EFEB9E31AB8440F00659E65 /* 0e80e67d4c1fd6b9f2e10598f095c36b-belgrad_donau_tot._oben.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "0e80e67d4c1fd6b9f2e10598f095c36b-belgrad_donau_tot._oben.mov"; sourceTree = "<group>"; };
+		9EFEB9E41AB8440F00659E65 /* 0e8a3a7d48bab355f6a1c611dff02c93-belgrad_donau_von_hinten_ht.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "0e8a3a7d48bab355f6a1c611dff02c93-belgrad_donau_von_hinten_ht.mov"; sourceTree = "<group>"; };
+		9EFEB9E51AB8440F00659E65 /* 100517090774388bfd628e19c4a4e508-mamaja-_blaue_wasserrutsche.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "100517090774388bfd628e19c4a4e508-mamaja-_blaue_wasserrutsche.mov"; sourceTree = "<group>"; };
+		9EFEB9E61AB8440F00659E65 /* 122b37f43671dc326ccf975879c8e42b-staribaska_fels2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "122b37f43671dc326ccf975879c8e42b-staribaska_fels2.mov"; sourceTree = "<group>"; };
+		9EFEB9E71AB8440F00659E65 /* 137f49ba41626fadb745cb9de3a02c8a-bukarest-mangoblock_2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "137f49ba41626fadb745cb9de3a02c8a-bukarest-mangoblock_2.mov"; sourceTree = "<group>"; };
+		9EFEB9E81AB8440F00659E65 /* 164183fbfc777ab64c49b5c5fdbed0c2-sunny_side_gelbes_resort,_spiegelungen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "164183fbfc777ab64c49b5c5fdbed0c2-sunny_side_gelbes_resort,_spiegelungen.mov"; sourceTree = "<group>"; };
+		9EFEB9E91AB8440F00659E65 /* 1899ca28980ba4702a5bbd5aa0a7d869-PLN_06_08_1_27.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "1899ca28980ba4702a5bbd5aa0a7d869-PLN_06_08_1_27.mov"; sourceTree = "<group>"; };
+		9EFEB9EA1AB8440F00659E65 /* 19641c0d606d008fa21c9842466baa3f-neptun_zugeklebte_schrift.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "19641c0d606d008fa21c9842466baa3f-neptun_zugeklebte_schrift.mov"; sourceTree = "<group>"; };
+		9EFEB9EB1AB8440F00659E65 /* 197b15af426fbb1c1aaad2a775bcdfd3-turkei_verpackte_stuhle.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "197b15af426fbb1c1aaad2a775bcdfd3-turkei_verpackte_stuhle.mov"; sourceTree = "<group>"; };
+		9EFEB9EC1AB8440F00659E65 /* 1e267525c6d115fa224dc0afb7908788-PLN_06_08_1_6.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "1e267525c6d115fa224dc0afb7908788-PLN_06_08_1_6.mov"; sourceTree = "<group>"; };
+		9EFEB9ED1AB8440F00659E65 /* 1eede3812cf8466a02df1d1737a661c3-mamaja-_eingehulltes_gebaude.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "1eede3812cf8466a02df1d1737a661c3-mamaja-_eingehulltes_gebaude.mov"; sourceTree = "<group>"; };
+		9EFEB9EE1AB8440F00659E65 /* 1fea80b513aed3aca5fa92bfd8918368-ins-Clip_02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1fea80b513aed3aca5fa92bfd8918368-ins-Clip_02.mp4"; sourceTree = "<group>"; };
+		9EFEB9EF1AB8440F00659E65 /* 20663e3eab134cf9ba2a6f4ee8cf998d-mamaja-_abgefuckter_club-eingang.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "20663e3eab134cf9ba2a6f4ee8cf998d-mamaja-_abgefuckter_club-eingang.mov"; sourceTree = "<group>"; };
+		9EFEB9F01AB8440F00659E65 /* 230555ac312914e62326e9d7e477700e-PLN_06_08_1_30.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "230555ac312914e62326e9d7e477700e-PLN_06_08_1_30.mov"; sourceTree = "<group>"; };
+		9EFEB9F11AB8440F00659E65 /* 2495b762f96adc7794ac779fd13ffc74-golden_sands_leere_gasse.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2495b762f96adc7794ac779fd13ffc74-golden_sands_leere_gasse.mov"; sourceTree = "<group>"; };
+		9EFEB9F21AB8440F00659E65 /* 25320dcb0b014b8ef33332c61f650f82-6152bb9395b560d1d3a9d67396c251d3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "25320dcb0b014b8ef33332c61f650f82-6152bb9395b560d1d3a9d67396c251d3.mov"; sourceTree = "<group>"; };
+		9EFEB9F31AB8440F00659E65 /* 25320dcb0b014b8ef33332c61f650f82-neptun_restaurant_und_fenster.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "25320dcb0b014b8ef33332c61f650f82-neptun_restaurant_und_fenster.mov"; sourceTree = "<group>"; };
+		9EFEB9F41AB8440F00659E65 /* 2787eb81bd18e7f5bcb3f659db558457-cres_boot_1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2787eb81bd18e7f5bcb3f659db558457-cres_boot_1.mov"; sourceTree = "<group>"; };
+		9EFEB9F51AB8440F00659E65 /* 279ccd589f04324713df03ded2232327-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "279ccd589f04324713df03ded2232327-text.txt"; sourceTree = "<group>"; };
+		9EFEB9F61AB8440F00659E65 /* 291c464511163ae133eee105e0a25f0a-saturn_runde_dacher_am_strand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "291c464511163ae133eee105e0a25f0a-saturn_runde_dacher_am_strand.mov"; sourceTree = "<group>"; };
+		9EFEB9F71AB8440F00659E65 /* 2a24b702de2823bc81a380be66240a4a-PLN_06_08_1_12.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2a24b702de2823bc81a380be66240a4a-PLN_06_08_1_12.mov"; sourceTree = "<group>"; };
+		9EFEB9F81AB8440F00659E65 /* 2a3686a86e5f945a4ccc2669d211411d-PLN_06_08_1_22.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2a3686a86e5f945a4ccc2669d211411d-PLN_06_08_1_22.mov"; sourceTree = "<group>"; };
+		9EFEB9F91AB8440F00659E65 /* 2ab02bdb8f4b847e16981bf98badca64-92b442d67fd556457ec8bcedf6d5053b.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2ab02bdb8f4b847e16981bf98badca64-92b442d67fd556457ec8bcedf6d5053b.mov"; sourceTree = "<group>"; };
+		9EFEB9FA1AB8440F00659E65 /* 2ab02bdb8f4b847e16981bf98badca64-PLN_06_08_1_40.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2ab02bdb8f4b847e16981bf98badca64-PLN_06_08_1_40.mov"; sourceTree = "<group>"; };
+		9EFEB9FB1AB8440F00659E65 /* 2aee9d89a0d3ad1e95f8c259761c9b61-belgrad_donau_ht.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2aee9d89a0d3ad1e95f8c259761c9b61-belgrad_donau_ht.mov"; sourceTree = "<group>"; };
+		9EFEB9FC1AB8440F00659E65 /* 2b6a759088019fc78407e41e0e6450a9-PLN_06_08_1_24.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2b6a759088019fc78407e41e0e6450a9-PLN_06_08_1_24.mov"; sourceTree = "<group>"; };
+		9EFEB9FD1AB8440F00659E65 /* 2bc497300aa58e7dd0a4c93ed2806219-mamaja-_abgefuckter_club-weit.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2bc497300aa58e7dd0a4c93ed2806219-mamaja-_abgefuckter_club-weit.mov"; sourceTree = "<group>"; };
+		9EFEB9FE1AB8440F00659E65 /* 2c7dce44acc3e81917a9077ce279daad-novi_beograd_skyline_in_sonne_weit.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2c7dce44acc3e81917a9077ce279daad-novi_beograd_skyline_in_sonne_weit.mov"; sourceTree = "<group>"; };
+		9EFEB9FF1AB8440F00659E65 /* 2c86be7ead76f8a7a2b8be7562f322f5-staribaska_fels6.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2c86be7ead76f8a7a2b8be7562f322f5-staribaska_fels6.mov"; sourceTree = "<group>"; };
+		9EFEBA001AB8440F00659E65 /* 2d41e795e5528924df519dd2de64f730-Clip_62.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2d41e795e5528924df519dd2de64f730-Clip_62.mov"; sourceTree = "<group>"; };
+		9EFEBA011AB8440F00659E65 /* 2d6c2842d9595b41353d54f79ad302ce-staribaska_fels5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2d6c2842d9595b41353d54f79ad302ce-staribaska_fels5.mov"; sourceTree = "<group>"; };
+		9EFEBA021AB8440F00659E65 /* 2dc2e294d334c46c01b2fdcf83b2b88d-sunny_side_fussballer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2dc2e294d334c46c01b2fdcf83b2b88d-sunny_side_fussballer.mov"; sourceTree = "<group>"; };
+		9EFEBA031AB8440F00659E65 /* 2f52d724b5518f0d530fa5dfb34c051d-PLN_06_08_1_39.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "2f52d724b5518f0d530fa5dfb34c051d-PLN_06_08_1_39.mov"; sourceTree = "<group>"; };
+		9EFEBA041AB8440F00659E65 /* 2faeca65d753e83f294ff48f5a1fd302-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2faeca65d753e83f294ff48f5a1fd302-text.txt"; sourceTree = "<group>"; };
+		9EFEBA051AB8440F00659E65 /* 316cb10e4b1ac669ea695b3fe62644f9-mamaja-_rauch_totale.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "316cb10e4b1ac669ea695b3fe62644f9-mamaja-_rauch_totale.mov"; sourceTree = "<group>"; };
+		9EFEBA061AB8440F00659E65 /* 31ed5bc113376d3be0739cad482305ab-belgrad_donau_baum_ht.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "31ed5bc113376d3be0739cad482305ab-belgrad_donau_baum_ht.mov"; sourceTree = "<group>"; };
+		9EFEBA071AB8440F00659E65 /* 33a2c4a3b5e5d0d1dce3334ea465f6a6-novi_beograd_rotlicht.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "33a2c4a3b5e5d0d1dce3334ea465f6a6-novi_beograd_rotlicht.mov"; sourceTree = "<group>"; };
+		9EFEBA081AB8440F00659E65 /* 33a58629f232923ca1ce3c02fa5c9537-bukarest-plastikfolie_trompe_loeil.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "33a58629f232923ca1ce3c02fa5c9537-bukarest-plastikfolie_trompe_loeil.mov"; sourceTree = "<group>"; };
+		9EFEBA091AB8440F00659E65 /* 33c63e1ed073af7da506977985e87f66-bungalow_weit.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "33c63e1ed073af7da506977985e87f66-bungalow_weit.mov"; sourceTree = "<group>"; };
+		9EFEBA0A1AB8440F00659E65 /* 33fe7306ebf0145d7d6d8207a7321bdb-belgrad_donau_waesche_grade.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "33fe7306ebf0145d7d6d8207a7321bdb-belgrad_donau_waesche_grade.mov"; sourceTree = "<group>"; };
+		9EFEBA0B1AB8440F00659E65 /* 352acd4361b810d1d3672e45f298572d-bungalow_aussen_schraeg.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "352acd4361b810d1d3672e45f298572d-bungalow_aussen_schraeg.mov"; sourceTree = "<group>"; };
+		9EFEBA0C1AB8440F00659E65 /* 3668bf78e6e96cc66b63ceeb8099afea-sunny_side_rosa_resort2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3668bf78e6e96cc66b63ceeb8099afea-sunny_side_rosa_resort2.mov"; sourceTree = "<group>"; };
+		9EFEBA0D1AB8440F00659E65 /* 37e1949050cd356b435dec2c8712b771-PLN_06_08_1_4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "37e1949050cd356b435dec2c8712b771-PLN_06_08_1_4.mov"; sourceTree = "<group>"; };
+		9EFEBA0E1AB8440F00659E65 /* 3a1bb0e973e1779f93975a6e74dcefd8-golden_sands_minigolf.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3a1bb0e973e1779f93975a6e74dcefd8-golden_sands_minigolf.mov"; sourceTree = "<group>"; };
+		9EFEBA0F1AB8440F00659E65 /* 3a534bcf0d5442ad3d3bc4951c863d70-golden_sands_verpackte_kioske.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3a534bcf0d5442ad3d3bc4951c863d70-golden_sands_verpackte_kioske.mov"; sourceTree = "<group>"; };
+		9EFEBA101AB8440F00659E65 /* 3c933f202ae80f6880bcc93090d56ce8-belgrad_donau_skater.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3c933f202ae80f6880bcc93090d56ce8-belgrad_donau_skater.mov"; sourceTree = "<group>"; };
+		9EFEBA111AB8440F00659E65 /* 3d095fe9bfc5cf81639c9fe74563e85e-turkei_rohbauten_weit.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3d095fe9bfc5cf81639c9fe74563e85e-turkei_rohbauten_weit.mov"; sourceTree = "<group>"; };
+		9EFEBA121AB8440F00659E65 /* 3dbd6d7445a3bdc03cec88feb65d77a3-novi_beograd_skyline_in_sonne_nah.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3dbd6d7445a3bdc03cec88feb65d77a3-novi_beograd_skyline_in_sonne_nah.mov"; sourceTree = "<group>"; };
+		9EFEBA131AB8440F00659E65 /* 3e17468d6d232b1e26545ba9fb031c15-venus_wasche_im_wind_mit_hund.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3e17468d6d232b1e26545ba9fb031c15-venus_wasche_im_wind_mit_hund.mov"; sourceTree = "<group>"; };
+		9EFEBA141AB8440F00659E65 /* 3e811163d1d5f17d85121a83365374d0-turkei_neubauten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3e811163d1d5f17d85121a83365374d0-turkei_neubauten.mov"; sourceTree = "<group>"; };
+		9EFEBA151AB8440F00659E65 /* 3ec6af839e6281535972a80b75552f8e-PLN_06_08_1_7.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3ec6af839e6281535972a80b75552f8e-PLN_06_08_1_7.mov"; sourceTree = "<group>"; };
+		9EFEBA161AB8440F00659E65 /* 3fa64f21475ea415e54a8f381dd9d0c1-novi_beograd_skyline.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "3fa64f21475ea415e54a8f381dd9d0c1-novi_beograd_skyline.mov"; sourceTree = "<group>"; };
+		9EFEBA171AB8440F00659E65 /* 40cf4fb1011f5b1828e3020a88aaf59c-belgrad_donau_baum_tot.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "40cf4fb1011f5b1828e3020a88aaf59c-belgrad_donau_baum_tot.mov"; sourceTree = "<group>"; };
+		9EFEBA181AB8440F00659E65 /* 42266b66e61c50d7f416dd590b693455-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "42266b66e61c50d7f416dd590b693455-text.txt"; sourceTree = "<group>"; };
+		9EFEBA191AB8440F00659E65 /* 429260e6578fc544162443c3ea4bf039-rijeka_zug2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "429260e6578fc544162443c3ea4bf039-rijeka_zug2.mov"; sourceTree = "<group>"; };
+		9EFEBA1A1AB8440F00659E65 /* 42eb20adeb5170175b5e2c21240cccc8-PLN_06_08_1_8.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "42eb20adeb5170175b5e2c21240cccc8-PLN_06_08_1_8.mov"; sourceTree = "<group>"; };
+		9EFEBA1B1AB8440F00659E65 /* 454537a8a961199fee8db36581954280-sunny_side_gelbes_resort.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "454537a8a961199fee8db36581954280-sunny_side_gelbes_resort.mov"; sourceTree = "<group>"; };
+		9EFEBA1C1AB8440F00659E65 /* 45c6fd8f59d07c2a86161ecfda565ac0-golden_sands_kiosk_am_meer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "45c6fd8f59d07c2a86161ecfda565ac0-golden_sands_kiosk_am_meer.mov"; sourceTree = "<group>"; };
+		9EFEBA1D1AB8440F00659E65 /* 46490a271f163e58a412252b3a9b01b2-belgrad_idea_und_kleider.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "46490a271f163e58a412252b3a9b01b2-belgrad_idea_und_kleider.mov"; sourceTree = "<group>"; };
+		9EFEBA1E1AB8440F00659E65 /* 46622405890441453b0a9d1e11090f0a-8db085058ed76164ff4e69b025340148.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "46622405890441453b0a9d1e11090f0a-8db085058ed76164ff4e69b025340148.mov"; sourceTree = "<group>"; };
+		9EFEBA1F1AB8440F00659E65 /* 46622405890441453b0a9d1e11090f0a-venus_schrift_restaurant.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "46622405890441453b0a9d1e11090f0a-venus_schrift_restaurant.mov"; sourceTree = "<group>"; };
+		9EFEBA201AB8440F00659E65 /* 468f61f4a317bab8e17ed2f6046cce99-punat_berg_wolken.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "468f61f4a317bab8e17ed2f6046cce99-punat_berg_wolken.mov"; sourceTree = "<group>"; };
+		9EFEBA211AB8440F00659E65 /* 46ebe3a3350e3436cb1e86c8b7b8d385-venus_grun_verhullt_von_innen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "46ebe3a3350e3436cb1e86c8b7b8d385-venus_grun_verhullt_von_innen.mov"; sourceTree = "<group>"; };
+		9EFEBA221AB8440F00659E65 /* 4702c80d234f871c9ad819150ecdd642-belgrad_donau_von_hinten_ganz.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4702c80d234f871c9ad819150ecdd642-belgrad_donau_von_hinten_ganz.mov"; sourceTree = "<group>"; };
+		9EFEBA231AB8440F00659E65 /* 47282c5c3b78832c512e1f733c363bb7-venus_wasche_im_wind.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "47282c5c3b78832c512e1f733c363bb7-venus_wasche_im_wind.mov"; sourceTree = "<group>"; };
+		9EFEBA241AB8440F00659E65 /* 4809401f4e2bf5c473cb2e15abc58582-venus_grun_verhullt_von_aussen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4809401f4e2bf5c473cb2e15abc58582-venus_grun_verhullt_von_aussen.mov"; sourceTree = "<group>"; };
+		9EFEBA251AB8440F00659E65 /* 48710c8bfa906b7ea92299947aad1685-staribaska_fels1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "48710c8bfa906b7ea92299947aad1685-staribaska_fels1.mov"; sourceTree = "<group>"; };
+		9EFEBA261AB8440F00659E65 /* 488ed8d34db1e3eeb91895415c6ab78e-mamaja-_store.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "488ed8d34db1e3eeb91895415c6ab78e-mamaja-_store.mov"; sourceTree = "<group>"; };
+		9EFEBA271AB8440F00659E65 /* 49bc1f6ee70effe05584d705aa4f6186-rijeka_zug.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "49bc1f6ee70effe05584d705aa4f6186-rijeka_zug.mov"; sourceTree = "<group>"; };
+		9EFEBA281AB8440F00659E65 /* 4bb148d434664f51e754af024fe82ffa-mamaja-_eingehulltes_gebaude_mit_menus.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4bb148d434664f51e754af024fe82ffa-mamaja-_eingehulltes_gebaude_mit_menus.mov"; sourceTree = "<group>"; };
+		9EFEBA291AB8440F00659E65 /* 4c0a39e13fc4762791d2a266be3f6613-neptun_hotelfassade2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4c0a39e13fc4762791d2a266be3f6613-neptun_hotelfassade2.mov"; sourceTree = "<group>"; };
+		9EFEBA2A1AB8440F00659E65 /* 4c13c17d9e883032ee85759643308f14-mamaja_grun_eingehulltes_haus.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4c13c17d9e883032ee85759643308f14-mamaja_grun_eingehulltes_haus.mov"; sourceTree = "<group>"; };
+		9EFEBA2B1AB8440F00659E65 /* 4cae6964061ab258124ab3c5504aa0c6-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "4cae6964061ab258124ab3c5504aa0c6-text.txt"; sourceTree = "<group>"; };
+		9EFEBA2C1AB8440F00659E65 /* 4decc026409f69e8a58f216d83d876ad-ins-Clip_04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "4decc026409f69e8a58f216d83d876ad-ins-Clip_04.mp4"; sourceTree = "<group>"; };
+		9EFEBA2D1AB8440F00659E65 /* 4e0fa39ee66e511f0c39f2005c7aa34a-belgrad_donau_von_hinten_nah.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4e0fa39ee66e511f0c39f2005c7aa34a-belgrad_donau_von_hinten_nah.mov"; sourceTree = "<group>"; };
+		9EFEBA2E1AB8440F00659E65 /* 4e9175dfec417bb9647b25002c911d7a-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "4e9175dfec417bb9647b25002c911d7a-text.txt"; sourceTree = "<group>"; };
+		9EFEBA2F1AB8440F00659E65 /* 4ec823680fd68b6eb47654d7767e5c8e-PLN_06_08_1_33.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4ec823680fd68b6eb47654d7767e5c8e-PLN_06_08_1_33.mov"; sourceTree = "<group>"; };
+		9EFEBA301AB8440F00659E65 /* 4f4942571bf166a0ced456495cecafdf-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "4f4942571bf166a0ced456495cecafdf-text.txt"; sourceTree = "<group>"; };
+		9EFEBA311AB8440F00659E65 /* 4f89185a4cfc8affce11fa629360237a-neptun_satellit_nah_und_zoom.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4f89185a4cfc8affce11fa629360237a-neptun_satellit_nah_und_zoom.mov"; sourceTree = "<group>"; };
+		9EFEBA321AB8440F00659E65 /* 4fad98f20ede707200a2b025165c3956-sunny_side_dachdecker.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "4fad98f20ede707200a2b025165c3956-sunny_side_dachdecker.mov"; sourceTree = "<group>"; };
+		9EFEBA331AB8440F00659E65 /* 501dfa40b999f49675229678ea695070-belgrad_donau_ganzer_block_schraeg.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "501dfa40b999f49675229678ea695070-belgrad_donau_ganzer_block_schraeg.mov"; sourceTree = "<group>"; };
+		9EFEBA341AB8440F00659E65 /* 5055365735cce3b9634133ae72ee70a3-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "5055365735cce3b9634133ae72ee70a3-text.txt"; sourceTree = "<group>"; };
+		9EFEBA351AB8440F00659E65 /* 50661f986db30a81c7405e1e0cb5431c-golden_sands_mc_donalds.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "50661f986db30a81c7405e1e0cb5431c-golden_sands_mc_donalds.mov"; sourceTree = "<group>"; };
+		9EFEBA361AB8440F00659E65 /* 518478d9b2bb3a94c03e8a710f4efc2a-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "518478d9b2bb3a94c03e8a710f4efc2a-text.txt"; sourceTree = "<group>"; };
+		9EFEBA371AB8440F00659E65 /* 51ce16c813b739d5d7521f2b5b97565a-PLN_06_08_1_3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "51ce16c813b739d5d7521f2b5b97565a-PLN_06_08_1_3.mov"; sourceTree = "<group>"; };
+		9EFEBA381AB8440F00659E65 /* 52cd02030340d0ea9917eaaeef9efdc2-06690923d108c0e0259ffa993dfeee18.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "52cd02030340d0ea9917eaaeef9efdc2-06690923d108c0e0259ffa993dfeee18.mov"; sourceTree = "<group>"; };
+		9EFEBA391AB8440F00659E65 /* 52cd02030340d0ea9917eaaeef9efdc2-bungalow_innen4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "52cd02030340d0ea9917eaaeef9efdc2-bungalow_innen4.mov"; sourceTree = "<group>"; };
+		9EFEBA3A1AB8440F00659E65 /* 52cd02030340d0ea9917eaaeef9efdc2-e7442cdde2969a4ffb2e43ad9dd4c5f2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "52cd02030340d0ea9917eaaeef9efdc2-e7442cdde2969a4ffb2e43ad9dd4c5f2.mov"; sourceTree = "<group>"; };
+		9EFEBA3B1AB8440F00659E65 /* 52f13ca81ee6de183fe218358976abd9-turkei_meer_durch_restaurant.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "52f13ca81ee6de183fe218358976abd9-turkei_meer_durch_restaurant.mov"; sourceTree = "<group>"; };
+		9EFEBA3C1AB8440F00659E65 /* 53507aa4331b66a2913639d3c727bb25-faehre_cres_ankunft.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "53507aa4331b66a2913639d3c727bb25-faehre_cres_ankunft.mov"; sourceTree = "<group>"; };
+		9EFEBA3D1AB8440F00659E65 /* 53c2a2cb762d23ffc715dd5146b7032c-mamaja-_wc-haus_und_block.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "53c2a2cb762d23ffc715dd5146b7032c-mamaja-_wc-haus_und_block.mov"; sourceTree = "<group>"; };
+		9EFEBA3E1AB8440F00659E65 /* 5672287d604f5fcbbcc9e55815214090-PLN_06_08_1_35.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "5672287d604f5fcbbcc9e55815214090-PLN_06_08_1_35.mov"; sourceTree = "<group>"; };
+		9EFEBA3F1AB8440F00659E65 /* 5796541c406bb4e9e9eb65d88886c0fc-mamaja-_bella_italia.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "5796541c406bb4e9e9eb65d88886c0fc-mamaja-_bella_italia.mov"; sourceTree = "<group>"; };
+		9EFEBA401AB8440F00659E65 /* 59059ba3ea16c796685689f56e5ff4ad-cres_meer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "59059ba3ea16c796685689f56e5ff4ad-cres_meer.mov"; sourceTree = "<group>"; };
+		9EFEBA411AB8440F00659E65 /* 5bad8c950805d1afb29646c219667e08-neptun_treppe_und_baume.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "5bad8c950805d1afb29646c219667e08-neptun_treppe_und_baume.mov"; sourceTree = "<group>"; };
+		9EFEBA421AB8440F00659E65 /* 5c07e1f2be35472c7ea28b5512d5f214-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "5c07e1f2be35472c7ea28b5512d5f214-text.txt"; sourceTree = "<group>"; };
+		9EFEBA431AB8440F00659E65 /* 5c43f7f186e6966e55f032bc06fc8066-PLN_06_08_1_19.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "5c43f7f186e6966e55f032bc06fc8066-PLN_06_08_1_19.mov"; sourceTree = "<group>"; };
+		9EFEBA441AB8440F00659E65 /* 5d2fed5afbf150e2eae344bdcec979f7-PLN_06_08_1_32.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "5d2fed5afbf150e2eae344bdcec979f7-PLN_06_08_1_32.mov"; sourceTree = "<group>"; };
+		9EFEBA451AB8440F00659E65 /* 5e4db5a4c036589bccf43dc78bc581ea-mamaja-_fassade_und_skulptur.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "5e4db5a4c036589bccf43dc78bc581ea-mamaja-_fassade_und_skulptur.mov"; sourceTree = "<group>"; };
+		9EFEBA461AB8440F00659E65 /* 602364e484d86f6fdd0659aeb1df65c8-staribaska_boote3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "602364e484d86f6fdd0659aeb1df65c8-staribaska_boote3.mov"; sourceTree = "<group>"; };
+		9EFEBA471AB8440F00659E65 /* 60472f8726f6dbfa3231f465be78dfdd-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "60472f8726f6dbfa3231f465be78dfdd-text.txt"; sourceTree = "<group>"; };
+		9EFEBA481AB8440F00659E65 /* 61296b0f9c6d50b7888268e43a7a772e-belgrad_donau_ht2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "61296b0f9c6d50b7888268e43a7a772e-belgrad_donau_ht2.mov"; sourceTree = "<group>"; };
+		9EFEBA491AB8440F00659E65 /* 63415ebb987a87ac326f6a69d9144014-mamaja-_allee.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "63415ebb987a87ac326f6a69d9144014-mamaja-_allee.mov"; sourceTree = "<group>"; };
+		9EFEBA4A1AB8440F00659E65 /* 643af538be54ee4b65eb0fb547af692f-d6ac9b7b4c4ced8cda3ea23b14b151cf.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "643af538be54ee4b65eb0fb547af692f-d6ac9b7b4c4ced8cda3ea23b14b151cf.mov"; sourceTree = "<group>"; };
+		9EFEBA4B1AB8440F00659E65 /* 643af538be54ee4b65eb0fb547af692f-venus_hotel_ariana.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "643af538be54ee4b65eb0fb547af692f-venus_hotel_ariana.mov"; sourceTree = "<group>"; };
+		9EFEBA4C1AB8440F00659E65 /* 64657d365c6b7ada476a737d092e1dde-belgrad_donau_baum_ht2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "64657d365c6b7ada476a737d092e1dde-belgrad_donau_baum_ht2.mov"; sourceTree = "<group>"; };
+		9EFEBA4D1AB8440F00659E65 /* 6553a599bcf2b26ba50a2f816d776dc3-krk_meer_boote.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6553a599bcf2b26ba50a2f816d776dc3-krk_meer_boote.mov"; sourceTree = "<group>"; };
+		9EFEBA4E1AB8440F00659E65 /* 662256e9fa4561e11eb6538d3d5cf0f3-venus_blocke_und_tofffahrer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "662256e9fa4561e11eb6538d3d5cf0f3-venus_blocke_und_tofffahrer.mov"; sourceTree = "<group>"; };
+		9EFEBA4F1AB8440F00659E65 /* 664f99ffe91ad3c1caeba66c8d624c00-bukarest-mangoblock.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "664f99ffe91ad3c1caeba66c8d624c00-bukarest-mangoblock.mov"; sourceTree = "<group>"; };
+		9EFEBA501AB8440F00659E65 /* 6736f7c8509c74c511b5b69a23d63b75-Clip_35.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6736f7c8509c74c511b5b69a23d63b75-Clip_35.mov"; sourceTree = "<group>"; };
+		9EFEBA511AB8440F00659E65 /* 6a3fcb7326abaaa2dd0f33780f3b6ba4-turkei_reihe_vogel_auf_mast.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6a3fcb7326abaaa2dd0f33780f3b6ba4-turkei_reihe_vogel_auf_mast.mov"; sourceTree = "<group>"; };
+		9EFEBA521AB8440F00659E65 /* 6acfd7c7012a0d89bf8e9e80a92bf13f-sunny_side_leuchtschrift_.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6acfd7c7012a0d89bf8e9e80a92bf13f-sunny_side_leuchtschrift_.mov"; sourceTree = "<group>"; };
+		9EFEBA531AB8440F00659E65 /* 6ad25a46b8999a8532a2e7d574b8e708-golden_sands_tattoo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6ad25a46b8999a8532a2e7d574b8e708-golden_sands_tattoo.mov"; sourceTree = "<group>"; };
+		9EFEBA541AB8440F00659E65 /* 6aeeb55b5205a7a4aeff3fe669c7b38a-bukarest-blaue_fassade_und_baum.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6aeeb55b5205a7a4aeff3fe669c7b38a-bukarest-blaue_fassade_und_baum.mov"; sourceTree = "<group>"; };
+		9EFEBA551AB8440F00659E65 /* 6b0ef91e18d3e6b8a984a08f6654d3b5-mamaja-_abgefuckter_club-ht.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6b0ef91e18d3e6b8a984a08f6654d3b5-mamaja-_abgefuckter_club-ht.mov"; sourceTree = "<group>"; };
+		9EFEBA561AB8440F00659E65 /* 6b22a4d94e6481b09f554a048294ad49-sunny_side_leuchtschrift_und_blocke.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6b22a4d94e6481b09f554a048294ad49-sunny_side_leuchtschrift_und_blocke.mov"; sourceTree = "<group>"; };
+		9EFEBA571AB8440F00659E65 /* 6b62165a715c6567e0e9afd1f1870ee4-PLN_06_08_1_29.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6b62165a715c6567e0e9afd1f1870ee4-PLN_06_08_1_29.mov"; sourceTree = "<group>"; };
+		9EFEBA581AB8440F00659E65 /* 6bcf54b83b354bcc2a482d448a17554a-PLN_06_08_1_31.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6bcf54b83b354bcc2a482d448a17554a-PLN_06_08_1_31.mov"; sourceTree = "<group>"; };
+		9EFEBA591AB8440F00659E65 /* 6d6ba09a31b6ba75d2f2600a60828ba1-bukarest-muellberg_und_schrift.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6d6ba09a31b6ba75d2f2600a60828ba1-bukarest-muellberg_und_schrift.mov"; sourceTree = "<group>"; };
+		9EFEBA5A1AB8440F00659E65 /* 6decb76f20b1c579d8d7b8b330da2def-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "6decb76f20b1c579d8d7b8b330da2def-text.txt"; sourceTree = "<group>"; };
+		9EFEBA5B1AB8440F00659E65 /* 6f16d83ec5095d5d853b772c8249987e-krk_industry3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6f16d83ec5095d5d853b772c8249987e-krk_industry3.mov"; sourceTree = "<group>"; };
+		9EFEBA5C1AB8440F00659E65 /* 6fcb76d5af538886693309969cd8ad97-cres_boot_3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "6fcb76d5af538886693309969cd8ad97-cres_boot_3.mov"; sourceTree = "<group>"; };
+		9EFEBA5D1AB8440F00659E65 /* 70894db1cdbfd5dd99c82f742f332875-staribasksa_boote2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "70894db1cdbfd5dd99c82f742f332875-staribasksa_boote2.mov"; sourceTree = "<group>"; };
+		9EFEBA5E1AB8440F00659E65 /* 70ac73d54c36fc2da669c7921133b873-neptun_hotelfassade.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "70ac73d54c36fc2da669c7921133b873-neptun_hotelfassade.mov"; sourceTree = "<group>"; };
+		9EFEBA5F1AB8440F00659E65 /* 70ac889b835182e71edc08ed291afea5-punat_berg_1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "70ac889b835182e71edc08ed291afea5-punat_berg_1.mov"; sourceTree = "<group>"; };
+		9EFEBA601AB8440F00659E65 /* 7300a6cfc99a08a8241893d6e09f428f-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "7300a6cfc99a08a8241893d6e09f428f-text.txt"; sourceTree = "<group>"; };
+		9EFEBA611AB8440F00659E65 /* 741ffd6f52c122a8a35f6b4ebffff170-PLN_06_08_1_9.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "741ffd6f52c122a8a35f6b4ebffff170-PLN_06_08_1_9.mov"; sourceTree = "<group>"; };
+		9EFEBA621AB8440F00659E65 /* 74a6461d83c30b581aa51f172c175241-mamaja_mimoza.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "74a6461d83c30b581aa51f172c175241-mamaja_mimoza.mov"; sourceTree = "<group>"; };
+		9EFEBA631AB8440F00659E65 /* 762e389577d1fd98a93cdccafbd90114-Clip_101.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "762e389577d1fd98a93cdccafbd90114-Clip_101.mov"; sourceTree = "<group>"; };
+		9EFEBA641AB8440F00659E65 /* 7834ded50cffde4a12ed4890451cece7-golden_sands_playboy_etc.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "7834ded50cffde4a12ed4890451cece7-golden_sands_playboy_etc.mov"; sourceTree = "<group>"; };
+		9EFEBA651AB8440F00659E65 /* 78f296155c67aa1409ab6088ad052bdd-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "78f296155c67aa1409ab6088ad052bdd-text.txt"; sourceTree = "<group>"; };
+		9EFEBA661AB8440F00659E65 /* 78fae906d5610b06b5bc4a765d53136f-venus_ariana_still.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "78fae906d5610b06b5bc4a765d53136f-venus_ariana_still.mov"; sourceTree = "<group>"; };
+		9EFEBA671AB8440F00659E65 /* 79cb5f04afd6a34edf624654a55237f9-Clip_119.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "79cb5f04afd6a34edf624654a55237f9-Clip_119.mov"; sourceTree = "<group>"; };
+		9EFEBA681AB8440F00659E65 /* 7a0f297aa7d1e2f99cc1c73e5f458053-bungalow_aussen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "7a0f297aa7d1e2f99cc1c73e5f458053-bungalow_aussen.mov"; sourceTree = "<group>"; };
+		9EFEBA691AB8440F00659E65 /* 7b9159477a1573f4b549a5113c8b421d-belgrad_2_hausfrauen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "7b9159477a1573f4b549a5113c8b421d-belgrad_2_hausfrauen.mov"; sourceTree = "<group>"; };
+		9EFEBA6A1AB8440F00659E65 /* 7e6ba24c044bdc9e552ca84e12081b63-mamaja_mann_mit_schaufel.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "7e6ba24c044bdc9e552ca84e12081b63-mamaja_mann_mit_schaufel.mov"; sourceTree = "<group>"; };
+		9EFEBA6B1AB8440F00659E65 /* 812ae6a7f16194d4e4fffad4f89fd1d5-mamaja_bewegter_vorhang.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "812ae6a7f16194d4e4fffad4f89fd1d5-mamaja_bewegter_vorhang.mov"; sourceTree = "<group>"; };
+		9EFEBA6C1AB8440F00659E65 /* 82655a3546090345667264702f13ccad-PLN_06_08_1_18.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "82655a3546090345667264702f13ccad-PLN_06_08_1_18.mov"; sourceTree = "<group>"; };
+		9EFEBA6D1AB8440F00659E65 /* 82d38723e33eed280361d1c8953ea1e5-neptun_hotel_belvedere.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "82d38723e33eed280361d1c8953ea1e5-neptun_hotel_belvedere.mov"; sourceTree = "<group>"; };
+		9EFEBA6E1AB8440F00659E65 /* 8446bfdf15710b5216782ac3a6c5fa89-novi_beograd_totale.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8446bfdf15710b5216782ac3a6c5fa89-novi_beograd_totale.mov"; sourceTree = "<group>"; };
+		9EFEBA6F1AB8440F00659E65 /* 845c025e65b008975bce7b3a736d5199-venus_hotel_ariana_gras_und_bierkisten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "845c025e65b008975bce7b3a736d5199-venus_hotel_ariana_gras_und_bierkisten.mov"; sourceTree = "<group>"; };
+		9EFEBA701AB8440F00659E65 /* 84963c7fa9a7d6d7191c2efffd1bd259-cres_boot_2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "84963c7fa9a7d6d7191c2efffd1bd259-cres_boot_2.mov"; sourceTree = "<group>"; };
+		9EFEBA711AB8440F00659E65 /* 8499d8aee53932bbd84e230679c3e5db-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "8499d8aee53932bbd84e230679c3e5db-text.txt"; sourceTree = "<group>"; };
+		9EFEBA721AB8440F00659E65 /* 84afda46f7f67a741eed5a21e21cb704-mann_in_rotem_hang.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "84afda46f7f67a741eed5a21e21cb704-mann_in_rotem_hang.mov"; sourceTree = "<group>"; };
+		9EFEBA731AB8440F00659E65 /* 84eaa94abea0db30c6df057bd05e5158-bukarest-drehende_hochzeitsdame.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "84eaa94abea0db30c6df057bd05e5158-bukarest-drehende_hochzeitsdame.mov"; sourceTree = "<group>"; };
+		9EFEBA741AB8440F00659E65 /* 8645cccd3bb7de9efc3c150e3d5a4c68-mamaja-_grauer_neubau.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8645cccd3bb7de9efc3c150e3d5a4c68-mamaja-_grauer_neubau.mov"; sourceTree = "<group>"; };
+		9EFEBA751AB8440F00659E65 /* 8648ed9ba283eb57478b106f5bd1e74c-7e1ac621762b8a9207a685e3f05f481d.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8648ed9ba283eb57478b106f5bd1e74c-7e1ac621762b8a9207a685e3f05f481d.mov"; sourceTree = "<group>"; };
+		9EFEBA761AB8440F00659E65 /* 8648ed9ba283eb57478b106f5bd1e74c-PLN_06_08_2_1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8648ed9ba283eb57478b106f5bd1e74c-PLN_06_08_2_1.mov"; sourceTree = "<group>"; };
+		9EFEBA771AB8440F00659E65 /* 88b6421ae3f7f224e0046cf132724e98-bukarest-pepsibuechse.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "88b6421ae3f7f224e0046cf132724e98-bukarest-pepsibuechse.mov"; sourceTree = "<group>"; };
+		9EFEBA781AB8440F00659E65 /* 8b43080cc45195e325b106c3486926e0-9a0b5f93c909ecc6c90383d524034533.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8b43080cc45195e325b106c3486926e0-9a0b5f93c909ecc6c90383d524034533.mov"; sourceTree = "<group>"; };
+		9EFEBA791AB8440F00659E65 /* 8b43080cc45195e325b106c3486926e0-b1ad69ef579d5be9786e573b39b1003b.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8b43080cc45195e325b106c3486926e0-b1ad69ef579d5be9786e573b39b1003b.mov"; sourceTree = "<group>"; };
+		9EFEBA7A1AB8440F00659E65 /* 8b43080cc45195e325b106c3486926e0-PLN_06_08_1_38.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8b43080cc45195e325b106c3486926e0-PLN_06_08_1_38.mov"; sourceTree = "<group>"; };
+		9EFEBA7B1AB8440F00659E65 /* 8b7c725c86c97957fa0c55c755af1383-104698d3f1bde9ab834132da8abb1630.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8b7c725c86c97957fa0c55c755af1383-104698d3f1bde9ab834132da8abb1630.mov"; sourceTree = "<group>"; };
+		9EFEBA7C1AB8440F00659E65 /* 8b7c725c86c97957fa0c55c755af1383-PLN_06_08_1_37.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8b7c725c86c97957fa0c55c755af1383-PLN_06_08_1_37.mov"; sourceTree = "<group>"; };
+		9EFEBA7D1AB8440F00659E65 /* 8b7f396306bf62eb47a5781303d9d694-turkei_reihe_rohbauten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8b7f396306bf62eb47a5781303d9d694-turkei_reihe_rohbauten.mov"; sourceTree = "<group>"; };
+		9EFEBA7E1AB8440F00659E65 /* 8c4d056fb2d59ebcfbdbb84c5ee7ccc1-bungalow_weit2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8c4d056fb2d59ebcfbdbb84c5ee7ccc1-bungalow_weit2.mov"; sourceTree = "<group>"; };
+		9EFEBA7F1AB8440F00659E65 /* 8d34e571f8686c27111cf6cd0b001fec-bukarest-blaue_fassade_und_lampe.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8d34e571f8686c27111cf6cd0b001fec-bukarest-blaue_fassade_und_lampe.mov"; sourceTree = "<group>"; };
+		9EFEBA801AB8440F00659E65 /* 8f3599f53ff9d763934fd572bf91903b-belgrad_donau_waesche_grade_ht.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8f3599f53ff9d763934fd572bf91903b-belgrad_donau_waesche_grade_ht.mov"; sourceTree = "<group>"; };
+		9EFEBA811AB8440F00659E65 /* 8f604b6f08f6db42e7a25f21889e4858-fa4444cb3df3a8836a8f681f55575a0c.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8f604b6f08f6db42e7a25f21889e4858-fa4444cb3df3a8836a8f681f55575a0c.mov"; sourceTree = "<group>"; };
+		9EFEBA821AB8440F00659E65 /* 8f604b6f08f6db42e7a25f21889e4858-PLN_06_08_1_11.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8f604b6f08f6db42e7a25f21889e4858-PLN_06_08_1_11.mov"; sourceTree = "<group>"; };
+		9EFEBA831AB8440F00659E65 /* 8ff87d1eeb8a6a6d2ac761aa97acad10-bakar_mann_in_baugrube.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "8ff87d1eeb8a6a6d2ac761aa97acad10-bakar_mann_in_baugrube.mov"; sourceTree = "<group>"; };
+		9EFEBA841AB8440F00659E65 /* 918b8955107e4040f02877411fa290a1-bukarest-fassade_mit_baum.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "918b8955107e4040f02877411fa290a1-bukarest-fassade_mit_baum.mov"; sourceTree = "<group>"; };
+		9EFEBA851AB8440F00659E65 /* 926987d383a7013df1810091f42c11c2-belgrad_donau_naeher.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "926987d383a7013df1810091f42c11c2-belgrad_donau_naeher.mov"; sourceTree = "<group>"; };
+		9EFEBA861AB8440F00659E65 /* 9395e788d832ef5a5bc7bcb9b7898844-bukarest-graue_fassade.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9395e788d832ef5a5bc7bcb9b7898844-bukarest-graue_fassade.mov"; sourceTree = "<group>"; };
+		9EFEBA871AB8440F00659E65 /* 9453e7ffef56e97e3ecd80a1c5d399e2-belgrad_donau_von_hinten_ganz_schraeg.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9453e7ffef56e97e3ecd80a1c5d399e2-belgrad_donau_von_hinten_ganz_schraeg.mov"; sourceTree = "<group>"; };
+		9EFEBA881AB8440F00659E65 /* 9464610fa3fb262dd391e27abcbed36a-turkei_viele_rohbauten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9464610fa3fb262dd391e27abcbed36a-turkei_viele_rohbauten.mov"; sourceTree = "<group>"; };
+		9EFEBA891AB8440F00659E65 /* 96705b2cfe136fdd1601afe6f6f37064-IMG_6165.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "96705b2cfe136fdd1601afe6f6f37064-IMG_6165.MOV"; sourceTree = "<group>"; };
+		9EFEBA8A1AB8440F00659E65 /* 96cb90c2cb735167e64960cfad5b0796-golden_sands_mc_donalds_und_meer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "96cb90c2cb735167e64960cfad5b0796-golden_sands_mc_donalds_und_meer.mov"; sourceTree = "<group>"; };
+		9EFEBA8B1AB8440F00659E65 /* 989b3cbae5be4e1beb5d519e4738678e-ins-Clip_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "989b3cbae5be4e1beb5d519e4738678e-ins-Clip_01.mp4"; sourceTree = "<group>"; };
+		9EFEBA8C1AB8440F00659E65 /* 9952f345dc4ac003945f14a47cd04969-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "9952f345dc4ac003945f14a47cd04969-text.txt"; sourceTree = "<group>"; };
+		9EFEBA8D1AB8440F00659E65 /* 99bae256ccf83ba11f131ef90a7567db-staribaska_fels3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "99bae256ccf83ba11f131ef90a7567db-staribaska_fels3.mov"; sourceTree = "<group>"; };
+		9EFEBA8E1AB8440F00659E65 /* 9a80ee90ff0674385d1f2b34895710bb-belgrad_idea_oben.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9a80ee90ff0674385d1f2b34895710bb-belgrad_idea_oben.mov"; sourceTree = "<group>"; };
+		9EFEBA8F1AB8440F00659E65 /* 9b65dbf196014a5f2c0a3886d66fd231-belgrad_donau_ganz.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9b65dbf196014a5f2c0a3886d66fd231-belgrad_donau_ganz.mov"; sourceTree = "<group>"; };
+		9EFEBA901AB8440F00659E65 /* 9c3c007a666f3731db175079faf89f84-novi_beograd_abendhimmel.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9c3c007a666f3731db175079faf89f84-novi_beograd_abendhimmel.mov"; sourceTree = "<group>"; };
+		9EFEBA911AB8440F00659E65 /* 9d34db928e50a366353cca77a8755525-PLN_06_08_1_28.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9d34db928e50a366353cca77a8755525-PLN_06_08_1_28.mov"; sourceTree = "<group>"; };
+		9EFEBA921AB8440F00659E65 /* 9d69f11997253776459ca23f1c04f2bc-sunny_side_fussballer1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9d69f11997253776459ca23f1c04f2bc-sunny_side_fussballer1.mov"; sourceTree = "<group>"; };
+		9EFEBA931AB8440F00659E65 /* 9e515e367088607e4a35d6478305035c-punat_haus_1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9e515e367088607e4a35d6478305035c-punat_haus_1.mov"; sourceTree = "<group>"; };
+		9EFEBA941AB8440F00659E65 /* 9f2cc4b275fee5635030e0a33675f7e7-turkei_rohbauten_und_schiff.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "9f2cc4b275fee5635030e0a33675f7e7-turkei_rohbauten_und_schiff.mov"; sourceTree = "<group>"; };
+		9EFEBA951AB8440F00659E65 /* a0d7e51f1036cc3c90f54f4d826a2ddc-PLN_06_08_1_34.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a0d7e51f1036cc3c90f54f4d826a2ddc-PLN_06_08_1_34.mov"; sourceTree = "<group>"; };
+		9EFEBA961AB8440F00659E65 /* a14d4fa6889f7f24830854e04d5c6bba-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "a14d4fa6889f7f24830854e04d5c6bba-text.txt"; sourceTree = "<group>"; };
+		9EFEBA971AB8440F00659E65 /* a1b7561f1164a8f5aebe1ba0db56013c-Clip_46.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a1b7561f1164a8f5aebe1ba0db56013c-Clip_46.mov"; sourceTree = "<group>"; };
+		9EFEBA981AB8440F00659E65 /* a1bcdf2e2ff595599a79b00c51fc736d-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "a1bcdf2e2ff595599a79b00c51fc736d-text.txt"; sourceTree = "<group>"; };
+		9EFEBA991AB8440F00659E65 /* a2217534c37417723a8d2f25a9439c52-belgrad_donau_von_hinten_nah-2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a2217534c37417723a8d2f25a9439c52-belgrad_donau_von_hinten_nah-2.mov"; sourceTree = "<group>"; };
+		9EFEBA9A1AB8440F00659E65 /* a27779cb421f303ff4ea2963a90f76e9-venus_ariana_bar.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a27779cb421f303ff4ea2963a90f76e9-venus_ariana_bar.mov"; sourceTree = "<group>"; };
+		9EFEBA9B1AB8440F00659E65 /* a449273990924a496e821c82352c8fbb-PLN_06_08_1_14.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a449273990924a496e821c82352c8fbb-PLN_06_08_1_14.mov"; sourceTree = "<group>"; };
+		9EFEBA9C1AB8440F00659E65 /* a4e58d1a98980b8f4651238b28edeaa8-windrader.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a4e58d1a98980b8f4651238b28edeaa8-windrader.mov"; sourceTree = "<group>"; };
+		9EFEBA9D1AB8440F00659E65 /* a78a9e97f5aaf8e75df31b65c2a5d2f1-venus_pedalos,_hutte_am_strand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a78a9e97f5aaf8e75df31b65c2a5d2f1-venus_pedalos,_hutte_am_strand.mov"; sourceTree = "<group>"; };
+		9EFEBA9E1AB8440F00659E65 /* a849d3d764464c7f550c8e4e29c06e15-bungalow_nah.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a849d3d764464c7f550c8e4e29c06e15-bungalow_nah.mov"; sourceTree = "<group>"; };
+		9EFEBA9F1AB8440F00659E65 /* a86474cc0592490cfa82ee63f0d23ec3-PLN_06_08_1_1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a86474cc0592490cfa82ee63f0d23ec3-PLN_06_08_1_1.mov"; sourceTree = "<group>"; };
+		9EFEBAA01AB8440F00659E65 /* a91f03117b0662b787d9adce765ffcdf-saturn_runde_dacher_am_strand1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a91f03117b0662b787d9adce765ffcdf-saturn_runde_dacher_am_strand1.mov"; sourceTree = "<group>"; };
+		9EFEBAA11AB8440F00659E65 /* a93f0678fb1926aa2752f6f7d3fa0fee-sunny_side_rosa_resort.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "a93f0678fb1926aa2752f6f7d3fa0fee-sunny_side_rosa_resort.mov"; sourceTree = "<group>"; };
+		9EFEBAA21AB8440F00659E65 /* aa44fcd0a79315b5c8c5ce721fc8e713-ins-Clip_05.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aa44fcd0a79315b5c8c5ce721fc8e713-ins-Clip_05.mp4"; sourceTree = "<group>"; };
+		9EFEBAA31AB8440F00659E65 /* aa7cf88d26f28df8f79326f3dcc9b9f7-venus_restaurant_und_pool.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "aa7cf88d26f28df8f79326f3dcc9b9f7-venus_restaurant_und_pool.mov"; sourceTree = "<group>"; };
+		9EFEBAA41AB8440F00659E65 /* ac5286694cc19d61856589b2d4234558-mamaja-_abgefuckter_club-kamin.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ac5286694cc19d61856589b2d4234558-mamaja-_abgefuckter_club-kamin.mov"; sourceTree = "<group>"; };
+		9EFEBAA51AB8440F00659E65 /* ac8aed510d005bbcfafbc0e58f663161-neptun_hotel_oltenia.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ac8aed510d005bbcfafbc0e58f663161-neptun_hotel_oltenia.mov"; sourceTree = "<group>"; };
+		9EFEBAA61AB8440F00659E65 /* acd4e391b902b70c9c7ee136bbafee39-krk_wasserrohrbruch_gegen_hauser.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "acd4e391b902b70c9c7ee136bbafee39-krk_wasserrohrbruch_gegen_hauser.mov"; sourceTree = "<group>"; };
+		9EFEBAA71AB8440F00659E65 /* ad0030415b937b207671e7eed1745adc-bukarest-led-fassade.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ad0030415b937b207671e7eed1745adc-bukarest-led-fassade.mov"; sourceTree = "<group>"; };
+		9EFEBAA81AB8440F00659E65 /* ad33e7d15cdee34a400fb6b30ee10e11-punat_berg_totale1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ad33e7d15cdee34a400fb6b30ee10e11-punat_berg_totale1.mov"; sourceTree = "<group>"; };
+		9EFEBAA91AB8440F00659E65 /* ad6cd1bf87f51f1c36912ad26c738b26-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ad6cd1bf87f51f1c36912ad26c738b26-text.txt"; sourceTree = "<group>"; };
+		9EFEBAAA1AB8440F00659E65 /* ae1e38fa10a83e080fb3666d73dca89c-faehre_cres.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ae1e38fa10a83e080fb3666d73dca89c-faehre_cres.mov"; sourceTree = "<group>"; };
+		9EFEBAAB1AB8441000659E65 /* aec00e6d7934b4899c200bc250368bef-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "aec00e6d7934b4899c200bc250368bef-text.txt"; sourceTree = "<group>"; };
+		9EFEBAAC1AB8441000659E65 /* b23f05759b8f4820fe4042d4877a237c-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "b23f05759b8f4820fe4042d4877a237c-text.txt"; sourceTree = "<group>"; };
+		9EFEBAAD1AB8441000659E65 /* b4584dd04618a2e25269492ece972142-belgrad_donau_von_hinten_schraeg.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b4584dd04618a2e25269492ece972142-belgrad_donau_von_hinten_schraeg.mov"; sourceTree = "<group>"; };
+		9EFEBAAE1AB8441000659E65 /* b4c4156ad25ad756d4ba20ffea5fb9fe-bukarest-_leuchtreklame.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b4c4156ad25ad756d4ba20ffea5fb9fe-bukarest-_leuchtreklame.mov"; sourceTree = "<group>"; };
+		9EFEBAAF1AB8441000659E65 /* b5b48f266d20103254205d2c18cf6056-mamaja-_grauer_neubau1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b5b48f266d20103254205d2c18cf6056-mamaja-_grauer_neubau1.mov"; sourceTree = "<group>"; };
+		9EFEBAB01AB8441000659E65 /* b5c3725156e816a1437358338cd4647e-golden_sands_blaue_holzkisten1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b5c3725156e816a1437358338cd4647e-golden_sands_blaue_holzkisten1.mov"; sourceTree = "<group>"; };
+		9EFEBAB11AB8441000659E65 /* b5c65e6ceed10fd202c42220ec2e00c4-golden_sands_blaue_holzkisten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b5c65e6ceed10fd202c42220ec2e00c4-golden_sands_blaue_holzkisten.mov"; sourceTree = "<group>"; };
+		9EFEBAB21AB8441000659E65 /* b703ca955d9e8da494cc9228c002ba40-punat_berg_voegel.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b703ca955d9e8da494cc9228c002ba40-punat_berg_voegel.mov"; sourceTree = "<group>"; };
+		9EFEBAB31AB8441000659E65 /* b70b2a6d27fb6219c13dc995be9852ac-mamaja-_storefront.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b70b2a6d27fb6219c13dc995be9852ac-mamaja-_storefront.mov"; sourceTree = "<group>"; };
+		9EFEBAB41AB8441000659E65 /* b75e7060153113187b88acf0917b3701-sunny_side_rosa_und_gelbes_resort.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "b75e7060153113187b88acf0917b3701-sunny_side_rosa_und_gelbes_resort.mov"; sourceTree = "<group>"; };
+		9EFEBAB51AB8441000659E65 /* bbc877672c9b45455a576cc7ba56b184-sunny_side_2_blocke_vom_meer_aus.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "bbc877672c9b45455a576cc7ba56b184-sunny_side_2_blocke_vom_meer_aus.mov"; sourceTree = "<group>"; };
+		9EFEBAB61AB8441000659E65 /* bce74e63e730406746cda7f977251415-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bce74e63e730406746cda7f977251415-text.txt"; sourceTree = "<group>"; };
+		9EFEBAB71AB8441000659E65 /* bd0fb144869733a6f44262f7ff5bebd4-bungalow_innen3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "bd0fb144869733a6f44262f7ff5bebd4-bungalow_innen3.mov"; sourceTree = "<group>"; };
+		9EFEBAB81AB8441000659E65 /* be0376fa7b16c785005cf27b04e53f49-staribaska_fels4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "be0376fa7b16c785005cf27b04e53f49-staribaska_fels4.mov"; sourceTree = "<group>"; };
+		9EFEBAB91AB8441000659E65 /* be5b733b547bcfee8e3be6ed9b1d3188-venus_restaurant_und_pool_zoom.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "be5b733b547bcfee8e3be6ed9b1d3188-venus_restaurant_und_pool_zoom.mov"; sourceTree = "<group>"; };
+		9EFEBABA1AB8441000659E65 /* c04944f6350df6e7d6e4fae0e967459c-belgrad_donau_schraeg_waesche.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c04944f6350df6e7d6e4fae0e967459c-belgrad_donau_schraeg_waesche.mov"; sourceTree = "<group>"; };
+		9EFEBABB1AB8441000659E65 /* c1410f72af354c05bbdbb4d197a49bad-version03_mit_ton.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "c1410f72af354c05bbdbb4d197a49bad-version03_mit_ton.mp4"; sourceTree = "<group>"; };
+		9EFEBABC1AB8441000659E65 /* c1418e8337beda5a65c73587f24591cc-neptun_hotel_und_pool.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c1418e8337beda5a65c73587f24591cc-neptun_hotel_und_pool.mov"; sourceTree = "<group>"; };
+		9EFEBABD1AB8441000659E65 /* c1707ffd9bce96acee85b8f493fc1df3-PLN_06_08_1_23.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c1707ffd9bce96acee85b8f493fc1df3-PLN_06_08_1_23.mov"; sourceTree = "<group>"; };
+		9EFEBABE1AB8441000659E65 /* c3ca9d4ff3e12d6db3a3d59937cda16a-mamaja-_rauch_naher.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c3ca9d4ff3e12d6db3a3d59937cda16a-mamaja-_rauch_naher.mov"; sourceTree = "<group>"; };
+		9EFEBABF1AB8441000659E65 /* c420805b1d3945af4823d97342b26ee7-PLN_06_08_1_2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c420805b1d3945af4823d97342b26ee7-PLN_06_08_1_2.mov"; sourceTree = "<group>"; };
+		9EFEBAC01AB8441000659E65 /* c548555a0407bf6d82c2e138cd8a49fe-novi_beograd_skyline_stufen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c548555a0407bf6d82c2e138cd8a49fe-novi_beograd_skyline_stufen.mov"; sourceTree = "<group>"; };
+		9EFEBAC11AB8441000659E65 /* c6f2b3d54caa0d3990e9d1b0331d50ec-848e19fabb3185b2714e3546c316964e.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c6f2b3d54caa0d3990e9d1b0331d50ec-848e19fabb3185b2714e3546c316964e.mov"; sourceTree = "<group>"; };
+		9EFEBAC21AB8441000659E65 /* c6f2b3d54caa0d3990e9d1b0331d50ec-mamaja-_schild_boomerang.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c6f2b3d54caa0d3990e9d1b0331d50ec-mamaja-_schild_boomerang.mov"; sourceTree = "<group>"; };
+		9EFEBAC31AB8441000659E65 /* c7e418cf44d40ae69f497b0067446e6f-novi_beograd_frau_und_zoom.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c7e418cf44d40ae69f497b0067446e6f-novi_beograd_frau_und_zoom.mov"; sourceTree = "<group>"; };
+		9EFEBAC41AB8441000659E65 /* c88ffe98b14587b427a7a14bbfe07bea-sunny_side_rosa_resort_und_kiosk.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c88ffe98b14587b427a7a14bbfe07bea-sunny_side_rosa_resort_und_kiosk.mov"; sourceTree = "<group>"; };
+		9EFEBAC51AB8441000659E65 /* c9204bf1c7bed1504b9afe26769bdfb1-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "c9204bf1c7bed1504b9afe26769bdfb1-text.txt"; sourceTree = "<group>"; };
+		9EFEBAC61AB8441000659E65 /* c93e60c40b5364afc7c51ab3efaa3504-belgrad_donau_baum_oben.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c93e60c40b5364afc7c51ab3efaa3504-belgrad_donau_baum_oben.mov"; sourceTree = "<group>"; };
+		9EFEBAC71AB8441000659E65 /* c9bb5e8e5f5eef2aeb9394353cc74e2a-saturn_leere_vitrine.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "c9bb5e8e5f5eef2aeb9394353cc74e2a-saturn_leere_vitrine.mov"; sourceTree = "<group>"; };
+		9EFEBAC81AB8441000659E65 /* cb460ceb5c43fa20e4ad4e6284d27bf5-PLN_06_08_1_16.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "cb460ceb5c43fa20e4ad4e6284d27bf5-PLN_06_08_1_16.mov"; sourceTree = "<group>"; };
+		9EFEBAC91AB8441000659E65 /* ccef14ba22ee6339f44a80c36491dfc5-mamaja_schwimmbad_und_tucher.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ccef14ba22ee6339f44a80c36491dfc5-mamaja_schwimmbad_und_tucher.mov"; sourceTree = "<group>"; };
+		9EFEBACA1AB8441000659E65 /* cd8edb2809f3c64d4400ee107e5ddba4-belgrad_donau_waesche.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "cd8edb2809f3c64d4400ee107e5ddba4-belgrad_donau_waesche.mov"; sourceTree = "<group>"; };
+		9EFEBACB1AB8441000659E65 /* cdb9c4544fe53f308373881814aec5e4-faehre_cres_leute.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "cdb9c4544fe53f308373881814aec5e4-faehre_cres_leute.mov"; sourceTree = "<group>"; };
+		9EFEBACC1AB8441000659E65 /* ce3fc2c58a4482edea6966240241d359-PLN_06_08_1_20.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ce3fc2c58a4482edea6966240241d359-PLN_06_08_1_20.mov"; sourceTree = "<group>"; };
+		9EFEBACD1AB8441000659E65 /* ce8c8962d039db6c5d150343d62a12a1-belgrad_donau_von_hinten_oben.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ce8c8962d039db6c5d150343d62a12a1-belgrad_donau_von_hinten_oben.mov"; sourceTree = "<group>"; };
+		9EFEBACE1AB8441000659E65 /* cee7286cf1071cc348c4caef12195d54-c94a8b6330268b48110c72c1581d2e08.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "cee7286cf1071cc348c4caef12195d54-c94a8b6330268b48110c72c1581d2e08.mov"; sourceTree = "<group>"; };
+		9EFEBACF1AB8441000659E65 /* cee7286cf1071cc348c4caef12195d54-PLN_06_08_1_36.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "cee7286cf1071cc348c4caef12195d54-PLN_06_08_1_36.mov"; sourceTree = "<group>"; };
+		9EFEBAD01AB8441000659E65 /* d01d629f7a4cbcf2ef7b7cb27a94012c-ins-Clip_08.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "d01d629f7a4cbcf2ef7b7cb27a94012c-ins-Clip_08.mp4"; sourceTree = "<group>"; };
+		9EFEBAD11AB8441000659E65 /* d02a97b735fdcd808fcd643442d2d0d6-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "d02a97b735fdcd808fcd643442d2d0d6-text.txt"; sourceTree = "<group>"; };
+		9EFEBAD21AB8441000659E65 /* d3129b7bebbc656244b54e0d9db58844-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "d3129b7bebbc656244b54e0d9db58844-text.txt"; sourceTree = "<group>"; };
+		9EFEBAD31AB8441000659E65 /* d3eeb0ab7c6f27cb721bf9ec7d1210f9-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "d3eeb0ab7c6f27cb721bf9ec7d1210f9-text.txt"; sourceTree = "<group>"; };
+		9EFEBAD41AB8441000659E65 /* d41eb2dfa85c26ceb94d05220af93ff0-ins-Clip_06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "d41eb2dfa85c26ceb94d05220af93ff0-ins-Clip_06.mp4"; sourceTree = "<group>"; };
+		9EFEBAD51AB8441000659E65 /* d45b1ade9195cc1b3ea10432efeecddb-krk_industry2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "d45b1ade9195cc1b3ea10432efeecddb-krk_industry2.mov"; sourceTree = "<group>"; };
+		9EFEBAD61AB8441000659E65 /* d57ae81e231c70461a25bfd1171d148b-mamaja-_pizza_al_forno.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "d57ae81e231c70461a25bfd1171d148b-mamaja-_pizza_al_forno.mov"; sourceTree = "<group>"; };
+		9EFEBAD71AB8441000659E65 /* d5bb439f387d72c32a8045336f907e64-cres_wolken.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "d5bb439f387d72c32a8045336f907e64-cres_wolken.mov"; sourceTree = "<group>"; };
+		9EFEBAD81AB8441000659E65 /* d65c9eb62f24dfbe213b482e08214abb-belgrad_donau_tot._unten.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "d65c9eb62f24dfbe213b482e08214abb-belgrad_donau_tot._unten.mov"; sourceTree = "<group>"; };
+		9EFEBAD91AB8441000659E65 /* d6c13c34623bb5c69faafeb2175e0d22-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "d6c13c34623bb5c69faafeb2175e0d22-text.txt"; sourceTree = "<group>"; };
+		9EFEBADA1AB8441000659E65 /* d73e528adf49d1f35d158d9fda66d705-sunny_side_bellevue_und_kiosk.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "d73e528adf49d1f35d158d9fda66d705-sunny_side_bellevue_und_kiosk.mov"; sourceTree = "<group>"; };
+		9EFEBADB1AB8441000659E65 /* d7c9b39ebb94403c3198c5c420068895-bukarest-mangoblock_hn.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "d7c9b39ebb94403c3198c5c420068895-bukarest-mangoblock_hn.mov"; sourceTree = "<group>"; };
+		9EFEBADC1AB8441000659E65 /* d8421660a4482eb018d0408ae88f1db9-faehre_cres_oeffnen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "d8421660a4482eb018d0408ae88f1db9-faehre_cres_oeffnen.mov"; sourceTree = "<group>"; };
+		9EFEBADD1AB8441000659E65 /* d956255e39223f87248a8f54968e4c88-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "d956255e39223f87248a8f54968e4c88-text.txt"; sourceTree = "<group>"; };
+		9EFEBADE1AB8441000659E65 /* d95828020b00d79872b7840083ea46bc-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "d95828020b00d79872b7840083ea46bc-text.txt"; sourceTree = "<group>"; };
+		9EFEBADF1AB8441000659E65 /* d9c705d66c5d8e251051dc8e629ca409-ins-Clip_07.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "d9c705d66c5d8e251051dc8e629ca409-ins-Clip_07.mp4"; sourceTree = "<group>"; };
+		9EFEBAE01AB8441000659E65 /* db062deaeea8199e48fd47dbc66ff1a6-faehre_cres_mann.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "db062deaeea8199e48fd47dbc66ff1a6-faehre_cres_mann.mov"; sourceTree = "<group>"; };
+		9EFEBAE11AB8441000659E65 /* dc498c60d753f1c80e1382c87b653b56-turkei_verpackte_stuhle2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dc498c60d753f1c80e1382c87b653b56-turkei_verpackte_stuhle2.mov"; sourceTree = "<group>"; };
+		9EFEBAE21AB8441000659E65 /* dc4a31de3e7128d7ec1889d2bb98dc60-neptun_hotelbalkone.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dc4a31de3e7128d7ec1889d2bb98dc60-neptun_hotelbalkone.mov"; sourceTree = "<group>"; };
+		9EFEBAE31AB8441000659E65 /* dc4b2c8ea578837cf14a3aec090476e9-neptun_hotel_und_satellitenschusseln.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dc4b2c8ea578837cf14a3aec090476e9-neptun_hotel_und_satellitenschusseln.mov"; sourceTree = "<group>"; };
+		9EFEBAE41AB8441000659E65 /* de0e2874e076e6d51ee82a2082b60d56-venus_hotel_ariana_innenraum.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "de0e2874e076e6d51ee82a2082b60d56-venus_hotel_ariana_innenraum.mov"; sourceTree = "<group>"; };
+		9EFEBAE51AB8441000659E65 /* df22806e7bdfb04353890fa7a2eaed76-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "df22806e7bdfb04353890fa7a2eaed76-text.txt"; sourceTree = "<group>"; };
+		9EFEBAE61AB8441000659E65 /* e0a20adcd8b6791665b6f766d37b4d14-cres_fischer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e0a20adcd8b6791665b6f766d37b4d14-cres_fischer.mov"; sourceTree = "<group>"; };
+		9EFEBAE71AB8441000659E65 /* e0a4a3fe8195d4ba584bc9c58a54aa30-punat_berg_autocrossing.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e0a4a3fe8195d4ba584bc9c58a54aa30-punat_berg_autocrossing.mov"; sourceTree = "<group>"; };
+		9EFEBAE81AB8441000659E65 /* e118905e0884a518f13954994782355b-venus_hotel_ariana2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e118905e0884a518f13954994782355b-venus_hotel_ariana2.mov"; sourceTree = "<group>"; };
+		9EFEBAE91AB8441000659E65 /* e2f7c227eb78b051f195b76b0bad04af-Clip_06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "e2f7c227eb78b051f195b76b0bad04af-Clip_06.mp4"; sourceTree = "<group>"; };
+		9EFEBAEA1AB8441000659E65 /* e66e13101037b9c50847f392a4c4cdcd-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "e66e13101037b9c50847f392a4c4cdcd-text.txt"; sourceTree = "<group>"; };
+		9EFEBAEB1AB8441000659E65 /* e67f4c9ae7b078f07ea08a8f3a1b0af6-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "e67f4c9ae7b078f07ea08a8f3a1b0af6-text.txt"; sourceTree = "<group>"; };
+		9EFEBAEC1AB8441000659E65 /* e70e98d8ea7749a2dbd5ded42b853221-PLN_06_08_1_25.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e70e98d8ea7749a2dbd5ded42b853221-PLN_06_08_1_25.mov"; sourceTree = "<group>"; };
+		9EFEBAED1AB8441000659E65 /* e78b52bc1b51580058a4e8b8385c057e-staribasksa_boote1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e78b52bc1b51580058a4e8b8385c057e-staribasksa_boote1.mov"; sourceTree = "<group>"; };
+		9EFEBAEE1AB8441000659E65 /* e7d1a75544039c65ece0cdc8afd69fbc-venus_ariana_total.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e7d1a75544039c65ece0cdc8afd69fbc-venus_ariana_total.mov"; sourceTree = "<group>"; };
+		9EFEBAEF1AB8441000659E65 /* e821303ed0a7378d0331f7e02450ac03-PLN_06_08_2_2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e821303ed0a7378d0331f7e02450ac03-PLN_06_08_2_2.mov"; sourceTree = "<group>"; };
+		9EFEBAF01AB8441000659E65 /* e82ed3f3d3672751ca7816d8efbb960d-bungalow_innen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e82ed3f3d3672751ca7816d8efbb960d-bungalow_innen.mov"; sourceTree = "<group>"; };
+		9EFEBAF11AB8441000659E65 /* e8ab97270ee71cc784c7e6f7ac782d0c-PLN_06_08_1_21.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e8ab97270ee71cc784c7e6f7ac782d0c-PLN_06_08_1_21.mov"; sourceTree = "<group>"; };
+		9EFEBAF21AB8441000659E65 /* e9192e37ec987be38bc0c338e11a26d1-novi_beograd_pferd_vor_blocken.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "e9192e37ec987be38bc0c338e11a26d1-novi_beograd_pferd_vor_blocken.mov"; sourceTree = "<group>"; };
+		9EFEBAF31AB8441000659E65 /* eb59302847ded12f14deefc324cb7ef3-saturn_dusche.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "eb59302847ded12f14deefc324cb7ef3-saturn_dusche.mov"; sourceTree = "<group>"; };
+		9EFEBAF41AB8441000659E65 /* ecbc6edf0fbe4d5428df591d8604f71c-venus_ariana_haufen.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ecbc6edf0fbe4d5428df591d8604f71c-venus_ariana_haufen.mov"; sourceTree = "<group>"; };
+		9EFEBAF51AB8441000659E65 /* ed66d1805cf98a75f66829db7e40a884-bukarest-fassade_mit_tanne.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ed66d1805cf98a75f66829db7e40a884-bukarest-fassade_mit_tanne.mov"; sourceTree = "<group>"; };
+		9EFEBAF61AB8441000659E65 /* ee91da6c7fb459387515c7816ac2ab82-neptun_diverse_fassaden.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ee91da6c7fb459387515c7816ac2ab82-neptun_diverse_fassaden.mov"; sourceTree = "<group>"; };
+		9EFEBAF71AB8441000659E65 /* eee0f032c898ba3086d8ffad223a9abb-punat_haus_2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "eee0f032c898ba3086d8ffad223a9abb-punat_haus_2.mov"; sourceTree = "<group>"; };
+		9EFEBAF81AB8441000659E65 /* efae621dc29eb8603293fb86ddaef72c-PLN_06_08_1_17.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "efae621dc29eb8603293fb86ddaef72c-PLN_06_08_1_17.mov"; sourceTree = "<group>"; };
+		9EFEBAF91AB8441000659E65 /* f055168b6539e6d7a3c8d35881619a91-belgrad_donau_waesche_grade_tot.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "f055168b6539e6d7a3c8d35881619a91-belgrad_donau_waesche_grade_tot.mov"; sourceTree = "<group>"; };
+		9EFEBAFA1AB8441000659E65 /* f5924b94ada1b684b1dd608cd9bddae6-PLN_06_08_1_26.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "f5924b94ada1b684b1dd608cd9bddae6-PLN_06_08_1_26.mov"; sourceTree = "<group>"; };
+		9EFEBAFB1AB8441000659E65 /* f5b0829adea98de3c456883fa6ef97cd-bukarest-fassade_an_strasse.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "f5b0829adea98de3c456883fa6ef97cd-bukarest-fassade_an_strasse.mov"; sourceTree = "<group>"; };
+		9EFEBAFC1AB8441000659E65 /* f8205597adacd075919523689ce2eae6-mamaja_3_hunde.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "f8205597adacd075919523689ce2eae6-mamaja_3_hunde.mov"; sourceTree = "<group>"; };
+		9EFEBAFD1AB8441000659E65 /* f828f0f4a11d0d133be126e08166fc01-PLN_06_08_1_10.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "f828f0f4a11d0d133be126e08166fc01-PLN_06_08_1_10.mov"; sourceTree = "<group>"; };
+		9EFEBAFE1AB8441000659E65 /* f908c17cd77a89f73364d8c203c02b64-krk_wasserrohrbruch_gegen_meer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "f908c17cd77a89f73364d8c203c02b64-krk_wasserrohrbruch_gegen_meer.mov"; sourceTree = "<group>"; };
+		9EFEBAFF1AB8441000659E65 /* fb415175b97460ca7857274525553f45-krk_industry1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "fb415175b97460ca7857274525553f45-krk_industry1.mov"; sourceTree = "<group>"; };
+		9EFEBB001AB8441000659E65 /* fb4cfa3a105befe393b295578bedaee8-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "fb4cfa3a105befe393b295578bedaee8-text.txt"; sourceTree = "<group>"; };
+		9EFEBB011AB8441000659E65 /* fd0c58a47782a938f61dccc61a0cddf0-punat_berg_faehre.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "fd0c58a47782a938f61dccc61a0cddf0-punat_berg_faehre.mov"; sourceTree = "<group>"; };
+		9EFEBB021AB8441000659E65 /* fe2b37522b5645b122aa9cd2c54df3fd-text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "fe2b37522b5645b122aa9cd2c54df3fd-text.txt"; sourceTree = "<group>"; };
+		9EFEBB041AB8441000659E65 /* playersettings.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = playersettings.xml; sourceTree = "<group>"; };
+		9EFEBB061AB8441000659E65 /* fonts.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fonts.xml; sourceTree = "<group>"; };
+		9EFEBB071AB8441000659E65 /* gui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gui.png; sourceTree = "<group>"; };
+		9EFEBB081AB8441000659E65 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		9EFEBB091AB8441000659E65 /* not-found.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "not-found.m4v"; sourceTree = "<group>"; };
+		9EFEBB0A1AB8441000659E65 /* not-found.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "not-found.mov"; sourceTree = "<group>"; };
+		9EFEBB0B1AB8441000659E65 /* not-found.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "not-found.mp4"; sourceTree = "<group>"; };
+		9EFEBB0C1AB8441000659E65 /* Roboto-Gui.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Gui.ttf"; sourceTree = "<group>"; };
+		9EFEBB0D1AB8441000659E65 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		9EFEBB0E1AB8441000659E65 /* sync.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sync.png; sourceTree = "<group>"; };
+		A64B8AA7481267CD4A76C16B /* ofxUITabBar.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUITabBar.cpp; path = ../../../addons/ofxUI/src/ofxUITabBar.cpp; sourceTree = SOURCE_ROOT; };
+		A8896AC3BECAAA504E3828F4 /* ofxUIEventArgs.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIEventArgs.cpp; path = ../../../addons/ofxUI/src/ofxUIEventArgs.cpp; sourceTree = SOURCE_ROOT; };
+		ACDA7C81A6F82A656A6940BC /* ofxGStreamer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGStreamer.cpp; path = ../../../addons/ofxGStreamer/src/ofxGStreamer.cpp; sourceTree = SOURCE_ROOT; };
+		AEFCF7E549ACA862C022AD40 /* ofxUIDefines.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIDefines.h; path = ../../../addons/ofxUI/src/ofxUIDefines.h; sourceTree = SOURCE_ROOT; };
+		B2063844ABD06B3BCB1F23D5 /* ofUnicode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofUnicode.h; path = ../../../addons/ofxUnicode/src/ofUnicode.h; sourceTree = SOURCE_ROOT; };
+		B21E7E5F548EEA92F368040B /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
+		B332F8E938E93329D9E34897 /* ofxGaplessVideoplayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGaplessVideoplayer.h; path = ../../../addons/ofxGaplessVideo/src/ofxGaplessVideoplayer.h; sourceTree = SOURCE_ROOT; };
+		B3CA0202B1A3B6D8920C2B15 /* ofxUIButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIButton.h; path = ../../../addons/ofxUI/src/ofxUIButton.h; sourceTree = SOURCE_ROOT; };
+		B848522CCA3A75ABD56752C9 /* ofxUIImageToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageToggle.cpp; path = ../../../addons/ofxUI/src/ofxUIImageToggle.cpp; sourceTree = SOURCE_ROOT; };
+		BB7E0432293158A4E3114E4F /* threadedPlayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = threadedPlayer.h; path = ../../../addons/ofxGaplessVideo/src/threadedPlayer.h; sourceTree = SOURCE_ROOT; };
+		BC6931447DE6C359DDDF21F1 /* ofxUIMultiImageButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIMultiImageButton.h; path = ../../../addons/ofxUI/src/ofxUIMultiImageButton.h; sourceTree = SOURCE_ROOT; };
+		BDA8CA36896AACFB09C55252 /* stb_truetype.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stb_truetype.h; path = ../../../addons/ofxFontStash/libs/fontstash/src/stb_truetype.h; sourceTree = SOURCE_ROOT; };
+		BF3CACAAE84A581E4AFA9FA7 /* ofUnicode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofUnicode.cpp; path = ../../../addons/ofxUnicode/src/ofUnicode.cpp; sourceTree = SOURCE_ROOT; };
+		BF88F02779DD820913ACEA06 /* ofxTCPClient.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPClient.cpp; path = ../../../addons/ofxNetwork/src/ofxTCPClient.cpp; sourceTree = SOURCE_ROOT; };
+		BFD3387AA9EFA53E1B4F087B /* ofxUIScrollableCanvas.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIScrollableCanvas.cpp; path = ../../../addons/ofxUI/src/ofxUIScrollableCanvas.cpp; sourceTree = SOURCE_ROOT; };
+		C161222F68D4F7CE28BC4F61 /* ofxUIBaseDraws.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIBaseDraws.h; path = ../../../addons/ofxUI/src/ofxUIBaseDraws.h; sourceTree = SOURCE_ROOT; };
+		C38D6DCC3AB9AAE213A64015 /* ofxUIScrollableCanvas.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIScrollableCanvas.h; path = ../../../addons/ofxUI/src/ofxUIScrollableCanvas.h; sourceTree = SOURCE_ROOT; };
+		C4639743735BBEB743C70DE6 /* ofxGaplessVideoplayer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGaplessVideoplayer.cpp; path = ../../../addons/ofxGaplessVideo/src/ofxGaplessVideoplayer.cpp; sourceTree = SOURCE_ROOT; };
+		C6305369801B450557086284 /* ofxUISpectrum.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISpectrum.h; path = ../../../addons/ofxUI/src/ofxUISpectrum.h; sourceTree = SOURCE_ROOT; };
+		C7B4B8AD9464A693A3683D0F /* ofxUISpacer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISpacer.h; path = ../../../addons/ofxUI/src/ofxUISpacer.h; sourceTree = SOURCE_ROOT; };
+		C8C9B823D7872F9CBF03A813 /* ofxTCPClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTCPClient.h; path = ../../../addons/ofxNetwork/src/ofxTCPClient.h; sourceTree = SOURCE_ROOT; };
+		CCEC29A4351C40BA86F2E491 /* ofxUIMinimalSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIMinimalSlider.h; path = ../../../addons/ofxUI/src/ofxUIMinimalSlider.h; sourceTree = SOURCE_ROOT; };
+		CF73E1AF93352CF515E7C9F2 /* ofxUIEventArgs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIEventArgs.h; path = ../../../addons/ofxUI/src/ofxUIEventArgs.h; sourceTree = SOURCE_ROOT; };
+		D1387F25A47EF6809B55B59C /* ofxUIValuePlotter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIValuePlotter.h; path = ../../../addons/ofxUI/src/ofxUIValuePlotter.h; sourceTree = SOURCE_ROOT; };
+		D45991C927E805C3B1AD7516 /* ofxUITabBar.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUITabBar.h; path = ../../../addons/ofxUI/src/ofxUITabBar.h; sourceTree = SOURCE_ROOT; };
+		D5AE78144E3980BD0B4445D7 /* fontstash.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = fontstash.c; path = ../../../addons/ofxFontStash/libs/fontstash/src/fontstash.c; sourceTree = SOURCE_ROOT; };
+		D66E735BE796BC0675320DC8 /* ofxUIImageSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageSlider.h; path = ../../../addons/ofxUI/src/ofxUIImageSlider.h; sourceTree = SOURCE_ROOT; };
+		D7177CC1E771E1E857F8CB48 /* ofxUISpectrum.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUISpectrum.cpp; path = ../../../addons/ofxUI/src/ofxUISpectrum.cpp; sourceTree = SOURCE_ROOT; };
+		D7D83EF74FC7508D9146FA63 /* ofxUILabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUILabel.cpp; path = ../../../addons/ofxUI/src/ofxUILabel.cpp; sourceTree = SOURCE_ROOT; };
+		D8A535D3474A0EAB684CAC5D /* ofxFontStash.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxFontStash.cpp; path = ../../../addons/ofxFontStash/src/ofxFontStash.cpp; sourceTree = SOURCE_ROOT; };
+		DBE31D52BCB0CE44B9D154F0 /* ofxUITextArea.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUITextArea.cpp; path = ../../../addons/ofxUI/src/ofxUITextArea.cpp; sourceTree = SOURCE_ROOT; };
+		DC55FEC740DD28FBDD2D4406 /* stb_truetype.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = stb_truetype.c; path = ../../../addons/ofxFontStash/libs/fontstash/src/stb_truetype.c; sourceTree = SOURCE_ROOT; };
+		E2813E36CEFD8D1C1B70E600 /* ofxUIRangeSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIRangeSlider.cpp; path = ../../../addons/ofxUI/src/ofxUIRangeSlider.cpp; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* ACP_GST_osxDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACP_GST_osxDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E6280B5FA1CEA20450916E49 /* ofxUIImageButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIImageButton.cpp; path = ../../../addons/ofxUI/src/ofxUIImageButton.cpp; sourceTree = SOURCE_ROOT; };
+		E65D547C2CD6A84FC9AF15FA /* ofxUITextInput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUITextInput.h; path = ../../../addons/ofxUI/src/ofxUITextInput.h; sourceTree = SOURCE_ROOT; };
+		E67BC70E17DDA0081C8FD9DD /* ofxUIImageButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIImageButton.h; path = ../../../addons/ofxUI/src/ofxUIImageButton.h; sourceTree = SOURCE_ROOT; };
+		E71733956CD601886837BE2E /* ofxUICanvas.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUICanvas.cpp; path = ../../../addons/ofxUI/src/ofxUICanvas.cpp; sourceTree = SOURCE_ROOT; };
+		E88F5D4D5E360FA5B5C8F99E /* ofxUISortableList.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUISortableList.h; path = ../../../addons/ofxUI/src/ofxUISortableList.h; sourceTree = SOURCE_ROOT; };
+		E8BFFBD7382B36DC6B6B876E /* utf8.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = utf8.h; path = ../../../addons/ofxUnicode/libs/utf8cpp/include/utf8.h; sourceTree = SOURCE_ROOT; };
+		EDFEB3D8C9183ADE3FACB4B5 /* ofxUICircleSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUICircleSlider.h; path = ../../../addons/ofxUI/src/ofxUICircleSlider.h; sourceTree = SOURCE_ROOT; };
+		F198996ED5C849097CC1ABB5 /* ofGstVideoGrabber.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofGstVideoGrabber.cpp; path = ../../../libs/openFrameworks/video/ofGstVideoGrabber.cpp; sourceTree = SOURCE_ROOT; };
+		F26E25F3872C0799D6433B99 /* ofxUILabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUILabel.h; path = ../../../addons/ofxUI/src/ofxUILabel.h; sourceTree = SOURCE_ROOT; };
+		F2B099E6BD1199664C48B177 /* ofxJSONElement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxJSONElement.cpp; path = ../../../addons/ofxJSON/src/ofxJSONElement.cpp; sourceTree = SOURCE_ROOT; };
+		F399B91E98DC31CDA6DDACB4 /* ofxTCPManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTCPManager.cpp; path = ../../../addons/ofxNetwork/src/ofxTCPManager.cpp; sourceTree = SOURCE_ROOT; };
+		F66993296A3AEEC70FD444F5 /* ofxNetwork.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNetwork.h; path = ../../../addons/ofxNetwork/src/ofxNetwork.h; sourceTree = SOURCE_ROOT; };
+		F9A4454B00CCFD7265D3CA85 /* ofxUILabelButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUILabelButton.cpp; path = ../../../addons/ofxUI/src/ofxUILabelButton.cpp; sourceTree = SOURCE_ROOT; };
+		F9DF961B5E7D4C4E1E5D029C /* ofxUITextArea.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUITextArea.h; path = ../../../addons/ofxUI/src/ofxUITextArea.h; sourceTree = SOURCE_ROOT; };
+		FBE1B379902B3C585DC8F7A2 /* ofxUILabelButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUILabelButton.h; path = ../../../addons/ofxUI/src/ofxUILabelButton.h; sourceTree = SOURCE_ROOT; };
+		FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlparser.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
+		FCCBDB55B98DA36682809F03 /* ofxUIWaveform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIWaveform.h; path = ../../../addons/ofxUI/src/ofxUIWaveform.h; sourceTree = SOURCE_ROOT; };
+		FDA2832E78CFA22BEEC74160 /* ofxUIFPS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUIFPS.h; path = ../../../addons/ofxUI/src/ofxUIFPS.h; sourceTree = SOURCE_ROOT; };
+		FEB61645EF9120F5BACB7462 /* ofxUIFPS.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIFPS.cpp; path = ../../../addons/ofxUI/src/ofxUIFPS.cpp; sourceTree = SOURCE_ROOT; };
+		FFD5D3C9D38E29DB72B32254 /* ofxUIDragableLabelButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIDragableLabelButton.cpp; path = ../../../addons/ofxUI/src/ofxUIDragableLabelButton.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EFEB9CD1AB8414300659E65 /* CoreFoundation.framework in Frameworks */,
+				9EFEB9C71AB8414300659E65 /* Cocoa.framework in Frameworks */,
+				9EFEB9C41AB8414300659E65 /* QuartzCore.framework in Frameworks */,
+				9EFEB9C31AB8414300659E65 /* CoreMedia.framework in Frameworks */,
+				9EFEB9CB1AB8414300659E65 /* AudioToolbox.framework in Frameworks */,
+				9EFEB9CE1AB8414300659E65 /* CoreServices.framework in Frameworks */,
+				9EFEB9C81AB8414300659E65 /* IOKit.framework in Frameworks */,
+				9EFEB9C51AB8414300659E65 /* Accelerate.framework in Frameworks */,
+				9EFEB9CF1AB8414300659E65 /* OpenGL.framework in Frameworks */,
+				9EFEB9CC1AB8414300659E65 /* CoreAudio.framework in Frameworks */,
+				9EFEB9CA1AB8414300659E65 /* ApplicationServices.framework in Frameworks */,
+				9EFEB9D01AB8414300659E65 /* QuickTime.framework in Frameworks */,
+				9EFEB9C91AB8414300659E65 /* AGL.framework in Frameworks */,
+				9EFEB9D11AB8414300659E65 /* CoreVideo.framework in Frameworks */,
+				9EFEB9D21AB8414300659E65 /* QTKit.framework in Frameworks */,
+				9EFEB9C61AB8414300659E65 /* AppKit.framework in Frameworks */,
+				9EFEB9C21AB8414300659E65 /* AVFoundation.framework in Frameworks */,
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		018A9CEA4D5B5F89F26EADEF /* utf8_v2_3_1 */ = {
+			isa = PBXGroup;
+			children = (
+				D3193A84FE82591D4932AA98 /* source */,
+			);
+			name = utf8_v2_3_1;
+			sourceTree = "<group>";
+		};
+		18240ECCE4076FB0833A8578 /* ofxNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				219374A14594D121F27FED3A /* src */,
+			);
+			name = ofxNetwork;
+			sourceTree = "<group>";
+		};
+		1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */ = {
+			isa = PBXGroup;
+			children = (
+				6ECEF0D76BC33727823EADFF /* src */,
+				6E54289412D2D94F45A05113 /* libs */,
+			);
+			name = ofxXmlSettings;
+			sourceTree = "<group>";
+		};
+		219374A14594D121F27FED3A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F66993296A3AEEC70FD444F5 /* ofxNetwork.h */,
+				1DFA26F2C6BBD1B8AC24C0B1 /* ofxNetworkUtils.h */,
+				BF88F02779DD820913ACEA06 /* ofxTCPClient.cpp */,
+				C8C9B823D7872F9CBF03A813 /* ofxTCPClient.h */,
+				F399B91E98DC31CDA6DDACB4 /* ofxTCPManager.cpp */,
+				26EF3E71A07C6948EAF6709E /* ofxTCPManager.h */,
+				1C085E327DAB912CFA2A443D /* ofxTCPServer.cpp */,
+				30841703B7AC8487D16FB4AA /* ofxTCPServer.h */,
+				35BB9BB90DBABFD3B39F8DB6 /* ofxUDPManager.cpp */,
+				2F519EB3B0DCD7378FB86ABE /* ofxUDPManager.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		2865DAEF86B1907A704CA70B /* ofxJSON */ = {
+			isa = PBXGroup;
+			children = (
+				292AF6148769654D0DF26018 /* src */,
+				F40E80CB2D443CBA9581DD03 /* libs */,
+			);
+			name = ofxJSON;
+			sourceTree = "<group>";
+		};
+		292AF6148769654D0DF26018 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1645F56257269CD0356320BD /* ofxJSON.h */,
+				F2B099E6BD1199664C48B177 /* ofxJSONElement.cpp */,
+				26A541233BC6F736E758F718 /* ofxJSONElement.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		4C084EBF7CBFDB1868AFF470 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D5AE78144E3980BD0B4445D7 /* fontstash.c */,
+				9B3F7D0AAB9DF619553ADA1B /* fontstash.h */,
+				DC55FEC740DD28FBDD2D4406 /* stb_truetype.c */,
+				BDA8CA36896AACFB09C55252 /* stb_truetype.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		58AD3BD71B781D9BC25763C8 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				61313493CDB52744E22A604D /* json-forwards.h */,
+				2C7CF000B7B4F782C187C353 /* json.h */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
+		68ABFC4AF1214FDD23F574A2 /* ofxGStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				B17FC2FE17C5A1E325E0F4D3 /* src */,
+			);
+			name = ofxGStreamer;
+			sourceTree = "<group>";
+		};
+		6AC1BBA537347FB96E2D8F8A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				9CD605EBED2DB8D058CD1A29 /* utf8cpp */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		6E3AE1A5F6F0D6F75C66C1CC /* utf8 */ = {
+			isa = PBXGroup;
+			children = (
+				320D5EBCA33717CE18A5A084 /* checked.h */,
+				60D80F2B6DD0B2BD8186BADD /* core.h */,
+				0515C14AC6601810E14A06E9 /* unchecked.h */,
+			);
+			name = utf8;
+			sourceTree = "<group>";
+		};
+		6E54289412D2D94F45A05113 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */,
+				B21E7E5F548EEA92F368040B /* tinyxml.h */,
+				832BDC407620CDBA568B713D /* tinyxmlerror.cpp */,
+				FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		6ECEF0D76BC33727823EADFF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */,
+				01DCC0911400F9ACF5B65578 /* ofxXmlSettings.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		787C5E98195D5F7A798BEDA5 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A721EFB518B2BFE659AAD339 /* fontstash */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		884658B2B75923C276F4F180 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				018A9CEA4D5B5F89F26EADEF /* utf8_v2_3_1 */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		977A836DD2C489CCC5E330FF /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				D486FC87F063317BB47E9FAC /* include */,
+				CCDC6F9CCF925CC402160B85 /* src */,
+			);
+			name = jsoncpp;
+			sourceTree = "<group>";
+		};
+		9CD605EBED2DB8D058CD1A29 /* utf8cpp */ = {
+			isa = PBXGroup;
+			children = (
+				E928C193989D93F56354A05C /* include */,
+				884658B2B75923C276F4F180 /* src */,
+			);
+			name = utf8cpp;
+			sourceTree = "<group>";
+		};
+		9EFEB9D31AB8440F00659E65 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9EFEB9D41AB8440F00659E65 /* _movies */,
+				9EFEBB031AB8441000659E65 /* movies */,
+				9EFEBB041AB8441000659E65 /* playersettings.xml */,
+				9EFEBB051AB8441000659E65 /* static */,
+			);
+			name = data;
+			path = bin/data;
+			sourceTree = "<group>";
+		};
+		9EFEB9D41AB8440F00659E65 /* _movies */ = {
+			isa = PBXGroup;
+			children = (
+				9EFEB9D51AB8440F00659E65 /* 016fb895038edda1666d573952772674-bukarest-mango_nah_und_lift.mov */,
+				9EFEB9D61AB8440F00659E65 /* 03dae535be2b05738a2339ee7a939659-venus_grader_block_am_strand.mov */,
+				9EFEB9D71AB8440F00659E65 /* 05dbbe1f45de06a4420e393aaf4cbef6-punat_berg_stein1.mov */,
+				9EFEB9D81AB8440F00659E65 /* 05dfb496fff87b48b3c38438afda6d04-faehre_cres_leute2.mov */,
+				9EFEB9D91AB8440F00659E65 /* 064780affefcaf401a2bca17f72e1497-PLN_06_08_1_13.mov */,
+				9EFEB9DA1AB8440F00659E65 /* 06b69fe894c962f642418382662f69e3-bukarest-schoenes_muster.mov */,
+				9EFEB9DB1AB8440F00659E65 /* 07a862efd37a7ee61cc6e802fe77a0ae-turkei_rohbauten.mov */,
+				9EFEB9DC1AB8440F00659E65 /* 07e51994851c72ddaa3c7bc113435f60-Clip_33.mov */,
+				9EFEB9DD1AB8440F00659E65 /* 0818be5e28f86a665b65fcc54290c189-punat_berg_stein2.mov */,
+				9EFEB9DE1AB8440F00659E65 /* 084f55f429a1b897ca04c2c485c26d54-neptun_schrift_braserie.mov */,
+				9EFEB9DF1AB8440F00659E65 /* 09177ecbab67c60a801a7802ed620c82-text.txt */,
+				9EFEB9E01AB8440F00659E65 /* 0b89c5f86cc5426bd4657080c401d4fd-text.txt */,
+				9EFEB9E11AB8440F00659E65 /* 0ce37dc7f748e0be15541cbb1df0c8be-154e894099b3efb79914c316f488dea9.mov */,
+				9EFEB9E21AB8440F00659E65 /* 0ce37dc7f748e0be15541cbb1df0c8be-venus_kioske_am_strand.mov */,
+				9EFEB9E31AB8440F00659E65 /* 0e80e67d4c1fd6b9f2e10598f095c36b-belgrad_donau_tot._oben.mov */,
+				9EFEB9E41AB8440F00659E65 /* 0e8a3a7d48bab355f6a1c611dff02c93-belgrad_donau_von_hinten_ht.mov */,
+				9EFEB9E51AB8440F00659E65 /* 100517090774388bfd628e19c4a4e508-mamaja-_blaue_wasserrutsche.mov */,
+				9EFEB9E61AB8440F00659E65 /* 122b37f43671dc326ccf975879c8e42b-staribaska_fels2.mov */,
+				9EFEB9E71AB8440F00659E65 /* 137f49ba41626fadb745cb9de3a02c8a-bukarest-mangoblock_2.mov */,
+				9EFEB9E81AB8440F00659E65 /* 164183fbfc777ab64c49b5c5fdbed0c2-sunny_side_gelbes_resort,_spiegelungen.mov */,
+				9EFEB9E91AB8440F00659E65 /* 1899ca28980ba4702a5bbd5aa0a7d869-PLN_06_08_1_27.mov */,
+				9EFEB9EA1AB8440F00659E65 /* 19641c0d606d008fa21c9842466baa3f-neptun_zugeklebte_schrift.mov */,
+				9EFEB9EB1AB8440F00659E65 /* 197b15af426fbb1c1aaad2a775bcdfd3-turkei_verpackte_stuhle.mov */,
+				9EFEB9EC1AB8440F00659E65 /* 1e267525c6d115fa224dc0afb7908788-PLN_06_08_1_6.mov */,
+				9EFEB9ED1AB8440F00659E65 /* 1eede3812cf8466a02df1d1737a661c3-mamaja-_eingehulltes_gebaude.mov */,
+				9EFEB9EE1AB8440F00659E65 /* 1fea80b513aed3aca5fa92bfd8918368-ins-Clip_02.mp4 */,
+				9EFEB9EF1AB8440F00659E65 /* 20663e3eab134cf9ba2a6f4ee8cf998d-mamaja-_abgefuckter_club-eingang.mov */,
+				9EFEB9F01AB8440F00659E65 /* 230555ac312914e62326e9d7e477700e-PLN_06_08_1_30.mov */,
+				9EFEB9F11AB8440F00659E65 /* 2495b762f96adc7794ac779fd13ffc74-golden_sands_leere_gasse.mov */,
+				9EFEB9F21AB8440F00659E65 /* 25320dcb0b014b8ef33332c61f650f82-6152bb9395b560d1d3a9d67396c251d3.mov */,
+				9EFEB9F31AB8440F00659E65 /* 25320dcb0b014b8ef33332c61f650f82-neptun_restaurant_und_fenster.mov */,
+				9EFEB9F41AB8440F00659E65 /* 2787eb81bd18e7f5bcb3f659db558457-cres_boot_1.mov */,
+				9EFEB9F51AB8440F00659E65 /* 279ccd589f04324713df03ded2232327-text.txt */,
+				9EFEB9F61AB8440F00659E65 /* 291c464511163ae133eee105e0a25f0a-saturn_runde_dacher_am_strand.mov */,
+				9EFEB9F71AB8440F00659E65 /* 2a24b702de2823bc81a380be66240a4a-PLN_06_08_1_12.mov */,
+				9EFEB9F81AB8440F00659E65 /* 2a3686a86e5f945a4ccc2669d211411d-PLN_06_08_1_22.mov */,
+				9EFEB9F91AB8440F00659E65 /* 2ab02bdb8f4b847e16981bf98badca64-92b442d67fd556457ec8bcedf6d5053b.mov */,
+				9EFEB9FA1AB8440F00659E65 /* 2ab02bdb8f4b847e16981bf98badca64-PLN_06_08_1_40.mov */,
+				9EFEB9FB1AB8440F00659E65 /* 2aee9d89a0d3ad1e95f8c259761c9b61-belgrad_donau_ht.mov */,
+				9EFEB9FC1AB8440F00659E65 /* 2b6a759088019fc78407e41e0e6450a9-PLN_06_08_1_24.mov */,
+				9EFEB9FD1AB8440F00659E65 /* 2bc497300aa58e7dd0a4c93ed2806219-mamaja-_abgefuckter_club-weit.mov */,
+				9EFEB9FE1AB8440F00659E65 /* 2c7dce44acc3e81917a9077ce279daad-novi_beograd_skyline_in_sonne_weit.mov */,
+				9EFEB9FF1AB8440F00659E65 /* 2c86be7ead76f8a7a2b8be7562f322f5-staribaska_fels6.mov */,
+				9EFEBA001AB8440F00659E65 /* 2d41e795e5528924df519dd2de64f730-Clip_62.mov */,
+				9EFEBA011AB8440F00659E65 /* 2d6c2842d9595b41353d54f79ad302ce-staribaska_fels5.mov */,
+				9EFEBA021AB8440F00659E65 /* 2dc2e294d334c46c01b2fdcf83b2b88d-sunny_side_fussballer.mov */,
+				9EFEBA031AB8440F00659E65 /* 2f52d724b5518f0d530fa5dfb34c051d-PLN_06_08_1_39.mov */,
+				9EFEBA041AB8440F00659E65 /* 2faeca65d753e83f294ff48f5a1fd302-text.txt */,
+				9EFEBA051AB8440F00659E65 /* 316cb10e4b1ac669ea695b3fe62644f9-mamaja-_rauch_totale.mov */,
+				9EFEBA061AB8440F00659E65 /* 31ed5bc113376d3be0739cad482305ab-belgrad_donau_baum_ht.mov */,
+				9EFEBA071AB8440F00659E65 /* 33a2c4a3b5e5d0d1dce3334ea465f6a6-novi_beograd_rotlicht.mov */,
+				9EFEBA081AB8440F00659E65 /* 33a58629f232923ca1ce3c02fa5c9537-bukarest-plastikfolie_trompe_loeil.mov */,
+				9EFEBA091AB8440F00659E65 /* 33c63e1ed073af7da506977985e87f66-bungalow_weit.mov */,
+				9EFEBA0A1AB8440F00659E65 /* 33fe7306ebf0145d7d6d8207a7321bdb-belgrad_donau_waesche_grade.mov */,
+				9EFEBA0B1AB8440F00659E65 /* 352acd4361b810d1d3672e45f298572d-bungalow_aussen_schraeg.mov */,
+				9EFEBA0C1AB8440F00659E65 /* 3668bf78e6e96cc66b63ceeb8099afea-sunny_side_rosa_resort2.mov */,
+				9EFEBA0D1AB8440F00659E65 /* 37e1949050cd356b435dec2c8712b771-PLN_06_08_1_4.mov */,
+				9EFEBA0E1AB8440F00659E65 /* 3a1bb0e973e1779f93975a6e74dcefd8-golden_sands_minigolf.mov */,
+				9EFEBA0F1AB8440F00659E65 /* 3a534bcf0d5442ad3d3bc4951c863d70-golden_sands_verpackte_kioske.mov */,
+				9EFEBA101AB8440F00659E65 /* 3c933f202ae80f6880bcc93090d56ce8-belgrad_donau_skater.mov */,
+				9EFEBA111AB8440F00659E65 /* 3d095fe9bfc5cf81639c9fe74563e85e-turkei_rohbauten_weit.mov */,
+				9EFEBA121AB8440F00659E65 /* 3dbd6d7445a3bdc03cec88feb65d77a3-novi_beograd_skyline_in_sonne_nah.mov */,
+				9EFEBA131AB8440F00659E65 /* 3e17468d6d232b1e26545ba9fb031c15-venus_wasche_im_wind_mit_hund.mov */,
+				9EFEBA141AB8440F00659E65 /* 3e811163d1d5f17d85121a83365374d0-turkei_neubauten.mov */,
+				9EFEBA151AB8440F00659E65 /* 3ec6af839e6281535972a80b75552f8e-PLN_06_08_1_7.mov */,
+				9EFEBA161AB8440F00659E65 /* 3fa64f21475ea415e54a8f381dd9d0c1-novi_beograd_skyline.mov */,
+				9EFEBA171AB8440F00659E65 /* 40cf4fb1011f5b1828e3020a88aaf59c-belgrad_donau_baum_tot.mov */,
+				9EFEBA181AB8440F00659E65 /* 42266b66e61c50d7f416dd590b693455-text.txt */,
+				9EFEBA191AB8440F00659E65 /* 429260e6578fc544162443c3ea4bf039-rijeka_zug2.mov */,
+				9EFEBA1A1AB8440F00659E65 /* 42eb20adeb5170175b5e2c21240cccc8-PLN_06_08_1_8.mov */,
+				9EFEBA1B1AB8440F00659E65 /* 454537a8a961199fee8db36581954280-sunny_side_gelbes_resort.mov */,
+				9EFEBA1C1AB8440F00659E65 /* 45c6fd8f59d07c2a86161ecfda565ac0-golden_sands_kiosk_am_meer.mov */,
+				9EFEBA1D1AB8440F00659E65 /* 46490a271f163e58a412252b3a9b01b2-belgrad_idea_und_kleider.mov */,
+				9EFEBA1E1AB8440F00659E65 /* 46622405890441453b0a9d1e11090f0a-8db085058ed76164ff4e69b025340148.mov */,
+				9EFEBA1F1AB8440F00659E65 /* 46622405890441453b0a9d1e11090f0a-venus_schrift_restaurant.mov */,
+				9EFEBA201AB8440F00659E65 /* 468f61f4a317bab8e17ed2f6046cce99-punat_berg_wolken.mov */,
+				9EFEBA211AB8440F00659E65 /* 46ebe3a3350e3436cb1e86c8b7b8d385-venus_grun_verhullt_von_innen.mov */,
+				9EFEBA221AB8440F00659E65 /* 4702c80d234f871c9ad819150ecdd642-belgrad_donau_von_hinten_ganz.mov */,
+				9EFEBA231AB8440F00659E65 /* 47282c5c3b78832c512e1f733c363bb7-venus_wasche_im_wind.mov */,
+				9EFEBA241AB8440F00659E65 /* 4809401f4e2bf5c473cb2e15abc58582-venus_grun_verhullt_von_aussen.mov */,
+				9EFEBA251AB8440F00659E65 /* 48710c8bfa906b7ea92299947aad1685-staribaska_fels1.mov */,
+				9EFEBA261AB8440F00659E65 /* 488ed8d34db1e3eeb91895415c6ab78e-mamaja-_store.mov */,
+				9EFEBA271AB8440F00659E65 /* 49bc1f6ee70effe05584d705aa4f6186-rijeka_zug.mov */,
+				9EFEBA281AB8440F00659E65 /* 4bb148d434664f51e754af024fe82ffa-mamaja-_eingehulltes_gebaude_mit_menus.mov */,
+				9EFEBA291AB8440F00659E65 /* 4c0a39e13fc4762791d2a266be3f6613-neptun_hotelfassade2.mov */,
+				9EFEBA2A1AB8440F00659E65 /* 4c13c17d9e883032ee85759643308f14-mamaja_grun_eingehulltes_haus.mov */,
+				9EFEBA2B1AB8440F00659E65 /* 4cae6964061ab258124ab3c5504aa0c6-text.txt */,
+				9EFEBA2C1AB8440F00659E65 /* 4decc026409f69e8a58f216d83d876ad-ins-Clip_04.mp4 */,
+				9EFEBA2D1AB8440F00659E65 /* 4e0fa39ee66e511f0c39f2005c7aa34a-belgrad_donau_von_hinten_nah.mov */,
+				9EFEBA2E1AB8440F00659E65 /* 4e9175dfec417bb9647b25002c911d7a-text.txt */,
+				9EFEBA2F1AB8440F00659E65 /* 4ec823680fd68b6eb47654d7767e5c8e-PLN_06_08_1_33.mov */,
+				9EFEBA301AB8440F00659E65 /* 4f4942571bf166a0ced456495cecafdf-text.txt */,
+				9EFEBA311AB8440F00659E65 /* 4f89185a4cfc8affce11fa629360237a-neptun_satellit_nah_und_zoom.mov */,
+				9EFEBA321AB8440F00659E65 /* 4fad98f20ede707200a2b025165c3956-sunny_side_dachdecker.mov */,
+				9EFEBA331AB8440F00659E65 /* 501dfa40b999f49675229678ea695070-belgrad_donau_ganzer_block_schraeg.mov */,
+				9EFEBA341AB8440F00659E65 /* 5055365735cce3b9634133ae72ee70a3-text.txt */,
+				9EFEBA351AB8440F00659E65 /* 50661f986db30a81c7405e1e0cb5431c-golden_sands_mc_donalds.mov */,
+				9EFEBA361AB8440F00659E65 /* 518478d9b2bb3a94c03e8a710f4efc2a-text.txt */,
+				9EFEBA371AB8440F00659E65 /* 51ce16c813b739d5d7521f2b5b97565a-PLN_06_08_1_3.mov */,
+				9EFEBA381AB8440F00659E65 /* 52cd02030340d0ea9917eaaeef9efdc2-06690923d108c0e0259ffa993dfeee18.mov */,
+				9EFEBA391AB8440F00659E65 /* 52cd02030340d0ea9917eaaeef9efdc2-bungalow_innen4.mov */,
+				9EFEBA3A1AB8440F00659E65 /* 52cd02030340d0ea9917eaaeef9efdc2-e7442cdde2969a4ffb2e43ad9dd4c5f2.mov */,
+				9EFEBA3B1AB8440F00659E65 /* 52f13ca81ee6de183fe218358976abd9-turkei_meer_durch_restaurant.mov */,
+				9EFEBA3C1AB8440F00659E65 /* 53507aa4331b66a2913639d3c727bb25-faehre_cres_ankunft.mov */,
+				9EFEBA3D1AB8440F00659E65 /* 53c2a2cb762d23ffc715dd5146b7032c-mamaja-_wc-haus_und_block.mov */,
+				9EFEBA3E1AB8440F00659E65 /* 5672287d604f5fcbbcc9e55815214090-PLN_06_08_1_35.mov */,
+				9EFEBA3F1AB8440F00659E65 /* 5796541c406bb4e9e9eb65d88886c0fc-mamaja-_bella_italia.mov */,
+				9EFEBA401AB8440F00659E65 /* 59059ba3ea16c796685689f56e5ff4ad-cres_meer.mov */,
+				9EFEBA411AB8440F00659E65 /* 5bad8c950805d1afb29646c219667e08-neptun_treppe_und_baume.mov */,
+				9EFEBA421AB8440F00659E65 /* 5c07e1f2be35472c7ea28b5512d5f214-text.txt */,
+				9EFEBA431AB8440F00659E65 /* 5c43f7f186e6966e55f032bc06fc8066-PLN_06_08_1_19.mov */,
+				9EFEBA441AB8440F00659E65 /* 5d2fed5afbf150e2eae344bdcec979f7-PLN_06_08_1_32.mov */,
+				9EFEBA451AB8440F00659E65 /* 5e4db5a4c036589bccf43dc78bc581ea-mamaja-_fassade_und_skulptur.mov */,
+				9EFEBA461AB8440F00659E65 /* 602364e484d86f6fdd0659aeb1df65c8-staribaska_boote3.mov */,
+				9EFEBA471AB8440F00659E65 /* 60472f8726f6dbfa3231f465be78dfdd-text.txt */,
+				9EFEBA481AB8440F00659E65 /* 61296b0f9c6d50b7888268e43a7a772e-belgrad_donau_ht2.mov */,
+				9EFEBA491AB8440F00659E65 /* 63415ebb987a87ac326f6a69d9144014-mamaja-_allee.mov */,
+				9EFEBA4A1AB8440F00659E65 /* 643af538be54ee4b65eb0fb547af692f-d6ac9b7b4c4ced8cda3ea23b14b151cf.mov */,
+				9EFEBA4B1AB8440F00659E65 /* 643af538be54ee4b65eb0fb547af692f-venus_hotel_ariana.mov */,
+				9EFEBA4C1AB8440F00659E65 /* 64657d365c6b7ada476a737d092e1dde-belgrad_donau_baum_ht2.mov */,
+				9EFEBA4D1AB8440F00659E65 /* 6553a599bcf2b26ba50a2f816d776dc3-krk_meer_boote.mov */,
+				9EFEBA4E1AB8440F00659E65 /* 662256e9fa4561e11eb6538d3d5cf0f3-venus_blocke_und_tofffahrer.mov */,
+				9EFEBA4F1AB8440F00659E65 /* 664f99ffe91ad3c1caeba66c8d624c00-bukarest-mangoblock.mov */,
+				9EFEBA501AB8440F00659E65 /* 6736f7c8509c74c511b5b69a23d63b75-Clip_35.mov */,
+				9EFEBA511AB8440F00659E65 /* 6a3fcb7326abaaa2dd0f33780f3b6ba4-turkei_reihe_vogel_auf_mast.mov */,
+				9EFEBA521AB8440F00659E65 /* 6acfd7c7012a0d89bf8e9e80a92bf13f-sunny_side_leuchtschrift_.mov */,
+				9EFEBA531AB8440F00659E65 /* 6ad25a46b8999a8532a2e7d574b8e708-golden_sands_tattoo.mov */,
+				9EFEBA541AB8440F00659E65 /* 6aeeb55b5205a7a4aeff3fe669c7b38a-bukarest-blaue_fassade_und_baum.mov */,
+				9EFEBA551AB8440F00659E65 /* 6b0ef91e18d3e6b8a984a08f6654d3b5-mamaja-_abgefuckter_club-ht.mov */,
+				9EFEBA561AB8440F00659E65 /* 6b22a4d94e6481b09f554a048294ad49-sunny_side_leuchtschrift_und_blocke.mov */,
+				9EFEBA571AB8440F00659E65 /* 6b62165a715c6567e0e9afd1f1870ee4-PLN_06_08_1_29.mov */,
+				9EFEBA581AB8440F00659E65 /* 6bcf54b83b354bcc2a482d448a17554a-PLN_06_08_1_31.mov */,
+				9EFEBA591AB8440F00659E65 /* 6d6ba09a31b6ba75d2f2600a60828ba1-bukarest-muellberg_und_schrift.mov */,
+				9EFEBA5A1AB8440F00659E65 /* 6decb76f20b1c579d8d7b8b330da2def-text.txt */,
+				9EFEBA5B1AB8440F00659E65 /* 6f16d83ec5095d5d853b772c8249987e-krk_industry3.mov */,
+				9EFEBA5C1AB8440F00659E65 /* 6fcb76d5af538886693309969cd8ad97-cres_boot_3.mov */,
+				9EFEBA5D1AB8440F00659E65 /* 70894db1cdbfd5dd99c82f742f332875-staribasksa_boote2.mov */,
+				9EFEBA5E1AB8440F00659E65 /* 70ac73d54c36fc2da669c7921133b873-neptun_hotelfassade.mov */,
+				9EFEBA5F1AB8440F00659E65 /* 70ac889b835182e71edc08ed291afea5-punat_berg_1.mov */,
+				9EFEBA601AB8440F00659E65 /* 7300a6cfc99a08a8241893d6e09f428f-text.txt */,
+				9EFEBA611AB8440F00659E65 /* 741ffd6f52c122a8a35f6b4ebffff170-PLN_06_08_1_9.mov */,
+				9EFEBA621AB8440F00659E65 /* 74a6461d83c30b581aa51f172c175241-mamaja_mimoza.mov */,
+				9EFEBA631AB8440F00659E65 /* 762e389577d1fd98a93cdccafbd90114-Clip_101.mov */,
+				9EFEBA641AB8440F00659E65 /* 7834ded50cffde4a12ed4890451cece7-golden_sands_playboy_etc.mov */,
+				9EFEBA651AB8440F00659E65 /* 78f296155c67aa1409ab6088ad052bdd-text.txt */,
+				9EFEBA661AB8440F00659E65 /* 78fae906d5610b06b5bc4a765d53136f-venus_ariana_still.mov */,
+				9EFEBA671AB8440F00659E65 /* 79cb5f04afd6a34edf624654a55237f9-Clip_119.mov */,
+				9EFEBA681AB8440F00659E65 /* 7a0f297aa7d1e2f99cc1c73e5f458053-bungalow_aussen.mov */,
+				9EFEBA691AB8440F00659E65 /* 7b9159477a1573f4b549a5113c8b421d-belgrad_2_hausfrauen.mov */,
+				9EFEBA6A1AB8440F00659E65 /* 7e6ba24c044bdc9e552ca84e12081b63-mamaja_mann_mit_schaufel.mov */,
+				9EFEBA6B1AB8440F00659E65 /* 812ae6a7f16194d4e4fffad4f89fd1d5-mamaja_bewegter_vorhang.mov */,
+				9EFEBA6C1AB8440F00659E65 /* 82655a3546090345667264702f13ccad-PLN_06_08_1_18.mov */,
+				9EFEBA6D1AB8440F00659E65 /* 82d38723e33eed280361d1c8953ea1e5-neptun_hotel_belvedere.mov */,
+				9EFEBA6E1AB8440F00659E65 /* 8446bfdf15710b5216782ac3a6c5fa89-novi_beograd_totale.mov */,
+				9EFEBA6F1AB8440F00659E65 /* 845c025e65b008975bce7b3a736d5199-venus_hotel_ariana_gras_und_bierkisten.mov */,
+				9EFEBA701AB8440F00659E65 /* 84963c7fa9a7d6d7191c2efffd1bd259-cres_boot_2.mov */,
+				9EFEBA711AB8440F00659E65 /* 8499d8aee53932bbd84e230679c3e5db-text.txt */,
+				9EFEBA721AB8440F00659E65 /* 84afda46f7f67a741eed5a21e21cb704-mann_in_rotem_hang.mov */,
+				9EFEBA731AB8440F00659E65 /* 84eaa94abea0db30c6df057bd05e5158-bukarest-drehende_hochzeitsdame.mov */,
+				9EFEBA741AB8440F00659E65 /* 8645cccd3bb7de9efc3c150e3d5a4c68-mamaja-_grauer_neubau.mov */,
+				9EFEBA751AB8440F00659E65 /* 8648ed9ba283eb57478b106f5bd1e74c-7e1ac621762b8a9207a685e3f05f481d.mov */,
+				9EFEBA761AB8440F00659E65 /* 8648ed9ba283eb57478b106f5bd1e74c-PLN_06_08_2_1.mov */,
+				9EFEBA771AB8440F00659E65 /* 88b6421ae3f7f224e0046cf132724e98-bukarest-pepsibuechse.mov */,
+				9EFEBA781AB8440F00659E65 /* 8b43080cc45195e325b106c3486926e0-9a0b5f93c909ecc6c90383d524034533.mov */,
+				9EFEBA791AB8440F00659E65 /* 8b43080cc45195e325b106c3486926e0-b1ad69ef579d5be9786e573b39b1003b.mov */,
+				9EFEBA7A1AB8440F00659E65 /* 8b43080cc45195e325b106c3486926e0-PLN_06_08_1_38.mov */,
+				9EFEBA7B1AB8440F00659E65 /* 8b7c725c86c97957fa0c55c755af1383-104698d3f1bde9ab834132da8abb1630.mov */,
+				9EFEBA7C1AB8440F00659E65 /* 8b7c725c86c97957fa0c55c755af1383-PLN_06_08_1_37.mov */,
+				9EFEBA7D1AB8440F00659E65 /* 8b7f396306bf62eb47a5781303d9d694-turkei_reihe_rohbauten.mov */,
+				9EFEBA7E1AB8440F00659E65 /* 8c4d056fb2d59ebcfbdbb84c5ee7ccc1-bungalow_weit2.mov */,
+				9EFEBA7F1AB8440F00659E65 /* 8d34e571f8686c27111cf6cd0b001fec-bukarest-blaue_fassade_und_lampe.mov */,
+				9EFEBA801AB8440F00659E65 /* 8f3599f53ff9d763934fd572bf91903b-belgrad_donau_waesche_grade_ht.mov */,
+				9EFEBA811AB8440F00659E65 /* 8f604b6f08f6db42e7a25f21889e4858-fa4444cb3df3a8836a8f681f55575a0c.mov */,
+				9EFEBA821AB8440F00659E65 /* 8f604b6f08f6db42e7a25f21889e4858-PLN_06_08_1_11.mov */,
+				9EFEBA831AB8440F00659E65 /* 8ff87d1eeb8a6a6d2ac761aa97acad10-bakar_mann_in_baugrube.mov */,
+				9EFEBA841AB8440F00659E65 /* 918b8955107e4040f02877411fa290a1-bukarest-fassade_mit_baum.mov */,
+				9EFEBA851AB8440F00659E65 /* 926987d383a7013df1810091f42c11c2-belgrad_donau_naeher.mov */,
+				9EFEBA861AB8440F00659E65 /* 9395e788d832ef5a5bc7bcb9b7898844-bukarest-graue_fassade.mov */,
+				9EFEBA871AB8440F00659E65 /* 9453e7ffef56e97e3ecd80a1c5d399e2-belgrad_donau_von_hinten_ganz_schraeg.mov */,
+				9EFEBA881AB8440F00659E65 /* 9464610fa3fb262dd391e27abcbed36a-turkei_viele_rohbauten.mov */,
+				9EFEBA891AB8440F00659E65 /* 96705b2cfe136fdd1601afe6f6f37064-IMG_6165.MOV */,
+				9EFEBA8A1AB8440F00659E65 /* 96cb90c2cb735167e64960cfad5b0796-golden_sands_mc_donalds_und_meer.mov */,
+				9EFEBA8B1AB8440F00659E65 /* 989b3cbae5be4e1beb5d519e4738678e-ins-Clip_01.mp4 */,
+				9EFEBA8C1AB8440F00659E65 /* 9952f345dc4ac003945f14a47cd04969-text.txt */,
+				9EFEBA8D1AB8440F00659E65 /* 99bae256ccf83ba11f131ef90a7567db-staribaska_fels3.mov */,
+				9EFEBA8E1AB8440F00659E65 /* 9a80ee90ff0674385d1f2b34895710bb-belgrad_idea_oben.mov */,
+				9EFEBA8F1AB8440F00659E65 /* 9b65dbf196014a5f2c0a3886d66fd231-belgrad_donau_ganz.mov */,
+				9EFEBA901AB8440F00659E65 /* 9c3c007a666f3731db175079faf89f84-novi_beograd_abendhimmel.mov */,
+				9EFEBA911AB8440F00659E65 /* 9d34db928e50a366353cca77a8755525-PLN_06_08_1_28.mov */,
+				9EFEBA921AB8440F00659E65 /* 9d69f11997253776459ca23f1c04f2bc-sunny_side_fussballer1.mov */,
+				9EFEBA931AB8440F00659E65 /* 9e515e367088607e4a35d6478305035c-punat_haus_1.mov */,
+				9EFEBA941AB8440F00659E65 /* 9f2cc4b275fee5635030e0a33675f7e7-turkei_rohbauten_und_schiff.mov */,
+				9EFEBA951AB8440F00659E65 /* a0d7e51f1036cc3c90f54f4d826a2ddc-PLN_06_08_1_34.mov */,
+				9EFEBA961AB8440F00659E65 /* a14d4fa6889f7f24830854e04d5c6bba-text.txt */,
+				9EFEBA971AB8440F00659E65 /* a1b7561f1164a8f5aebe1ba0db56013c-Clip_46.mov */,
+				9EFEBA981AB8440F00659E65 /* a1bcdf2e2ff595599a79b00c51fc736d-text.txt */,
+				9EFEBA991AB8440F00659E65 /* a2217534c37417723a8d2f25a9439c52-belgrad_donau_von_hinten_nah-2.mov */,
+				9EFEBA9A1AB8440F00659E65 /* a27779cb421f303ff4ea2963a90f76e9-venus_ariana_bar.mov */,
+				9EFEBA9B1AB8440F00659E65 /* a449273990924a496e821c82352c8fbb-PLN_06_08_1_14.mov */,
+				9EFEBA9C1AB8440F00659E65 /* a4e58d1a98980b8f4651238b28edeaa8-windrader.mov */,
+				9EFEBA9D1AB8440F00659E65 /* a78a9e97f5aaf8e75df31b65c2a5d2f1-venus_pedalos,_hutte_am_strand.mov */,
+				9EFEBA9E1AB8440F00659E65 /* a849d3d764464c7f550c8e4e29c06e15-bungalow_nah.mov */,
+				9EFEBA9F1AB8440F00659E65 /* a86474cc0592490cfa82ee63f0d23ec3-PLN_06_08_1_1.mov */,
+				9EFEBAA01AB8440F00659E65 /* a91f03117b0662b787d9adce765ffcdf-saturn_runde_dacher_am_strand1.mov */,
+				9EFEBAA11AB8440F00659E65 /* a93f0678fb1926aa2752f6f7d3fa0fee-sunny_side_rosa_resort.mov */,
+				9EFEBAA21AB8440F00659E65 /* aa44fcd0a79315b5c8c5ce721fc8e713-ins-Clip_05.mp4 */,
+				9EFEBAA31AB8440F00659E65 /* aa7cf88d26f28df8f79326f3dcc9b9f7-venus_restaurant_und_pool.mov */,
+				9EFEBAA41AB8440F00659E65 /* ac5286694cc19d61856589b2d4234558-mamaja-_abgefuckter_club-kamin.mov */,
+				9EFEBAA51AB8440F00659E65 /* ac8aed510d005bbcfafbc0e58f663161-neptun_hotel_oltenia.mov */,
+				9EFEBAA61AB8440F00659E65 /* acd4e391b902b70c9c7ee136bbafee39-krk_wasserrohrbruch_gegen_hauser.mov */,
+				9EFEBAA71AB8440F00659E65 /* ad0030415b937b207671e7eed1745adc-bukarest-led-fassade.mov */,
+				9EFEBAA81AB8440F00659E65 /* ad33e7d15cdee34a400fb6b30ee10e11-punat_berg_totale1.mov */,
+				9EFEBAA91AB8440F00659E65 /* ad6cd1bf87f51f1c36912ad26c738b26-text.txt */,
+				9EFEBAAA1AB8440F00659E65 /* ae1e38fa10a83e080fb3666d73dca89c-faehre_cres.mov */,
+				9EFEBAAB1AB8441000659E65 /* aec00e6d7934b4899c200bc250368bef-text.txt */,
+				9EFEBAAC1AB8441000659E65 /* b23f05759b8f4820fe4042d4877a237c-text.txt */,
+				9EFEBAAD1AB8441000659E65 /* b4584dd04618a2e25269492ece972142-belgrad_donau_von_hinten_schraeg.mov */,
+				9EFEBAAE1AB8441000659E65 /* b4c4156ad25ad756d4ba20ffea5fb9fe-bukarest-_leuchtreklame.mov */,
+				9EFEBAAF1AB8441000659E65 /* b5b48f266d20103254205d2c18cf6056-mamaja-_grauer_neubau1.mov */,
+				9EFEBAB01AB8441000659E65 /* b5c3725156e816a1437358338cd4647e-golden_sands_blaue_holzkisten1.mov */,
+				9EFEBAB11AB8441000659E65 /* b5c65e6ceed10fd202c42220ec2e00c4-golden_sands_blaue_holzkisten.mov */,
+				9EFEBAB21AB8441000659E65 /* b703ca955d9e8da494cc9228c002ba40-punat_berg_voegel.mov */,
+				9EFEBAB31AB8441000659E65 /* b70b2a6d27fb6219c13dc995be9852ac-mamaja-_storefront.mov */,
+				9EFEBAB41AB8441000659E65 /* b75e7060153113187b88acf0917b3701-sunny_side_rosa_und_gelbes_resort.mov */,
+				9EFEBAB51AB8441000659E65 /* bbc877672c9b45455a576cc7ba56b184-sunny_side_2_blocke_vom_meer_aus.mov */,
+				9EFEBAB61AB8441000659E65 /* bce74e63e730406746cda7f977251415-text.txt */,
+				9EFEBAB71AB8441000659E65 /* bd0fb144869733a6f44262f7ff5bebd4-bungalow_innen3.mov */,
+				9EFEBAB81AB8441000659E65 /* be0376fa7b16c785005cf27b04e53f49-staribaska_fels4.mov */,
+				9EFEBAB91AB8441000659E65 /* be5b733b547bcfee8e3be6ed9b1d3188-venus_restaurant_und_pool_zoom.mov */,
+				9EFEBABA1AB8441000659E65 /* c04944f6350df6e7d6e4fae0e967459c-belgrad_donau_schraeg_waesche.mov */,
+				9EFEBABB1AB8441000659E65 /* c1410f72af354c05bbdbb4d197a49bad-version03_mit_ton.mp4 */,
+				9EFEBABC1AB8441000659E65 /* c1418e8337beda5a65c73587f24591cc-neptun_hotel_und_pool.mov */,
+				9EFEBABD1AB8441000659E65 /* c1707ffd9bce96acee85b8f493fc1df3-PLN_06_08_1_23.mov */,
+				9EFEBABE1AB8441000659E65 /* c3ca9d4ff3e12d6db3a3d59937cda16a-mamaja-_rauch_naher.mov */,
+				9EFEBABF1AB8441000659E65 /* c420805b1d3945af4823d97342b26ee7-PLN_06_08_1_2.mov */,
+				9EFEBAC01AB8441000659E65 /* c548555a0407bf6d82c2e138cd8a49fe-novi_beograd_skyline_stufen.mov */,
+				9EFEBAC11AB8441000659E65 /* c6f2b3d54caa0d3990e9d1b0331d50ec-848e19fabb3185b2714e3546c316964e.mov */,
+				9EFEBAC21AB8441000659E65 /* c6f2b3d54caa0d3990e9d1b0331d50ec-mamaja-_schild_boomerang.mov */,
+				9EFEBAC31AB8441000659E65 /* c7e418cf44d40ae69f497b0067446e6f-novi_beograd_frau_und_zoom.mov */,
+				9EFEBAC41AB8441000659E65 /* c88ffe98b14587b427a7a14bbfe07bea-sunny_side_rosa_resort_und_kiosk.mov */,
+				9EFEBAC51AB8441000659E65 /* c9204bf1c7bed1504b9afe26769bdfb1-text.txt */,
+				9EFEBAC61AB8441000659E65 /* c93e60c40b5364afc7c51ab3efaa3504-belgrad_donau_baum_oben.mov */,
+				9EFEBAC71AB8441000659E65 /* c9bb5e8e5f5eef2aeb9394353cc74e2a-saturn_leere_vitrine.mov */,
+				9EFEBAC81AB8441000659E65 /* cb460ceb5c43fa20e4ad4e6284d27bf5-PLN_06_08_1_16.mov */,
+				9EFEBAC91AB8441000659E65 /* ccef14ba22ee6339f44a80c36491dfc5-mamaja_schwimmbad_und_tucher.mov */,
+				9EFEBACA1AB8441000659E65 /* cd8edb2809f3c64d4400ee107e5ddba4-belgrad_donau_waesche.mov */,
+				9EFEBACB1AB8441000659E65 /* cdb9c4544fe53f308373881814aec5e4-faehre_cres_leute.mov */,
+				9EFEBACC1AB8441000659E65 /* ce3fc2c58a4482edea6966240241d359-PLN_06_08_1_20.mov */,
+				9EFEBACD1AB8441000659E65 /* ce8c8962d039db6c5d150343d62a12a1-belgrad_donau_von_hinten_oben.mov */,
+				9EFEBACE1AB8441000659E65 /* cee7286cf1071cc348c4caef12195d54-c94a8b6330268b48110c72c1581d2e08.mov */,
+				9EFEBACF1AB8441000659E65 /* cee7286cf1071cc348c4caef12195d54-PLN_06_08_1_36.mov */,
+				9EFEBAD01AB8441000659E65 /* d01d629f7a4cbcf2ef7b7cb27a94012c-ins-Clip_08.mp4 */,
+				9EFEBAD11AB8441000659E65 /* d02a97b735fdcd808fcd643442d2d0d6-text.txt */,
+				9EFEBAD21AB8441000659E65 /* d3129b7bebbc656244b54e0d9db58844-text.txt */,
+				9EFEBAD31AB8441000659E65 /* d3eeb0ab7c6f27cb721bf9ec7d1210f9-text.txt */,
+				9EFEBAD41AB8441000659E65 /* d41eb2dfa85c26ceb94d05220af93ff0-ins-Clip_06.mp4 */,
+				9EFEBAD51AB8441000659E65 /* d45b1ade9195cc1b3ea10432efeecddb-krk_industry2.mov */,
+				9EFEBAD61AB8441000659E65 /* d57ae81e231c70461a25bfd1171d148b-mamaja-_pizza_al_forno.mov */,
+				9EFEBAD71AB8441000659E65 /* d5bb439f387d72c32a8045336f907e64-cres_wolken.mov */,
+				9EFEBAD81AB8441000659E65 /* d65c9eb62f24dfbe213b482e08214abb-belgrad_donau_tot._unten.mov */,
+				9EFEBAD91AB8441000659E65 /* d6c13c34623bb5c69faafeb2175e0d22-text.txt */,
+				9EFEBADA1AB8441000659E65 /* d73e528adf49d1f35d158d9fda66d705-sunny_side_bellevue_und_kiosk.mov */,
+				9EFEBADB1AB8441000659E65 /* d7c9b39ebb94403c3198c5c420068895-bukarest-mangoblock_hn.mov */,
+				9EFEBADC1AB8441000659E65 /* d8421660a4482eb018d0408ae88f1db9-faehre_cres_oeffnen.mov */,
+				9EFEBADD1AB8441000659E65 /* d956255e39223f87248a8f54968e4c88-text.txt */,
+				9EFEBADE1AB8441000659E65 /* d95828020b00d79872b7840083ea46bc-text.txt */,
+				9EFEBADF1AB8441000659E65 /* d9c705d66c5d8e251051dc8e629ca409-ins-Clip_07.mp4 */,
+				9EFEBAE01AB8441000659E65 /* db062deaeea8199e48fd47dbc66ff1a6-faehre_cres_mann.mov */,
+				9EFEBAE11AB8441000659E65 /* dc498c60d753f1c80e1382c87b653b56-turkei_verpackte_stuhle2.mov */,
+				9EFEBAE21AB8441000659E65 /* dc4a31de3e7128d7ec1889d2bb98dc60-neptun_hotelbalkone.mov */,
+				9EFEBAE31AB8441000659E65 /* dc4b2c8ea578837cf14a3aec090476e9-neptun_hotel_und_satellitenschusseln.mov */,
+				9EFEBAE41AB8441000659E65 /* de0e2874e076e6d51ee82a2082b60d56-venus_hotel_ariana_innenraum.mov */,
+				9EFEBAE51AB8441000659E65 /* df22806e7bdfb04353890fa7a2eaed76-text.txt */,
+				9EFEBAE61AB8441000659E65 /* e0a20adcd8b6791665b6f766d37b4d14-cres_fischer.mov */,
+				9EFEBAE71AB8441000659E65 /* e0a4a3fe8195d4ba584bc9c58a54aa30-punat_berg_autocrossing.mov */,
+				9EFEBAE81AB8441000659E65 /* e118905e0884a518f13954994782355b-venus_hotel_ariana2.mov */,
+				9EFEBAE91AB8441000659E65 /* e2f7c227eb78b051f195b76b0bad04af-Clip_06.mp4 */,
+				9EFEBAEA1AB8441000659E65 /* e66e13101037b9c50847f392a4c4cdcd-text.txt */,
+				9EFEBAEB1AB8441000659E65 /* e67f4c9ae7b078f07ea08a8f3a1b0af6-text.txt */,
+				9EFEBAEC1AB8441000659E65 /* e70e98d8ea7749a2dbd5ded42b853221-PLN_06_08_1_25.mov */,
+				9EFEBAED1AB8441000659E65 /* e78b52bc1b51580058a4e8b8385c057e-staribasksa_boote1.mov */,
+				9EFEBAEE1AB8441000659E65 /* e7d1a75544039c65ece0cdc8afd69fbc-venus_ariana_total.mov */,
+				9EFEBAEF1AB8441000659E65 /* e821303ed0a7378d0331f7e02450ac03-PLN_06_08_2_2.mov */,
+				9EFEBAF01AB8441000659E65 /* e82ed3f3d3672751ca7816d8efbb960d-bungalow_innen.mov */,
+				9EFEBAF11AB8441000659E65 /* e8ab97270ee71cc784c7e6f7ac782d0c-PLN_06_08_1_21.mov */,
+				9EFEBAF21AB8441000659E65 /* e9192e37ec987be38bc0c338e11a26d1-novi_beograd_pferd_vor_blocken.mov */,
+				9EFEBAF31AB8441000659E65 /* eb59302847ded12f14deefc324cb7ef3-saturn_dusche.mov */,
+				9EFEBAF41AB8441000659E65 /* ecbc6edf0fbe4d5428df591d8604f71c-venus_ariana_haufen.mov */,
+				9EFEBAF51AB8441000659E65 /* ed66d1805cf98a75f66829db7e40a884-bukarest-fassade_mit_tanne.mov */,
+				9EFEBAF61AB8441000659E65 /* ee91da6c7fb459387515c7816ac2ab82-neptun_diverse_fassaden.mov */,
+				9EFEBAF71AB8441000659E65 /* eee0f032c898ba3086d8ffad223a9abb-punat_haus_2.mov */,
+				9EFEBAF81AB8441000659E65 /* efae621dc29eb8603293fb86ddaef72c-PLN_06_08_1_17.mov */,
+				9EFEBAF91AB8441000659E65 /* f055168b6539e6d7a3c8d35881619a91-belgrad_donau_waesche_grade_tot.mov */,
+				9EFEBAFA1AB8441000659E65 /* f5924b94ada1b684b1dd608cd9bddae6-PLN_06_08_1_26.mov */,
+				9EFEBAFB1AB8441000659E65 /* f5b0829adea98de3c456883fa6ef97cd-bukarest-fassade_an_strasse.mov */,
+				9EFEBAFC1AB8441000659E65 /* f8205597adacd075919523689ce2eae6-mamaja_3_hunde.mov */,
+				9EFEBAFD1AB8441000659E65 /* f828f0f4a11d0d133be126e08166fc01-PLN_06_08_1_10.mov */,
+				9EFEBAFE1AB8441000659E65 /* f908c17cd77a89f73364d8c203c02b64-krk_wasserrohrbruch_gegen_meer.mov */,
+				9EFEBAFF1AB8441000659E65 /* fb415175b97460ca7857274525553f45-krk_industry1.mov */,
+				9EFEBB001AB8441000659E65 /* fb4cfa3a105befe393b295578bedaee8-text.txt */,
+				9EFEBB011AB8441000659E65 /* fd0c58a47782a938f61dccc61a0cddf0-punat_berg_faehre.mov */,
+				9EFEBB021AB8441000659E65 /* fe2b37522b5645b122aa9cd2c54df3fd-text.txt */,
+			);
+			path = _movies;
+			sourceTree = "<group>";
+		};
+		9EFEBB031AB8441000659E65 /* movies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = movies;
+			sourceTree = "<group>";
+		};
+		9EFEBB051AB8441000659E65 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				9EFEBB061AB8441000659E65 /* fonts.xml */,
+				9EFEBB071AB8441000659E65 /* gui.png */,
+				9EFEBB081AB8441000659E65 /* logo.png */,
+				9EFEBB091AB8441000659E65 /* not-found.m4v */,
+				9EFEBB0A1AB8441000659E65 /* not-found.mov */,
+				9EFEBB0B1AB8441000659E65 /* not-found.mp4 */,
+				9EFEBB0C1AB8441000659E65 /* Roboto-Gui.ttf */,
+				9EFEBB0D1AB8441000659E65 /* Roboto-Medium.ttf */,
+				9EFEBB0E1AB8441000659E65 /* sync.png */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		A492CE86424AB8905550BFD8 /* ofxUI */ = {
+			isa = PBXGroup;
+			children = (
+				D60F85FE32E11F4003B80627 /* src */,
+			);
+			name = ofxUI;
+			sourceTree = "<group>";
+		};
+		A721EFB518B2BFE659AAD339 /* fontstash */ = {
+			isa = PBXGroup;
+			children = (
+				4C084EBF7CBFDB1868AFF470 /* src */,
+			);
+			name = fontstash;
+			sourceTree = "<group>";
+		};
+		B17FC2FE17C5A1E325E0F4D3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				427CFB8DEC529175DE5A1BE5 /* ofxGStreamer.h */,
+				ACDA7C81A6F82A656A6940BC /* ofxGStreamer.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		B55C940C88229BDF2174AE73 /* utf8 */ = {
+			isa = PBXGroup;
+			children = (
+				26207A0EB54CBAAF59F96A82 /* checked.h */,
+				11D8E2992E2E3FC07AE1D0E5 /* core.h */,
+				2E0D84EF6FDDA146459B2400 /* unchecked.h */,
+			);
+			name = utf8;
+			sourceTree = "<group>";
+		};
+		B7006DB7785B098B4504962B /* ofxFontStash */ = {
+			isa = PBXGroup;
+			children = (
+				EE9FC485BA17E42108FEDBF5 /* src */,
+				787C5E98195D5F7A798BEDA5 /* libs */,
+			);
+			name = ofxFontStash;
+			sourceTree = "<group>";
+		};
+		BA5A54C2056A17DC99BF8DF7 /* ofxGaplessVideo */ = {
+			isa = PBXGroup;
+			children = (
+				C9111F8A4F8662AC24851E63 /* src */,
+			);
+			name = ofxGaplessVideo;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				18240ECCE4076FB0833A8578 /* ofxNetwork */,
+				1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */,
+				B7006DB7785B098B4504962B /* ofxFontStash */,
+				BA5A54C2056A17DC99BF8DF7 /* ofxGaplessVideo */,
+				68ABFC4AF1214FDD23F574A2 /* ofxGStreamer */,
+				2865DAEF86B1907A704CA70B /* ofxJSON */,
+				A492CE86424AB8905550BFD8 /* ofxUI */,
+				DC83E36DCD9D09FB0842EE71 /* ofxUnicode */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		C9111F8A4F8662AC24851E63 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C4639743735BBEB743C70DE6 /* ofxGaplessVideoplayer.cpp */,
+				B332F8E938E93329D9E34897 /* ofxGaplessVideoplayer.h */,
+				BB7E0432293158A4E3114E4F /* threadedPlayer.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		CCDC6F9CCF925CC402160B85 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				21BDE665988474F1B1F4D302 /* jsoncpp.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D3193A84FE82591D4932AA98 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				B55C940C88229BDF2174AE73 /* utf8 */,
+				973BD95D5ED93E71B227038E /* utf8.h */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		D486FC87F063317BB47E9FAC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				58AD3BD71B781D9BC25763C8 /* json */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		D60F85FE32E11F4003B80627 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				64C6F7AD018FFD34C7ABB6F2 /* ofxUI.h */,
+				02FF3B8D243CFB85AE0909EB /* ofxUI2DGraph.cpp */,
+				653CFAE31336DAA04B1F1503 /* ofxUI2DGraph.h */,
+				1553D7111BCBE7834BCC0784 /* ofxUI2DPad.cpp */,
+				961DE8B564EF22E65C9480AE /* ofxUI2DPad.h */,
+				28155024C27152A66926B553 /* ofxUIBaseDraws.cpp */,
+				C161222F68D4F7CE28BC4F61 /* ofxUIBaseDraws.h */,
+				876BBA9542E267584885CAD8 /* ofxUIBiLabelSlider.cpp */,
+				2DD185513A2875EC8A078670 /* ofxUIBiLabelSlider.h */,
+				8F8238006E98A8E39851968C /* ofxUIButton.cpp */,
+				B3CA0202B1A3B6D8920C2B15 /* ofxUIButton.h */,
+				E71733956CD601886837BE2E /* ofxUICanvas.cpp */,
+				4FF2F2D5A01ADA37A9ADE20F /* ofxUICanvas.h */,
+				2556100026B425E8370BCF75 /* ofxUICircleSlider.cpp */,
+				EDFEB3D8C9183ADE3FACB4B5 /* ofxUICircleSlider.h */,
+				AEFCF7E549ACA862C022AD40 /* ofxUIDefines.h */,
+				FFD5D3C9D38E29DB72B32254 /* ofxUIDragableLabelButton.cpp */,
+				3C9066FB257B904A547019ED /* ofxUIDragableLabelButton.h */,
+				31517A9D3D67D9C054954DC5 /* ofxUIDropDownList.cpp */,
+				531D8D09739D338239967B3A /* ofxUIDropDownList.h */,
+				A8896AC3BECAAA504E3828F4 /* ofxUIEventArgs.cpp */,
+				CF73E1AF93352CF515E7C9F2 /* ofxUIEventArgs.h */,
+				FEB61645EF9120F5BACB7462 /* ofxUIFPS.cpp */,
+				FDA2832E78CFA22BEEC74160 /* ofxUIFPS.h */,
+				7E7E592342D8B7FB73A6F64D /* ofxUIFPSSlider.cpp */,
+				664D65407BE633C038FA9498 /* ofxUIFPSSlider.h */,
+				938F5A098A216B403906129C /* ofxUIImage.cpp */,
+				4ED7BC3AF72F6BE8F0917A30 /* ofxUIImage.h */,
+				E6280B5FA1CEA20450916E49 /* ofxUIImageButton.cpp */,
+				E67BC70E17DDA0081C8FD9DD /* ofxUIImageButton.h */,
+				8B5F60B902BFFD95E99AAB34 /* ofxUIImageSampler.cpp */,
+				4AEA0D08C3B0323FEDC8D974 /* ofxUIImageSampler.h */,
+				2689C5C8A97002C218125F2F /* ofxUIImageSlider.cpp */,
+				D66E735BE796BC0675320DC8 /* ofxUIImageSlider.h */,
+				B848522CCA3A75ABD56752C9 /* ofxUIImageToggle.cpp */,
+				2D394124F88F348AA4142DCF /* ofxUIImageToggle.h */,
+				D7D83EF74FC7508D9146FA63 /* ofxUILabel.cpp */,
+				F26E25F3872C0799D6433B99 /* ofxUILabel.h */,
+				F9A4454B00CCFD7265D3CA85 /* ofxUILabelButton.cpp */,
+				FBE1B379902B3C585DC8F7A2 /* ofxUILabelButton.h */,
+				76AF3B44E0E2FA8BFBD5F592 /* ofxUILabelToggle.cpp */,
+				6248640C06B47042BB5BD3F2 /* ofxUILabelToggle.h */,
+				2BE7216430113F333B8351ED /* ofxUIMinimalSlider.cpp */,
+				CCEC29A4351C40BA86F2E491 /* ofxUIMinimalSlider.h */,
+				7965EE214E4C332003852642 /* ofxUIMovingGraph.cpp */,
+				5C48E3511951BB86FA9AA642 /* ofxUIMovingGraph.h */,
+				17E06821FB98542FDB806E50 /* ofxUIMultiImageButton.cpp */,
+				BC6931447DE6C359DDDF21F1 /* ofxUIMultiImageButton.h */,
+				1C5ED4467DFF0AC3482E9362 /* ofxUIMultiImageToggle.cpp */,
+				1902452F5E510A2DBC1E5BD6 /* ofxUIMultiImageToggle.h */,
+				0D6768C572B6CA49227C29EA /* ofxUINumberDialer.cpp */,
+				15C99204FF4D8D72AD034B63 /* ofxUINumberDialer.h */,
+				334840CA6B3402C8C30CAC4E /* ofxUIOFWrapper.h */,
+				9D33A3E929B0B5D9C002E30E /* ofxUIRadio.cpp */,
+				4C9B919B991B4E45BC5DC0DB /* ofxUIRadio.h */,
+				E2813E36CEFD8D1C1B70E600 /* ofxUIRangeSlider.cpp */,
+				856BF5AB0322D0689EE63829 /* ofxUIRangeSlider.h */,
+				828EDF7F6C239EA7B17F32F0 /* ofxUIRectangle.cpp */,
+				1E29C7E8C47E3E2DB1C58766 /* ofxUIRectangle.h */,
+				64F3DE24F191ECED9DBE903C /* ofxUIRotarySlider.cpp */,
+				885850B62FAD08EB1D2F0BF4 /* ofxUIRotarySlider.h */,
+				BFD3387AA9EFA53E1B4F087B /* ofxUIScrollableCanvas.cpp */,
+				C38D6DCC3AB9AAE213A64015 /* ofxUIScrollableCanvas.h */,
+				0DE8B77977749C1835A9472B /* ofxUISlider.cpp */,
+				470B5D2AC2F616D10B2E6025 /* ofxUISlider.h */,
+				5613D5D24B00D8AD909F7E6A /* ofxUISortableList.cpp */,
+				E88F5D4D5E360FA5B5C8F99E /* ofxUISortableList.h */,
+				30CBAAEC78A0E9EBBB10A05A /* ofxUISpacer.cpp */,
+				C7B4B8AD9464A693A3683D0F /* ofxUISpacer.h */,
+				D7177CC1E771E1E857F8CB48 /* ofxUISpectrum.cpp */,
+				C6305369801B450557086284 /* ofxUISpectrum.h */,
+				38EBD5650A3BF5A499B07525 /* ofxUISuperCanvas.cpp */,
+				1C43CDB79BF40EA7424B9680 /* ofxUISuperCanvas.h */,
+				A64B8AA7481267CD4A76C16B /* ofxUITabBar.cpp */,
+				D45991C927E805C3B1AD7516 /* ofxUITabBar.h */,
+				DBE31D52BCB0CE44B9D154F0 /* ofxUITextArea.cpp */,
+				F9DF961B5E7D4C4E1E5D029C /* ofxUITextArea.h */,
+				06C7032F68D99A145A53CB6F /* ofxUITextInput.cpp */,
+				E65D547C2CD6A84FC9AF15FA /* ofxUITextInput.h */,
+				48CCCEA0C681DE8B4945111B /* ofxUIToggle.cpp */,
+				4117B8C24D49837D3DF9C23B /* ofxUIToggle.h */,
+				702A2528CA64B397E9B91ABE /* ofxUIToggleMatrix.cpp */,
+				8178EB9AA3C0268331AF3AF3 /* ofxUIToggleMatrix.h */,
+				87035EFE3D4427294D4D1338 /* ofxUIUtils.h */,
+				4D902D60E5CCFA9F2554BC7C /* ofxUIValuePlotter.cpp */,
+				D1387F25A47EF6809B55B59C /* ofxUIValuePlotter.h */,
+				9345327AA463407B3DADBADE /* ofxUIWaveform.cpp */,
+				FCCBDB55B98DA36682809F03 /* ofxUIWaveform.h */,
+				08A9C84B3CA68561BE01FF37 /* ofxUIWidget.cpp */,
+				32BD050A579633ADBCA5AF6B /* ofxUIWidget.h */,
+				23FA31CAEA236B2C1E218497 /* ofxUIWidgets.h */,
+				5AD807D1AF254F978AB20B1C /* ofxUIWidgetWithLabel.cpp */,
+				02677FA320D6C63B228A7562 /* ofxUIWidgetWithLabel.h */,
+				5E62D62D32EFCA8D05DDAD1A /* ofxUIWrapper.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		DC83E36DCD9D09FB0842EE71 /* ofxUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				EDB6E66F21E3A65060CA0833 /* src */,
+				6AC1BBA537347FB96E2D8F8A /* libs */,
+			);
+			name = ofxUnicode;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				9EFEB9D31AB8440F00659E65 /* data */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				E4B69B5B0A3A1756003C02F2 /* ACP_GST_osxDebug.app */,
+				9EFEB9B11AB8414300659E65 /* AVFoundation.framework */,
+				9EFEB9B21AB8414300659E65 /* CoreMedia.framework */,
+				9EFEB9B31AB8414300659E65 /* QuartzCore.framework */,
+				9EFEB9B41AB8414300659E65 /* Accelerate.framework */,
+				9EFEB9B51AB8414300659E65 /* AppKit.framework */,
+				9EFEB9B61AB8414300659E65 /* Cocoa.framework */,
+				9EFEB9B71AB8414300659E65 /* IOKit.framework */,
+				9EFEB9B81AB8414300659E65 /* AGL.framework */,
+				9EFEB9B91AB8414300659E65 /* ApplicationServices.framework */,
+				9EFEB9BA1AB8414300659E65 /* AudioToolbox.framework */,
+				9EFEB9BB1AB8414300659E65 /* CoreAudio.framework */,
+				9EFEB9BC1AB8414300659E65 /* CoreFoundation.framework */,
+				9EFEB9BD1AB8414300659E65 /* CoreServices.framework */,
+				9EFEB9BE1AB8414300659E65 /* OpenGL.framework */,
+				9EFEB9BF1AB8414300659E65 /* QuickTime.framework */,
+				9EFEB9C01AB8414300659E65 /* CoreVideo.framework */,
+				9EFEB9C11AB8414300659E65 /* QTKit.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9EFEB9A61AB83F2400659E65 /* configThread.h */,
+				9EFEB9A71AB83F2400659E65 /* main.cpp */,
+				9EFEB9A81AB83F2400659E65 /* ofApp.cpp */,
+				9EFEB9A91AB83F2400659E65 /* ofApp.h */,
+				9EFEB9AA1AB83F2400659E65 /* subtitleThread.h */,
+				9EFEB9AB1AB83F2400659E65 /* syncThread.h */,
+				9EFEB9AC1AB83F2400659E65 /* threadedLoader.h */,
+				9EFEB9AD1AB83F2400659E65 /* threadedSoundplayer.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		E928C193989D93F56354A05C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6E3AE1A5F6F0D6F75C66C1CC /* utf8 */,
+				E8BFFBD7382B36DC6B6B876E /* utf8.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		EDB6E66F21E3A65060CA0833 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8BF1B7E7C1C21FE45AB73E04 /* ofTextConverter.cpp */,
+				2A290CAAF51BCF4C00277C55 /* ofTextConverter.h */,
+				BF3CACAAE84A581E4AFA9FA7 /* ofUnicode.cpp */,
+				B2063844ABD06B3BCB1F23D5 /* ofUnicode.h */,
+				45FD7CA9F83C2CD563A7A5F4 /* ofUTF8.cpp */,
+				1EE77CC72B6BF6921CD961C9 /* ofUTF8.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		EE9FC485BA17E42108FEDBF5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D8A535D3474A0EAB684CAC5D /* ofxFontStash.cpp */,
+				093C39E85E4407D3C432539E /* ofxFontStash.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		F40E80CB2D443CBA9581DD03 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				977A836DD2C489CCC5E330FF /* jsoncpp */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* ACP_GST_osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "ACP_GST_osx" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				9EFEBB181AB8443B00659E65 /* CopyFiles */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = ACP_GST_osx;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* ACP_GST_osxDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ACP_GST_osx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* ACP_GST_osx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960D20B191346612D5C05A6A /* ofxTCPClient.cpp in Sources */,
+				125506CD3E5F428AAFE5CC65 /* ofxTCPManager.cpp in Sources */,
+				66CA411C5A9664E27326BF36 /* ofxTCPServer.cpp in Sources */,
+				E2564CF7DDB3713772BB682E /* ofxUDPManager.cpp in Sources */,
+				63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */,
+				933A2227713C720CEFF80FD9 /* tinyxml.cpp in Sources */,
+				9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */,
+				9EFEB9AF1AB83F2400659E65 /* ofApp.cpp in Sources */,
+				5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */,
+				7B388D550037229D99E7F52A /* ofxFontStash.cpp in Sources */,
+				801397981E78A4CBDE809376 /* fontstash.c in Sources */,
+				522FFFB6EB3DA57CCB07EF9A /* stb_truetype.c in Sources */,
+				852A1567B07E60FFD3CE6828 /* ofxGaplessVideoplayer.cpp in Sources */,
+				EFF44E8E264F0AD343D1E018 /* ofGstUtils.cpp in Sources */,
+				EA6B03BE577F2E744640A557 /* ofGstVideoPlayer.cpp in Sources */,
+				9D99424B122DE3C1D83A3670 /* ofGstVideoGrabber.cpp in Sources */,
+				F19063B0EC4D063E8E2588EC /* ofxGStreamer.cpp in Sources */,
+				BEDFEE7400C58EA4E412B757 /* ofxJSONElement.cpp in Sources */,
+				FB84AAF8D1B7A95266DB5C09 /* jsoncpp.cpp in Sources */,
+				9F5C6DD965B4F3A6DB5B88F8 /* ofxUI2DGraph.cpp in Sources */,
+				4B3ED367CA852D522E2EE996 /* ofxUI2DPad.cpp in Sources */,
+				F1E8DE8734BA6F69A5112FA8 /* ofxUIBaseDraws.cpp in Sources */,
+				C381F2B7CFD84C0E540EB4BC /* ofxUIBiLabelSlider.cpp in Sources */,
+				7D393646FB859A930EF58917 /* ofxUIButton.cpp in Sources */,
+				7BE46522B64E24FAEDE1A25D /* ofxUICanvas.cpp in Sources */,
+				DF0C851B244C4C867CEA8806 /* ofxUICircleSlider.cpp in Sources */,
+				9BE4AE0AA2B8C436BDFE9D4D /* ofxUIDragableLabelButton.cpp in Sources */,
+				9EFEB9AE1AB83F2400659E65 /* main.cpp in Sources */,
+				F392A99D83698FC099127880 /* ofxUIDropDownList.cpp in Sources */,
+				084025DA517D8329301FE1B6 /* ofxUIEventArgs.cpp in Sources */,
+				7252706DA14C1BE63950ADDA /* ofxUIFPS.cpp in Sources */,
+				22030CBDCC25D815E7ED6757 /* ofxUIFPSSlider.cpp in Sources */,
+				3D4EA8E172D3E4A30FEFA969 /* ofxUIImage.cpp in Sources */,
+				7F2CD93F681F3C1547B3BF2C /* ofxUIImageButton.cpp in Sources */,
+				FBD0CD0AFE3849C14E829CAF /* ofxUIImageSampler.cpp in Sources */,
+				26874B150C8535AEA0F24C8C /* ofxUIImageSlider.cpp in Sources */,
+				FB8AA9FA6535767BE31806BC /* ofxUIImageToggle.cpp in Sources */,
+				7C3DC84C9BFCBD2866DB2B6C /* ofxUILabel.cpp in Sources */,
+				FFD1EBFCA24DFB4E4427B4FE /* ofxUILabelButton.cpp in Sources */,
+				C30B3A2A37F8F32EE7318718 /* ofxUILabelToggle.cpp in Sources */,
+				9A83D1B3FB64456BC907667F /* ofxUIMinimalSlider.cpp in Sources */,
+				F440B307990F8F5CE40B9111 /* ofxUIMovingGraph.cpp in Sources */,
+				222C3AB10FA3158602718602 /* ofxUIMultiImageButton.cpp in Sources */,
+				F9C20834354ACC8337320B8C /* ofxUIMultiImageToggle.cpp in Sources */,
+				E3D59A6B55F05669B3FBF8BD /* ofxUINumberDialer.cpp in Sources */,
+				D60E54E7FD6E19BC8636E0D2 /* ofxUIRadio.cpp in Sources */,
+				1587708E3CAC72997E43504E /* ofxUIRangeSlider.cpp in Sources */,
+				59C5F2F5D7254C33C00F97CB /* ofxUIRectangle.cpp in Sources */,
+				FE0F1DB69ACCD163E9DA2A15 /* ofxUIRotarySlider.cpp in Sources */,
+				43BADBB2FE0F17D34B57A705 /* ofxUIScrollableCanvas.cpp in Sources */,
+				740A58CBFDFE578C83A349AF /* ofxUISlider.cpp in Sources */,
+				ADE7C2AFC51E3F7E5E389026 /* ofxUISortableList.cpp in Sources */,
+				BFEFCE32DAFE10A8EB519F6C /* ofxUISpacer.cpp in Sources */,
+				52AFF80A869790144ACCC9BA /* ofxUISpectrum.cpp in Sources */,
+				1DAAC3FB4B98B08AE63F4687 /* ofxUISuperCanvas.cpp in Sources */,
+				5AE95ADB5549701423B6DA48 /* ofxUITabBar.cpp in Sources */,
+				C961BE22AB9A8CCF037FC18F /* ofxUITextArea.cpp in Sources */,
+				F8D05F7C7F785CE323983B47 /* ofxUITextInput.cpp in Sources */,
+				04C82720B149CE576B8CBB06 /* ofxUIToggle.cpp in Sources */,
+				E3A1109F67D711D6C256031E /* ofxUIToggleMatrix.cpp in Sources */,
+				60012C723B05938A3D388335 /* ofxUIValuePlotter.cpp in Sources */,
+				AE281BEBF3A00F1FC37F3DA0 /* ofxUIWaveform.cpp in Sources */,
+				82845E1F8C90E1F5A99D9868 /* ofxUIWidget.cpp in Sources */,
+				CE5D89B9893EAA12F511DCAC /* ofxUIWidgetWithLabel.cpp in Sources */,
+				B0F2688D773B5C8FB13237F8 /* ofTextConverter.cpp in Sources */,
+				5A479B04DF062DE7431FD3BF /* ofUnicode.cpp in Sources */,
+				AD7CCE180C5BEF646A1B62E1 /* ofUTF8.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					"/Library/Frameworks/GStreamer.framework/Headers/**",
+					"../../../addons/ofxJSON/**",
+					"../../../addons/ofxNetwork/**",
+					"../../../addons/ofxFontStash/libs/**",
+					"../../../addons/ofxXmlSettings/**",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-lpthread",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"-F/Library/Frameworks",
+					"-framework",
+					GStreamer,
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					"/Library/Frameworks/GStreamer.framework/Headers/**",
+					"../../../addons/ofxJSON/**",
+					"../../../addons/ofxNetwork/**",
+					"../../../addons/ofxFontStash/libs/**",
+					"../../../addons/ofxXmlSettings/**",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-lpthread",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"-F/Library/Frameworks",
+					"-framework",
+					GStreamer,
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ACP_GST_osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "ACP_GST_osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}

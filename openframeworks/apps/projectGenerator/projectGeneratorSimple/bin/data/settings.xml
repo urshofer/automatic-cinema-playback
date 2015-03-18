@@ -1,0 +1,8 @@
+<group>
+	<ofxAccelerometer>0</ofxAccelerometer>
+	<ofxAndroid>0</ofxAndroid>
+	<ofxEmscripten>0</ofxEmscripten>
+	<ofxGStreamer>0</ofxGStreamer>
+	<ofxiOS>0</ofxiOS>
+	<ofxMultiTouch>0</ofxMultiTouch>
+</group>

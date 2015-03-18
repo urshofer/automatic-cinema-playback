@@ -1,0 +1,8 @@
+ofxNetwork
+ofxXmlSettings
+ofxFontStash
+ofxGaplessVideo
+ofxGStreamer
+ofxJSON
+ofxUI
+ofxUnicode
