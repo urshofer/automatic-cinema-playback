@@ -130,12 +130,13 @@ class syncThread : public ofThread{
 							// Error Crawl
 							else {
 								result = "Movie: missing";
-                                
+                                /*
 								#ifdef TARGET_OF_IPHONE
 									MO->loadMovie("static/not-found.m4v", false, false);
 								#else
 									MO->loadMovie("static/not-found.mov", false, false);
 								#endif
+                                */
 							}
 			
 						}
