@@ -5,62 +5,62 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>29190016-74C1-41AA-820E-D6572D3A8382</string>
+	<string>AD0DF002-12A5-421C-852C-0CB72F680586</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ACP_GST_osx</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>056FDC25-2C35-43F3-AABA-2CB169D07E28</key>
+		<key>06415424-69B8-42D3-B94E-6A479F210C9D</key>
+		<string>https://github.com/openframeworks/openFrameworks</string>
+		<key>07B711FF-E84A-42A5-BFC5-478B413B221B</key>
+		<string>https://github.com/jefftimesten/ofxJSON</string>
+		<key>0EBFD993-66E9-45D1-804A-FED41915B423</key>
 		<string>https://github.com/urshofer/ofxGaplessVideo</string>
+		<key>1144552A-A580-464D-8CCA-CE48975F4C75</key>
+		<string>https://github.com/urshofer/automatic-cinema-playback</string>
+		<key>21CAED10-7588-437B-BA5D-10C985C1ACE2</key>
+		<string>https://github.com/bakercp/ofxUnicode</string>
 		<key>3EF64080-4BE5-4DEA-BED6-C448B9CE0A29</key>
 		<string>https://github.com/arturoc/ofxGStreamer</string>
-		<key>50C9128E-AAAD-4FBF-9AEE-7BCAA88FB97A</key>
-		<string>https://github.com/urshofer/automatic-cinema-playback</string>
-		<key>5F109818-87D7-4B43-A557-6514D6E883E4</key>
-		<string>https://github.com/jefftimesten/ofxJSON</string>
-		<key>748C3969-DFF2-4066-AB2D-51129364C5A2</key>
-		<string>https://github.com/openframeworks/openFrameworks</string>
-		<key>981C0082-F21C-495B-AC8B-59DE88889100</key>
-		<string>https://github.com/bakercp/ofxUnicode</string>
-		<key>B516F4BA-5CC3-442B-BE18-C610D4E0890C</key>
-		<string>https://github.com/rezaali/ofxUI</string>
-		<key>D665210E-510A-4BD5-9D39-1CEF82828C59</key>
+		<key>51D8B23B-C303-4562-8C3F-FC0AF0CF3054</key>
 		<string>https://github.com/armadillu/ofxFontStash</string>
+		<key>843A1F73-12F7-42AF-B79C-FD7C483261FF</key>
+		<string>https://github.com/rezaali/ofxUI</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>openframeworks/apps/myApps/ACP_GST_osx/ACP_GST_osx.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>056FDC25-2C35-43F3-AABA-2CB169D07E28</key>
+		<key>06415424-69B8-42D3-B94E-6A479F210C9D</key>
+		<string>../../../../../openFrameworks</string>
+		<key>07B711FF-E84A-42A5-BFC5-478B413B221B</key>
+		<string>../../../../../addons/ofxJSON</string>
+		<key>0EBFD993-66E9-45D1-804A-FED41915B423</key>
 		<string>../../../../../addons/ofxGaplessVideo</string>
+		<key>1144552A-A580-464D-8CCA-CE48975F4C75</key>
+		<string>../../../../../..</string>
+		<key>21CAED10-7588-437B-BA5D-10C985C1ACE2</key>
+		<string>../../../../../addons/ofxUnicode</string>
 		<key>3EF64080-4BE5-4DEA-BED6-C448B9CE0A29</key>
 		<string>../../../../../addons/ofxGStreamer</string>
-		<key>50C9128E-AAAD-4FBF-9AEE-7BCAA88FB97A</key>
-		<string>../../../../../..</string>
-		<key>5F109818-87D7-4B43-A557-6514D6E883E4</key>
-		<string>../../../../../addons/ofxJSON</string>
-		<key>748C3969-DFF2-4066-AB2D-51129364C5A2</key>
-		<string>../../../../../openFrameworks</string>
-		<key>981C0082-F21C-495B-AC8B-59DE88889100</key>
-		<string>../../../../../addons/ofxUnicode</string>
-		<key>B516F4BA-5CC3-442B-BE18-C610D4E0890C</key>
-		<string>../../../../../addons/ofxUI</string>
-		<key>D665210E-510A-4BD5-9D39-1CEF82828C59</key>
+		<key>51D8B23B-C303-4562-8C3F-FC0AF0CF3054</key>
 		<string>../../../../../addons/ofxFontStash</string>
+		<key>843A1F73-12F7-42AF-B79C-FD7C483261FF</key>
+		<string>../../../../../addons/ofxUI</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/urshofer/automatic-cinema-playback</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>50C9128E-AAAD-4FBF-9AEE-7BCAA88FB97A</string>
+	<string>1144552A-A580-464D-8CCA-CE48975F4C75</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>50C9128E-AAAD-4FBF-9AEE-7BCAA88FB97A</string>
+			<string>1144552A-A580-464D-8CCA-CE48975F4C75</string>
 			<key>IDESourceControlWCCName</key>
 			<string>automatic-cinema-playback</string>
 		</dict>
@@ -68,7 +68,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D665210E-510A-4BD5-9D39-1CEF82828C59</string>
+			<string>51D8B23B-C303-4562-8C3F-FC0AF0CF3054</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxFontStash</string>
 		</dict>
@@ -76,7 +76,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>056FDC25-2C35-43F3-AABA-2CB169D07E28</string>
+			<string>0EBFD993-66E9-45D1-804A-FED41915B423</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxGaplessVideo</string>
 		</dict>
@@ -92,7 +92,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5F109818-87D7-4B43-A557-6514D6E883E4</string>
+			<string>07B711FF-E84A-42A5-BFC5-478B413B221B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxJSON</string>
 		</dict>
@@ -100,7 +100,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B516F4BA-5CC3-442B-BE18-C610D4E0890C</string>
+			<string>843A1F73-12F7-42AF-B79C-FD7C483261FF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxUI</string>
 		</dict>
@@ -108,7 +108,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>981C0082-F21C-495B-AC8B-59DE88889100</string>
+			<string>21CAED10-7588-437B-BA5D-10C985C1ACE2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxUnicode</string>
 		</dict>
@@ -116,7 +116,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>748C3969-DFF2-4066-AB2D-51129364C5A2</string>
+			<string>06415424-69B8-42D3-B94E-6A479F210C9D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>openFrameworks</string>
 		</dict>
