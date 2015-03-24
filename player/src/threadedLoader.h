@@ -124,14 +124,20 @@ public:
                 
                 if (_missing)
                 {
-                    fileMissing = root[index]["f"].asString();
+                    if (lock()) {
+                        fileMissing = root[index]["f"].asString();
+                        unlock();
+                    }
                     ofLogVerbose() << "MISSING " << "movies/" << fileMissing << endl;
                     ofSaveURLTo(apiURL + "/Download/" + apiKEY + "/" + root[index]["f"].asString(), localPath);
     				ofLogVerbose() << "Downloading " << apiURL << "/Download/" << apiKEY + "/" << root[index]["f"].asString();
+                    if (lock()) {
+                        fileMissing = "";
+                        unlock();
+                    }
                 }
             }
         }
-        fileMissing = "";
         isDownloading = false;
     }
 

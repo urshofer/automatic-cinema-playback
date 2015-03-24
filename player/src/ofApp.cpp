@@ -496,11 +496,11 @@ void ofApp::exit() {
     if (gui->isEnabled())
         delete gui;
     // stop the threads
-	if (MO.isThreadRunning()) {
+	//if (MO.isThreadRunning()) {
 		MO.stopThread();
-        MO.waitForThread();
+    //    MO.waitForThread();
         std::cout  << "- Movie Thread Stopped" << endl;
-	}
+	//}
 	if (TO.isThreadRunning()) {
 		TO.stopThread();
         TO.waitForThread();

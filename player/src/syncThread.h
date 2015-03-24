@@ -68,7 +68,7 @@ class syncThread : public ofThread{
 						if (access(fileNameInOF.c_str(), R_OK) == -1 || TO->downloadFile() == root[index]["f"].asString())
 						{
 							// Try to download, it might be added to the list later...
-                          
+                            ofLogError("Sync") << "File Missing: " << TO->downloadFile() << endl;
 							available = false;
                             TO->startDownload();
 						}
@@ -76,7 +76,6 @@ class syncThread : public ofThread{
 
 						if (root[index]["t"].asString()=="text" && available && hasText && (root[index]["m"].asString() == "t" || root[index]["m"].asString() == "p"))  {
                             ofLogVerbose() << "+ NET: loadSubtitles";
-                            
 							SU->loadSubtitles(fileNameInOF);
 						}
 
@@ -190,7 +189,7 @@ class syncThread : public ofThread{
 			channel = _channel;
 		   	udpConnection.Create();
 		   	udpConnection.BindMcast(mIp, _port);
-		   	udpConnection.SetNonBlocking(false);
+		   	udpConnection.SetNonBlocking(true);
             udpConnection.SetReuseAddress(true);
             if (udpConnection.HasSocket()) {
                 startThread();   // blocking, verbose
@@ -216,13 +215,26 @@ class syncThread : public ofThread{
 
 		void threadedFunction(){
             ofLogError() << "+ NET: Starting Thread";
+            char udpMessage[1000];
+            string message;
+            string last_message;
+            unsigned long long t = ofGetElapsedTimeMillis();
 			while (isThreadRunning()) {
-				char udpMessage[1000];
+                memset(&udpMessage[0], 0, sizeof(udpMessage));
 				udpConnection.Receive(udpMessage,1000);
-				string message=udpMessage;
-				if(message.length() > 5){
-					parseJSON(message);
-				}
+				message=udpMessage;
+				if(message.length() > 5) {
+                    if(last_message != message && ofGetElapsedTimeMillis() - t > 100){
+                        ofLogVerbose((ofToString(ofGetElapsedTimef(),2))) << message << endl;
+                        parseJSON(message);
+                    }
+                    else {
+                        ofLogVerbose((ofToString(ofGetElapsedTimef(),2))) << "possible dupe or error." << endl;
+                    }
+                    last_message = message;
+                    t = ofGetElapsedTimeMillis();
+                }
+                ofSleepMillis(5);
 			}
 		}
 
