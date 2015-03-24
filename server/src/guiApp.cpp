@@ -132,7 +132,7 @@ void ofApp::guiEvent(ofxUIEventArgs &e)
         XML.setValue("PORT", port);
         XML.setValue("URL", apiurl);
         XML.saveFile();
-
+/*
         ofxUIButton *ti = (ofxUIButton *) e.widget;
         if (ti->getValue()) {
             MD5Engine md5;
@@ -146,7 +146,7 @@ void ofApp::guiEvent(ofxUIEventArgs &e)
                 ofLogError() << "- Could not connect to API Server and Log In";
             }
         }
-    }
+*/    }
     
 }
 
@@ -168,7 +168,7 @@ void ofApp::setup(){
         std::exit(0);
     }
     FXML.setTo("/fonts");
-    string guifont = FXML.getValue("gui");
+    guifont = FXML.getValue("gui");
     ofLogError() << "- Loading font " << guifont;
     cinetype_1.load(guifont, 10);
     cinetype_2.load(guifont, 16);
@@ -193,10 +193,8 @@ void ofApp::setup(){
     
     MD5Engine md5;
     md5.update(pass);
-	if (getdata.parse( curlConnect(apiurl + "/Login", "username=" + user + "&password=" + DigestEngine::digestToHex(md5.digest()) ), returnval )) {sessionid = returnval.asString();}
-	else {
-        ofLogError() << "- Could not connect to API Server and Log In";
-        setupGUI(guifont);
+    if (getdata.parse( curlConnect(apiurl + "/Login", "username=" + user + "&password=" + DigestEngine::digestToHex(md5.digest()) ), returnval )) {
+        sessionid = returnval.asString();
     }
     configured = false;
 }
@@ -240,6 +238,29 @@ void ofApp::update(){
             FRM.start(framerate, multicastip, port, sessionid, apiurl);
             
             configured = true;
+        }
+    }
+    else {
+        MD5Engine md5;
+        md5.update(pass);
+        static bool showGUI = false;
+        static long timer = ofGetElapsedTimeMillis();
+        if (ofGetElapsedTimeMillis()-timer>1000) {
+            if (getdata.parse( curlConnect(apiurl + "/Login", "username=" + user + "&password=" + DigestEngine::digestToHex(md5.digest()) ), returnval )) {
+                sessionid = returnval.asString();
+                if (showGUI) {
+                    gui->disable();
+                }
+                ofLogError() << "- Yes! Logged in...";
+            }
+            else {
+                ofLogError() << "- Could not connect to API Server and Log In";
+                if (!showGUI) {
+                    setupGUI(guifont);
+                    showGUI = true;
+                }
+            }
+            timer = ofGetElapsedTimeMillis();
         }
     }
 }

@@ -82,6 +82,7 @@ public:
     ofxUDPManager udpConnection;
 
     /* Font */
+        string guifont;
 #ifdef TARGET_OF_IPHONE
         ofxRetinaTrueTypeFont cinetype_1, cinetype_2;
 #else
