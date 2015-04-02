@@ -497,28 +497,28 @@ void ofApp::exit() {
         delete gui;
     // stop the threads
 	//if (MO.isThreadRunning()) {
-		MO.stopThread();
+		MO.stop();
     //    MO.waitForThread();
         std::cout  << "- Movie Thread Stopped" << endl;
 	//}
 	if (TO.isThreadRunning()) {
-		TO.stopThread();
+		TO.stop();
         TO.waitForThread();
         std::cout  << "- Download Thread Stopped" << endl;
 	}
 	if (SN.isThreadRunning()) {
-		SN.stopThread();
+		SN.stop();
         SN.waitForThread();
         std::cout  << "- Sound Thread Stopped" << endl;
 	}
 	if (SC.isThreadRunning()) {
-		SC.stopThread();
+		SC.stop();
         SC.waitForThread();
         std::cout  << "- Network Sync Thread Stopped" << endl;
         
 	}
 	if (SU.isThreadRunning()) {
-		SU.stopThread();
+		SU.stop();
         SU.waitForThread();
         std::cout  << "- Subtitle Thread Stopped" << endl;
         

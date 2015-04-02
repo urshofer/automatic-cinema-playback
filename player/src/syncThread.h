@@ -211,7 +211,6 @@ class syncThread : public ofThread{
 
         void stop(){
             stopThread();
-            waitForThread();
             if (udpConnection.HasSocket()) {
                 udpConnection.Close();
             }
