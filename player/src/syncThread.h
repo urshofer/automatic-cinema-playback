@@ -175,10 +175,10 @@ class syncThread : public ofThread{
 		
 		void start(string multicastIp, int _port, vector<string> _channel, threadedLoader &_TO, ofxGaplessVideoPlayer &_MO, threadedSoundplayer	&_SN, subtitleThread &_SU, bool _hasVideo, bool _hasAudio, bool _hasText){
             
-            char * mIp = new char[multicastIp.size() + 1];
+/*            char * mIp = new char[multicastIp.size() + 1];
             copy(multicastIp.begin(), multicastIp.end(), mIp);
             mIp[multicastIp.size()] = '\0';
-            
+*/
 			MO = &_MO;
 			TO = &_TO;
 			SN = &_SN;
@@ -187,10 +187,13 @@ class syncThread : public ofThread{
 			hasAudio = _hasAudio;
 			hasText  = _hasText;
 			channel = _channel;
-		   	udpConnection.Create();
+            
+            configNet(multicastIp, _port);
+            
+/*		   	udpConnection.Create();
 		   	udpConnection.BindMcast(mIp, _port);
 		   	udpConnection.SetNonBlocking(true);
-            udpConnection.SetReuseAddress(true);
+            udpConnection.SetReuseAddress(true);*/
             if (udpConnection.HasSocket()) {
                 startThread();   // blocking, verbose
             }
@@ -207,10 +210,11 @@ class syncThread : public ofThread{
     }
 
         void stop(){
+            stopThread();
+            waitForThread();
             if (udpConnection.HasSocket()) {
                 udpConnection.Close();
             }
-            stopThread();
         }
 
 		void threadedFunction(){
