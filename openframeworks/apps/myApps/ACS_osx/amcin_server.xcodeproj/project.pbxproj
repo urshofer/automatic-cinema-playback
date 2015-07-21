@@ -265,7 +265,7 @@
 		9E4DBA961A0CFE39003941B1 /* testApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = testApp.cpp; path = ../../../../../server/src/testApp.cpp; sourceTree = "<group>"; };
 		9E4DBA971A0CFE39003941B1 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = ../../../../../server/src/testApp.h; sourceTree = "<group>"; };
 		9E9141EA1AAC955400860A8C /* gui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gui.png; path = ../../../../../../server/bin/data/gui.png; sourceTree = "<group>"; };
-		9EBC30171AACD4AF00B6DA80 /* ACSDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ACSDebug.app; path = "AC ControllerDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBC30171AACD4AF00B6DA80 /* AC ControllerDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AC ControllerDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC1AB5E19D07FDB0053B19D /* addons.make */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
 		9EE36C5819D4A9F700E54B35 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		9EE36C5919D4A9F700E54B35 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
@@ -648,7 +648,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				9EBC30171AACD4AF00B6DA80 /* ACSDebug.app */,
+				9EBC30171AACD4AF00B6DA80 /* AC ControllerDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -697,7 +697,7 @@
 			);
 			name = "AC Controller";
 			productName = myOFApp;
-			productReference = 9EBC30171AACD4AF00B6DA80 /* ACSDebug.app */;
+			productReference = 9EBC30171AACD4AF00B6DA80 /* AC ControllerDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -707,6 +707,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
+				TargetAttributes = {
+					E4B69B5A0A3A1756003C02F2 = {
+						DevelopmentTeam = 29K5GAHAHX;
+					};
+				};
 			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "amcin_server" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -914,6 +919,7 @@
 		E4B69B600A3A1757003C02F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -944,6 +950,7 @@
 		E4B69B610A3A1757003C02F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
