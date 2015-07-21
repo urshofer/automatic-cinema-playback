@@ -12,7 +12,9 @@ int main( ){
     #elif TARGET_OF_IPHONE
         ofSetupOpenGL(1024,768,OF_FULLSCREEN);
     #else
-        ofSetupOpenGL(640, 360, OF_WINDOW);
+ //       ofSetupOpenGL(1280, 960, OF_GAME_MODE);
+           ofSetupOpenGL(LED_WIDTH, LED_HEIGHT, OF_WINDOW);
+    
     #endif
 	ofRunApp( new ofApp());
 }

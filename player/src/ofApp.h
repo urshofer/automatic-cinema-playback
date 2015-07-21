@@ -14,6 +14,9 @@
 #include "ofxFontStash.h"
 #include "ofxUI.h"
 
+#define LED_WIDTH  384
+#define LED_HEIGHT 224
+
 
 #ifdef TARGET_OF_IPHONE
 	class ofApp : public ofxiOSApp {

@@ -403,7 +403,22 @@ void ofApp::draw(){
     
     else {
         if (config.hasVideo) {
-            if (!MO.draw()) {
+            float w = MO.getWidth();
+            float h = MO.getHeight();
+            float hs = LED_HEIGHT;
+            float ws = LED_WIDTH;
+            
+            bool square = w > 0 && w / h > ws / hs ? true : false;
+
+            if (square) {
+                ws = h > 0 ? w / h * hs : ws;
+            }
+            else {
+                hs = w > 0 ? h / w * ws : hs;
+            }
+            
+
+            if (!MO.draw(((LED_WIDTH - ws) / 2), ((LED_HEIGHT - hs) / 2), ws, hs)) {
                 drawWaitForConfig("Waiting for Footage");
             }
         }
@@ -485,6 +500,12 @@ void ofApp::mouseMoved(int x, int y ){
     mouseTimer = ofGetElapsedTimeMillis();
     cursorflag = true;
     ofShowCursor();
+    if (SN.isThreadRunning()) {
+        SN.setMatrixEffect(x,y,0,ofGetWidth(),0,ofGetHeight());
+    }
+    float _x = abs(ofMap(x, 0, ofGetWidth(), -.5, .5, true));
+    float _y = abs(ofMap(y, 0, ofGetHeight(), -.5, .5, true));
+    MO.setVolume(_x*_y);
 }
 #endif
 
