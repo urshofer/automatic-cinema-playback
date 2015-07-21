@@ -19,3 +19,6 @@
 [submodule "openframeworks/addons/ofxGStreamer"]
 	path = openframeworks/addons/ofxGStreamer
 	url = https://github.com/arturoc/ofxGStreamer
+[submodule "openframeworks/addons/ofxAudioUnit"]
+	path = openframeworks/addons/ofxAudioUnit
+	url = https://github.com/admsyn/ofxAudioUnit
