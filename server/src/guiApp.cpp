@@ -6,7 +6,7 @@ void ofApp::drawWaitForConfig(string message) {
 
     ofPushStyle();
     ofSetColor(255,255,255,80);
-    ofRect(0, 0, ofGetWidth(), 43);
+    ofDrawRectangle(0, 0, ofGetWidth(), 43);
     ofPopStyle();
     
     cinetype_2.drawString(message, 12, 28);
@@ -27,6 +27,37 @@ void ofApp::drawWaitForConfig(string message) {
     }
 	ofDisableBlendMode();
     ofPopStyle();
+
+    // Do Stuff every Second
+    static long timer = ofGetElapsedTimeMillis();
+    static string act;
+    static int _offset = 100;
+    static Json::Reader json;
+    static Json::Value 	jsonData;
+
+    /* Load Channels */
+    
+    string s = FRM.getState();
+    if (s != "") {
+        act = s;
+        timer = ofGetElapsedTimeMillis();
+    }
+    if (ofGetElapsedTimeMillis()-timer<250) {
+        ofPushStyle();
+        ofSetColor (0, 255, 0);
+        if (json.parse( act, jsonData )) {
+//            cout << jsonData.toStyledString() << endl;
+            if (jsonData.isArray()) {
+                for ( unsigned int index = 0; index < jsonData.size(); index++ )  {
+                    ofDrawCircle(ofGetWidth()-(60 + index * _offset), 20, radius/2);
+                    cinetype_1.drawString(jsonData[index]["c"].asString(), ofGetWidth()-(100 + index * _offset), 25);
+                }
+            }
+       }
+        ofPopStyle();
+    }
+
+
 }
 
 string ofApp::curlConnect(string _url, string _post){
@@ -153,6 +184,9 @@ void ofApp::guiEvent(ofxUIEventArgs &e)
 	
 //--------------------------------------------------------------
 void ofApp::setup(){
+    ofAppGLFWWindow * glfwWindow = (ofAppGLFWWindow*) ofGetWindowPtr();
+    glfwWindow->iconify(true);
+    
 #ifdef TARGET_OSX
     ofSetDataPathRoot("../Resources/data/");
 #endif
@@ -360,10 +394,4 @@ void ofApp::draw(){
 
         offset_y += 80;
     }
-    
-    
-
-
-
-    
 }

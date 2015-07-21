@@ -71,7 +71,8 @@ class framerThread : public ofThread{
 		int framerate, port;
 		loaderThread	LDR;
 		string sessionid, apiurl, multicastip, stack, state;
-		ofxUDPManager udpConnection;
+        bool state_changed;
+        ofxUDPManager udpConnection;
     
 
 		//--------------------------
@@ -85,8 +86,6 @@ class framerThread : public ofThread{
                 unlock();
              }
             return _v;
-			//ofScopedLock lock(mutex);
-			//return verbose;
         }
 
 		string loaderstate() {
@@ -94,23 +93,13 @@ class framerThread : public ofThread{
 		}
 
 		string getState() {
-/*            string _state;
-			if( lock() ){
-				_state = state;
-				unlock();
-			}
-			return _state;*/
 			ofScopedLock lock(mutex);
-			return state;
+            string _state = state_changed ? state : "";
+            state_changed = false;
+			return _state;
 		}
 
 		string getStack() {
-/*            string _stack;
-			if( lock() ){
-				_stack = stack;
-				unlock();
-			}
-			return _stack;*/
 			ofScopedLock lock(mutex);
 			return stack;
 		}
@@ -132,17 +121,14 @@ class framerThread : public ofThread{
 			sessionid = _sessionid;				
 			port = _port;
 			setupnet();
-//			gst_init (NULL, NULL);
-			state = "Initializing...";
-//		    gstclock = gst_system_clock_obtain();
-//			netclock = gst_net_time_provider_new (gstclock, _multicastip.c_str(), port + 10);
+			setState("Initializing...");
 
 			/* Playlist Loader Thread: Polls every ten Seconds if a new Playlist exists. */
 			LDR.start(sessionid, apiurl);
 			
 			// Wait till first Elements are loaded
 			while (!LDR.waitForReady()) {
-				state = "Waiting for Data...";
+                setState("Waiting for Data...");
 				ofSleepMillis(1000);
 			}
 
@@ -158,21 +144,16 @@ class framerThread : public ofThread{
 			std::cout << "FRM Stopped\n";		
 		}
 		
-/*		void setState(string _state) {
-			if (lock()) {
-				state = _state;
-				unlock();
-			}
+		void setState(string _state) {
+            if (lock()) {
+                state = _state;
+                state_changed = true;
+                unlock();
+            }
 		}
-*/
+
 		void threadedFunction(){
-//			setState("Framer Running");		
-//			if (lock()) {
-				state = "Framer running...";
-//				unlock();
-//			}
-
-
+			setState("Framer Running");
 			Json::Value senddata;
 			loaderThread::_clip _cl = (loaderThread::_clip) {
 				 "",
@@ -385,10 +366,7 @@ class framerThread : public ofThread{
 					string send = writer.write( senddata["s"] );
 					if (send.size()>5) {
 						udpConnection.SendAll(send.c_str(),send.size());
-						if (lock()) {
-							state = ofToString(nowTime/1000) + ": " + send;
-							unlock();
-						}
+                        setState(send);
 						send = "";
 					}
 				}
@@ -404,7 +382,6 @@ class framerThread : public ofThread{
                 nowTime = ofGetElapsedTimeMillis();
 
             }
-//			stop();
 		}
 
 
