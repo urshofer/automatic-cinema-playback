@@ -107,6 +107,7 @@ class framerThread : public ofThread{
 		void setupnet() {
 			udpConnection.Create();
 			udpConnection.ConnectMcast((char*)multicastip.c_str(), port);
+//   			udpConnection.Connect((char*)multicastip.c_str(), port);
 			udpConnection.SetNonBlocking(false);
 			udpConnection.SetEnableBroadcast(true);
             udpConnection.SetReuseAddress(true);            
@@ -116,6 +117,7 @@ class framerThread : public ofThread{
 
 			/* Create Multi Cast Interface */
 			multicastip = _multicastip;
+//			multicastip = "127.0.0.1";
 			framerate = _framerate;		
 			apiurl = _apiurl;
 			sessionid = _sessionid;				
@@ -168,7 +170,8 @@ class framerThread : public ofThread{
 				 "", 
 				 false, 
 				 false, 
-				 false
+				 false,
+                 false
 			};				
 			/* refresh channel list */
 			std::vector <std::string> channels = LDR.getChannels();
@@ -254,12 +257,12 @@ class framerThread : public ofThread{
                             senddata["s"][store_index]["fxin"]	= (*sactive).data_next.gap_in?"FadeIn":"-";
                             senddata["s"][store_index]["fxout"]	= (*sactive).data_next.gap_out?"FadeOut":"-";
                             store_index++;
-                            if ((*sactive).data_next.in==0) {
-                                (*sactive).state = SWITCH;
-                            }
-                            else {
+//                            if ((*sactive).data_next.in==0) {
+//                                (*sactive).state = SWITCH;
+//                            }
+//                            else {
                                 (*sactive).state = WAITING;
-                            }
+//                            }
 						}
 					}
                     
@@ -281,6 +284,7 @@ class framerThread : public ofThread{
                             senddata["s"][store_index]["m"]		= "p";
                             senddata["s"][store_index]["t"]		= (*sactive).data_next.type;
                             senddata["s"][store_index]["f"]		= (*sactive).data_next.data_checksum;
+                            senddata["s"][store_index]["syncpoint"]	= (*sactive).data_next.syncpoint;
                             store_index++;
                             (*sactive).state = SWITCH;
 						}
@@ -366,6 +370,11 @@ class framerThread : public ofThread{
 					string send = writer.write( senddata["s"] );
 					if (send.size()>5) {
 						udpConnection.SendAll(send.c_str(),send.size());
+//                        if (send.find("Audio") != string::npos) {
+//                            cout << "SENT AUDIO SIGNAL" << endl;
+//                            cout << send << endl;
+//                        }
+//                        cout << "SENT: " << ofToString(send.size()) << " Bytes:" << endl;
                         setState(send);
 						send = "";
 					}
@@ -378,7 +387,7 @@ class framerThread : public ofThread{
                     unlock();
 				}
                 /* Frame Advancing and timer Adjustement */
-                ofSleepMillis(5);
+                ofSleepMillis(25);
                 nowTime = ofGetElapsedTimeMillis();
 
             }

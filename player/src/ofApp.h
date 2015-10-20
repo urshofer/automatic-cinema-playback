@@ -13,10 +13,16 @@
 #include "syncThread.h"
 #include "ofxFontStash.h"
 #include "ofxUI.h"
+#include "ofxOpenNI.h"
 
-#define LED_WIDTH  384
-#define LED_HEIGHT 224
 
+#define LED_WIDTH  448
+#define LED_HEIGHT 256
+#define LED_LEFT   20
+#define LED_TOP    20
+#define MIX_AUDIO  .5f
+#define MIX_VIDEO  .25f
+#define MIX_AUDIO_MINVOL .1f
 
 #ifdef TARGET_OF_IPHONE
 	class ofApp : public ofxiOSApp {
@@ -60,7 +66,13 @@
         ofxFontStash            cinetype;
         ofTrueTypeFont          cinetype_1,cinetype_2;
         ofImage                 syncicon,logoicon;
-
+        
+        ofxOpenNI               device;
+        bool                    deviceready;
+        float                   _playground[4] = {-1000.0,1000.0,1000,2000};
+        
+        int                 left_offset, top_offset;
+        float               sound_mix_audio, sound_mix_video, sound_mix_minvolume;
         
         struct _baseconfig {
             vector<string> channel;

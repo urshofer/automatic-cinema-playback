@@ -32,6 +32,7 @@ class loaderThread : public ofThread{
 			bool 			reset;
 			bool 			gap_in;
 			bool 			gap_out;
+            bool            syncpoint;
 		};
 		
 		
@@ -233,7 +234,8 @@ class loaderThread : public ofThread{
 				 "", 
 				 false, 
 				 false, 
-				 false
+				 false,
+                 false
 			};
 			map < string,_queue >::iterator qactive = queue.find(_channel);
 			if(qactive != queue.end())
@@ -277,7 +279,7 @@ class loaderThread : public ofThread{
 					
 //						char *encodedURL = url_escape(channelData[index]["name"].asString());
 					
-						masterslaveJson.parse( curlConnect(apiurl + "/HasMaster/" + sessionid + "/" + url_escape(channelData[index]["name"].asString()), ""), masterslaveData );
+						//masterslaveJson.parse( curlConnect(apiurl + "/HasMaster/" + sessionid + "/" + url_escape(channelData[index]["name"].asString()), ""), masterslaveData );
 
 						_queue _q;
 //						_q.name = channelData[index]["name"].asString();
@@ -287,8 +289,13 @@ class loaderThread : public ofThread{
                         _q.force_new = false;
 						_q.last_time = 0;
 						_q.data.clear();
-						_q.is_slave = masterslaveData["slave"].asBool();
-						_q.master   = masterslaveData["master"].asString();	
+						
+                        _q.is_slave = false;
+						_q.master   = "";
+                        //_q.is_slave = masterslaveData["slave"].asBool();
+						//_q.master   = masterslaveData["master"].asString();
+                        
+                        
 						all.push_back(channelData[index]["name"].asString());
 						//queue.push_back(_q);
 //						queue.emplace (channelData[index]["name"].asString(),_q);
@@ -402,7 +409,7 @@ class loaderThread : public ofThread{
 								_nextData.type				= nextData["element"]["element_type"].asString();
 								_nextData.data_checksum		= nextData["element"]["element_data_checksum"].asString();
                                 _nextData.reset				= nextData["element"]["is_new"].asBool();
-
+                                _nextData.syncpoint         = nextData["syncpoint"].asBool();
 
                                 _nextData.gap_in			= true;
                                 _nextData.gap_out			= true;

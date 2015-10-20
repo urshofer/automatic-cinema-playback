@@ -86,7 +86,7 @@ void ofApp::setup(){
     ofSetDataPathRoot("../Resources/data/");
 #endif
     
-    ofSetLogLevel(OF_LOG_ERROR);
+    ofSetLogLevel(OF_LOG_SILENT);
 	ofEnableAntiAliasing();
     ofEnableAlphaBlending();
 	ofSetVerticalSync(true);
@@ -133,6 +133,31 @@ void ofApp::setup(){
     /* Gui Stuff */
     setupGUI("static/" + guifont, false);
     
+    /* Set Up Kinect */
+    
+    for (int _dim = 0; _dim < 4; _dim++) {
+        _playground[_dim]       = FXML.getValue("limit_" + ofToString(_dim),   _playground[_dim]);
+        cout << "PL: " << _playground[_dim] << endl;
+
+    }
+    
+    left_offset = FXML.getValue("left_offset",   LED_LEFT);
+    top_offset  = FXML.getValue("top_offset",    LED_TOP);
+    
+    sound_mix_audio = FXML.getValue("sound_mix_audio",   MIX_AUDIO);
+    sound_mix_video = FXML.getValue("sound_mix_video",   MIX_VIDEO);
+    sound_mix_minvolume = FXML.getValue("sound_mix_minvolume",   MIX_AUDIO_MINVOL);
+    
+    deviceready = false;
+    if (device.setup()) {
+        device.addDepthStream();
+        device.addUserTracker(.8);
+        device.start();
+        device.setMotionThresholds(0.5f, 3.5f, 300.0f);
+        device.bUseDepth = true;
+        device.bUseImage = true;
+        deviceready      = true;
+    }
     ofSleepMillis(500);
     
 }
@@ -332,6 +357,63 @@ void ofApp::guiEvent(ofxUIEventArgs &e)
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    static float _ramp = 0.0f;
+    static float _target = 0.0f;
+    static float _current = 0.0f;
+    
+    /* Kinect Stuff */
+    if (deviceready) {
+        device.update();
+        map<int, ofxOpenNIUser> trackedUsers = device.skeletonData();
+        float _z = 0.0f;
+        float _x = 0.0f;
+        bool _found = false;
+        bool _idle_mode = true;
+        for(map<int, ofxOpenNIUser>::iterator it = trackedUsers.begin(); it != trackedUsers.end(); ++it){
+            ofxOpenNIUser& u = it->second;
+            vector<ofxOpenNIJoint> joints = u.getJoints();
+
+            if (u.isTracking() && u.isVisible() &&
+                (joints[8].positionReal.z > _playground[2]) &&
+                (joints[8].positionReal.z < _playground[3]) &&
+                (joints[8].positionReal.x > _playground[0]) &&
+                (joints[8].positionReal.x < _playground[1]) &&
+                (joints[8].positionReal.z < _z || !_found)
+                ) {
+                _z = joints[8].positionReal.z;
+                _x = joints[8].positionReal.x;
+                _found = true;
+            }
+            _idle_mode = false;
+        }
+        
+        if (_idle_mode) {
+            _target = 0.0f;
+            _ramp = _current > _target ? -.01f : (_current < _target ? .01f : 0.0f);
+        }
+        
+        else {
+            
+            float __x = 1 - abs(ofMap(_x, _playground[0], _playground[1], -1, 1, true));
+            float __y = 1 - abs(ofMap(_z, _playground[2], _playground[3], -1, 1, true));
+            
+            _target = __x * __y;
+            _ramp = _current > _target ? -.01f : (_current < _target ? .01f : 0.0f);
+            
+        }
+        
+        if (_ramp != 0) {
+            _current += _ramp;
+            if ((_current >= _target && _ramp > 0) || (_current <= _target && _ramp < 0)) {
+                _ramp = 0.0f;
+            }
+            if (SN.isThreadRunning()) {
+                SN.setMatrixEffect(_current);
+            }
+            MO.setVolume((1-_current) * sound_mix_video);
+        }
+    }
+    
     /* Waiting for Config */
 
     static bool waitforconfig = true;
@@ -365,7 +447,7 @@ void ofApp::update(){
             std::cout  << "+ Subtitle Thread started"  << endl;
 
             // Sound Thread Started
-            SN.start(config.hasAudio);
+            SN.start(config.hasAudio, sound_mix_audio, sound_mix_minvolume, ofToInt(config.serverconfig[3]));
             std::cout  << "+ Sound Thread started"  << endl;
             
             
@@ -376,8 +458,16 @@ void ofApp::update(){
             /* Check Screen Size */
             if (config.fullscreen && ofGetWindowMode()!=OF_FULLSCREEN) {
                 ofSetFullscreen(config.fullscreen);
+                #ifdef TARGET_OSX
+                CGCaptureAllDisplays();
+                NSWindow * window = (NSWindow *)ofGetWindowPtr()->getCocoaWindow();
+                [window setLevel:CGShieldingWindowLevel()];
+                #endif
             }
             
+            SN.setMatrixEffect(0);
+            MO.setVolume(1 * sound_mix_video);
+        
             waitforconfig = false;
         }
     }
@@ -392,6 +482,12 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+//    ofTexture& depthTexture = device.depthData();
+//  ofTexture& imageTexture = device.imageData();
+//   depthTexture.draw(10,10,20,20*.75);
+//    imageTexture.draw(10,30,20,20*.75);
+    
     
      /* Draw "Wait for Config" Screen */
     
@@ -418,7 +514,7 @@ void ofApp::draw(){
             }
             
 
-            if (!MO.draw(((LED_WIDTH - ws) / 2), ((LED_HEIGHT - hs) / 2), ws, hs)) {
+            if (!MO.draw(left_offset + ((LED_WIDTH - ws) / 2), top_offset + ((LED_HEIGHT - hs) / 2), ws, hs)) {
                 drawWaitForConfig("Waiting for Footage");
             }
         }
@@ -444,6 +540,14 @@ void ofApp::draw(){
         ofColor(255);
         cinetype.drawMultiLine(SU.getSubtitle(), ofGetHeight()/30, (ofGetWidth()-box.width)/2, ofGetHeight()-(box.height+(ofGetHeight()/20)));
 
+        ofPopStyle();
+    }
+    
+    /* Draw Sync Point */
+    if (ofGetElapsedTimeMillis() - SC.getSyncPoint() < 500) {
+        ofPushStyle();
+        ofSetColor(255, 0, 0);
+        ofCircle(left_offset + 20, top_offset + 20, 15);
         ofPopStyle();
     }
 
@@ -482,6 +586,14 @@ void ofApp::keyPressed(int key){
                 gui->enable();
             }
             break;
+        case 's':
+            SN.setMatrixEffect(0);
+            MO.setVolume(1 * sound_mix_video);
+            break;
+        case 'm':
+            SN.setMatrixEffect(1);
+            MO.setVolume(0 * sound_mix_video);
+            break;
     }
 }
 //--------------------------------------------------------------
@@ -500,12 +612,6 @@ void ofApp::mouseMoved(int x, int y ){
     mouseTimer = ofGetElapsedTimeMillis();
     cursorflag = true;
     ofShowCursor();
-    if (SN.isThreadRunning()) {
-        SN.setMatrixEffect(x,y,0,ofGetWidth(),0,ofGetHeight());
-    }
-    float _x = abs(ofMap(x, 0, ofGetWidth(), -.5, .5, true));
-    float _y = abs(ofMap(y, 0, ofGetHeight(), -.5, .5, true));
-    MO.setVolume(_x*_y);
 }
 #endif
 
@@ -514,6 +620,11 @@ void ofApp::mouseMoved(int x, int y ){
 //--------------------------------------------------------------
 void ofApp::exit() {
 	std::cout  << "+ Exiting now" << endl;
+    
+    /* Kinekt Stuff */
+    device.stop();
+    device.waitForThread();
+    
     if (gui->isEnabled())
         delete gui;
     // stop the threads

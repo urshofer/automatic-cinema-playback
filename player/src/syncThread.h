@@ -18,11 +18,15 @@ class syncThread : public ofThread{
         subtitleThread          *SU;
 		vector<string> channel;
 		bool hasVideo, hasAudio, hasText;
+        float syncPoint;
 		
 		//--------------------------
 		syncThread(){
 		}
 		
+        float getSyncPoint() {
+            return syncPoint;
+        }
 		
 		//--------------------------------------------------------------
 		string parseJSON(string s) {
@@ -31,7 +35,7 @@ class syncThread : public ofThread{
             
 			bool parsingSuccessful = reader.parse( s, root );
 			if ( !parsingSuccessful ) {
-		//		std::cout  << "Failed to parse JSON\n" << reader.getFormatedErrorMessages();
+				std::cout  << "Failed to parse JSON\n" << reader.getFormatedErrorMessages();
 				return result;
 			}
 
@@ -42,7 +46,13 @@ class syncThread : public ofThread{
 			if (root.isArray() == 1) {
 				for ( unsigned int index = 0; index < root.size(); ++index )  {
 
-
+                    if (root[index]["syncpoint"].isBool() && root[index]["syncpoint"].asBool()) {
+                        if (lock()) {
+                            syncPoint = ofGetElapsedTimeMillis();
+                            unlock();
+                        }
+                    }
+                    
 					// Todo: Multiple Channels available
 					// "Video","Bild","Musik","Sprache","Text"
 
@@ -80,7 +90,10 @@ class syncThread : public ofThread{
 						}
 
 						if ((root[index]["t"].asString()=="audio") && hasAudio)  {
+                            cout << "RECV AUDIO SIGNAL" << endl;
+                            cout << s << endl;
 							if (available) {
+                               
 								// Trigger or append
 								if (root[index]["m"].asString() == "t") {
 									SN->loadSound(movieFile);
@@ -107,7 +120,7 @@ class syncThread : public ofThread{
 								bool _in = root[index]["fxin"].asString()=="FadeIn"?true:false;
 								bool _out = root[index]["fxout"].asString()=="FadeOut"?true:false;
                                 
-//                                cout << "Fx: " << root[index]["fxin"].asString() << "/" << root[index]["fxout"].asString() << "\n";
+//                                cout << "VIDEO: " << root[index]["fxin"].asString() << "/" << root[index]["fxout"].asString() << "\n";
 //                                cout << "Bo: " << _in << "/" << _out << "\n";
 
                                 
@@ -165,6 +178,7 @@ class syncThread : public ofThread{
             ofLogError() << "+ NET: Settig up net " << multicastIp << ":" << _port;
             udpConnection.Create();
             udpConnection.BindMcast(mIp, _port);
+//            udpConnection.Bind(_port);
             udpConnection.SetNonBlocking(false);
             udpConnection.SetReuseAddress(true);
             if (udpConnection.HasSocket()) {
@@ -194,9 +208,9 @@ class syncThread : public ofThread{
 		   	udpConnection.BindMcast(mIp, _port);
 		   	udpConnection.SetNonBlocking(true);
             udpConnection.SetReuseAddress(true);*/
-            if (udpConnection.HasSocket()) {
-                startThread();   // blocking, verbose
-            }
+//            if (udpConnection.HasSocket()) {
+//                startThread();   // blocking, verbose
+//            }
         }
     
     void updateConfig(vector<string> _channel, bool _hasVideo, bool _hasAudio, bool _hasText) {
@@ -227,17 +241,19 @@ class syncThread : public ofThread{
 				udpConnection.Receive(udpMessage,1000);
 				message=udpMessage;
 				if(message.length() > 5) {
-                    if(last_message != message && ofGetElapsedTimeMillis() - t > 100){
-                        ofLogVerbose((ofToString(ofGetElapsedTimef(),2))) << message << endl;
-                        parseJSON(message);
+                    if(last_message == message && ofGetElapsedTimeMillis() - t < 100){
+                        //                        cout << "RECV: Dupe" << endl;
+                        ofLogVerbose((ofToString(ofGetElapsedTimef(),2))) << "possible dupe or error." << endl;
                     }
                     else {
-                        ofLogVerbose((ofToString(ofGetElapsedTimef(),2))) << "possible dupe or error." << endl;
+                        ofLogVerbose((ofToString(ofGetElapsedTimef(),2))) << message << endl;
+                        //                        cout << "RECV: " << ofToString(message.size()) << " Bytes" << endl;
+                        parseJSON(message);
                     }
                     last_message = message;
                     t = ofGetElapsedTimeMillis();
                 }
-                ofSleepMillis(5);
+          //      ofSleepMillis(5);
 			}
 		}
 
