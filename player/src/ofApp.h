@@ -24,6 +24,7 @@
 #define MIX_VIDEO  .25f
 #define MIX_AUDIO_MINVOL .1f
 
+
 #ifdef TARGET_OF_IPHONE
 	class ofApp : public ofxiOSApp {
 #else

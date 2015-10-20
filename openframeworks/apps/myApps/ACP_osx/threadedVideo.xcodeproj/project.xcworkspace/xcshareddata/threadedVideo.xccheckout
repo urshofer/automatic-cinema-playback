@@ -32,7 +32,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>01AA4CBABFC70149D264A6043113AE4AA0B55E07</key>
-		<string>../../../../../../openframeworks/addons/ofxAudioUnit/</string>
+		<string>../../../../../../openframeworks/addons/ofxAudioUnit</string>
 		<key>2559BBC2C6F846687D7E9F4E42C98FC44D06AE4C</key>
 		<string>../../../../../..openframeworks/addons/ofxUnicode</string>
 		<key>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</key>

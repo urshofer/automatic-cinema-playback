@@ -1,5 +1,7 @@
 #include "ofApp.h"
-
+#ifdef TARGET_OSX
+    #import <Cocoa/Cocoa.h>
+#endif
 void ofApp::drawWaitForConfig(string message) {
     static int angle[3] = {0,0,0};
     static float radius = 25;
@@ -460,7 +462,8 @@ void ofApp::update(){
                 ofSetFullscreen(config.fullscreen);
                 #ifdef TARGET_OSX
                 CGCaptureAllDisplays();
-                NSWindow * window = (NSWindow *)ofGetWindowPtr()->getCocoaWindow();
+                NSWindow* window =  (NSWindow *)ofGetWindowPtr()->getCocoaWindow();
+//                NSWindow * window = (NSWindow *)ofGetWindowPtr()->getCocoaWindow();
                 [window setLevel:CGShieldingWindowLevel()];
                 #endif
             }
