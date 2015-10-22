@@ -48,12 +48,17 @@ public:
     
     
     void setMatrixEffect(float _centerized) {
+        std::cout << "[Matrix Effect] Set to " << _centerized << endl;
         #ifdef TARGET_OSX
 
         fx.setParameter(kBandpassParam_Bandwidth, kAudioUnitScope_Global,       ofMap(_centerized, 0, 1, settings.BandpassBandwidthMin, settings.BandpassBandwidthMax, true));
         fx.setParameter(kBandpassParam_CenterFrequency, kAudioUnitScope_Global, ofMap(_centerized, 0, 1, settings.BandpassCenterFrequencyMin, settings.BandpassCenterFrequencyMax, true));
         float _f = ofMap(settings.VolumeFactor, 0, 1, 0, 1, true);
         mixer.setOutputVolume(_centerized*_f + (settings.MinVolume * (1 - _centerized)));
+        #else
+        for ( unsigned int _index = 0; _index < MAX_SOUND; _index++ )  {
+            sound[_index].setVolume(_centerized);
+        }
         #endif
     }
 

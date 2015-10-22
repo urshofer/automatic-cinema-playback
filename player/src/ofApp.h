@@ -16,14 +16,10 @@
 #include "ofxOpenNI.h"
 
 
-#define LED_WIDTH  448
-#define LED_HEIGHT 256
-#define LED_LEFT   20
-#define LED_TOP    20
 #define MIX_AUDIO  .5f
 #define MIX_VIDEO  .25f
 #define MIX_AUDIO_MINVOL .1f
-
+#define MIX_AUDIO_MAXVOL 1.0f
 
 #ifdef TARGET_OF_IPHONE
 	class ofApp : public ofxiOSApp {
@@ -68,12 +64,14 @@
         ofTrueTypeFont          cinetype_1,cinetype_2;
         ofImage                 syncicon,logoicon;
         
-        ofxOpenNI               device;
+        #ifdef TARGET_OSX
+            ofxOpenNI               device;
+        #endif
         bool                    deviceready;
         float                   _playground[4] = {-1000.0,1000.0,1000,2000};
+        bool                    kinekt = false;
         
-        int                 left_offset, top_offset;
-        float               sound_mix_audio, sound_mix_video, sound_mix_minvolume;
+        float               sound_mix_audio, sound_mix_video, sound_mix_minvolume, sound_mix_maxvolume;
         
         struct _baseconfig {
             vector<string> channel;

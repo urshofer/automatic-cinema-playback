@@ -9,6 +9,14 @@
 #include <unistd.h>
 #include <iostream>
 #include <fstream>
+#include "Poco/MD5Engine.h"
+#include "Poco/DigestStream.h"
+#include "Poco/StreamCopier.h"
+
+using Poco::DigestEngine;
+using Poco::MD5Engine;
+using Poco::DigestOutputStream;
+using Poco::StreamCopier;
 
 class threadedLoader : public ofThread{
 
@@ -71,6 +79,7 @@ public:
 
     void doDownload() {
         // Get List of Files from Server
+        static string checksum = "";
         isDownloading = true;
         triggerDownload = false;
 		ofLogVerbose() << "Start Download";
@@ -80,7 +89,12 @@ public:
 		#else
 		        string localDir = ofToDataPath("movies/", true);
 		#endif
-		if (!DIR.doesDirectoryExist(localDir)) {
+        char lastChar = *localDir.rbegin();
+        if (lastChar != '/') localDir += "/";
+        
+		ofLogVerbose() << "Data Path: " << localDir << endl;
+
+        if (!DIR.doesDirectoryExist(localDir)) {
             if (DIR.createDirectory(localDir)) {
 				ofLogVerbose() << "Creating local dir" << endl;
             }
@@ -94,6 +108,19 @@ public:
         Json::Reader 	reader;
         Json::Value 	root;
         ofHttpResponse resp = ofLoadURL(apiURL + "/List/" + apiKEY);
+        
+        MD5Engine md5;
+        md5.update(resp.data);
+        string _checksum = DigestEngine::digestToHex(md5.digest());
+        if (_checksum == checksum) {
+            isDownloading = false;
+            std::cout << "File list is the same" << endl;
+            return;
+        }
+        else {
+            checksum = _checksum;
+        }
+        
 
         bool parsingSuccessful = reader.parse(resp.data, root );
         if ( !parsingSuccessful ) {
@@ -130,7 +157,9 @@ public:
                     }
                     ofLogVerbose() << "MISSING " << "movies/" << fileMissing << endl;
                     ofSaveURLTo(apiURL + "/Download/" + apiKEY + "/" + root[index]["f"].asString(), localPath);
-    				ofLogVerbose() << "Downloading " << apiURL << "/Download/" << apiKEY + "/" << root[index]["f"].asString();
+                    ofSleepMillis(100);
+                    std::cout << " Downloading " << ofToString(index) << " of " << ofToString(root.size()) << endl;
+//                    std::cout << "Downloading " << apiURL << "/Download/" << apiKEY + "/" << root[index]["f"].asString() << " into: " << localPath;
                     if (lock()) {
                         fileMissing = "";
                         unlock();

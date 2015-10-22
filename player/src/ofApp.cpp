@@ -89,6 +89,7 @@ void ofApp::setup(){
 #endif
     
     ofSetLogLevel(OF_LOG_SILENT);
+//    ofSetLogLevel(OF_LOG_VERBOSE);
 	ofEnableAntiAliasing();
     ofEnableAlphaBlending();
 	ofSetVerticalSync(true);
@@ -115,6 +116,13 @@ void ofApp::setup(){
     cinetype_1.load("static/" + mainfont, 20);
     cinetype_2.load("static/" + mainfont, 10);
     cinetype_2.setLetterSpacing(0.95);
+    
+    /* Load Sound Defaults */
+    sound_mix_audio = FXML.getValue("sound_mix_audio",   MIX_AUDIO);
+    sound_mix_video = FXML.getValue("sound_mix_video",   MIX_VIDEO);
+    sound_mix_minvolume = FXML.getValue("sound_mix_minvolume",   MIX_AUDIO_MINVOL);
+    sound_mix_maxvolume = FXML.getValue("sound_mix_maxvolume",   MIX_AUDIO_MAXVOL);
+    
     /* Load Icon */
     syncicon.load("static/sync.png");
     logoicon.load("static/logo.png");
@@ -131,35 +139,34 @@ void ofApp::setup(){
    
     /* Starting UP Movie Thread */
     MO.start();
+    MO.setVolume(sound_mix_maxvolume * sound_mix_video);
 
     /* Gui Stuff */
     setupGUI("static/" + guifont, false);
     
-    /* Set Up Kinect */
-    
-    for (int _dim = 0; _dim < 4; _dim++) {
-        _playground[_dim]       = FXML.getValue("limit_" + ofToString(_dim),   _playground[_dim]);
-        cout << "PL: " << _playground[_dim] << endl;
 
-    }
+    /* Set Up Kinect */
+    #ifdef TARGET_OSX
+        for (int _dim = 0; _dim < 4; _dim++) {
+            _playground[_dim]       = FXML.getValue("limit_" + ofToString(_dim),   _playground[_dim]);
+            cout << "PL: " << _playground[_dim] << endl;
+            
+        }
     
-    left_offset = FXML.getValue("left_offset",   LED_LEFT);
-    top_offset  = FXML.getValue("top_offset",    LED_TOP);
-    
-    sound_mix_audio = FXML.getValue("sound_mix_audio",   MIX_AUDIO);
-    sound_mix_video = FXML.getValue("sound_mix_video",   MIX_VIDEO);
-    sound_mix_minvolume = FXML.getValue("sound_mix_minvolume",   MIX_AUDIO_MINVOL);
-    
-    deviceready = false;
-    if (device.setup()) {
-        device.addDepthStream();
-        device.addUserTracker(.8);
-        device.start();
-        device.setMotionThresholds(0.5f, 3.5f, 300.0f);
-        device.bUseDepth = true;
-        device.bUseImage = true;
-        deviceready      = true;
-    }
+        kinekt = FXML.getValue("enable_kinekt",   kinekt);
+        if (kinekt) {
+            deviceready = false;
+            if (device.setup()) {
+                device.addDepthStream();
+                device.addUserTracker(.8);
+                device.start();
+                device.setMotionThresholds(0.5f, 3.5f, 300.0f);
+                device.bUseDepth = true;
+                device.bUseImage = true;
+                deviceready      = true;
+            }
+        }
+    #endif
     ofSleepMillis(500);
     
 }
@@ -364,7 +371,7 @@ void ofApp::update(){
     static float _current = 0.0f;
     
     /* Kinect Stuff */
-    if (deviceready) {
+    if (kinekt && deviceready) {
         device.update();
         map<int, ofxOpenNIUser> trackedUsers = device.skeletonData();
         float _z = 0.0f;
@@ -410,7 +417,7 @@ void ofApp::update(){
                 _ramp = 0.0f;
             }
             if (SN.isThreadRunning()) {
-                SN.setMatrixEffect(_current);
+                SN.setMatrixEffect(_current * sound_mix_audio);
             }
             MO.setVolume((1-_current) * sound_mix_video);
         }
@@ -450,6 +457,7 @@ void ofApp::update(){
 
             // Sound Thread Started
             SN.start(config.hasAudio, sound_mix_audio, sound_mix_minvolume, ofToInt(config.serverconfig[3]));
+            SN.setMatrixEffect(sound_mix_maxvolume * sound_mix_audio);
             std::cout  << "+ Sound Thread started"  << endl;
             
             
@@ -467,10 +475,6 @@ void ofApp::update(){
                 [window setLevel:CGShieldingWindowLevel()];
                 #endif
             }
-            
-            SN.setMatrixEffect(0);
-            MO.setVolume(1 * sound_mix_video);
-        
             waitforconfig = false;
         }
     }
@@ -486,12 +490,6 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-//    ofTexture& depthTexture = device.depthData();
-//  ofTexture& imageTexture = device.imageData();
-//   depthTexture.draw(10,10,20,20*.75);
-//    imageTexture.draw(10,30,20,20*.75);
-    
-    
      /* Draw "Wait for Config" Screen */
     
     if (CN.isThreadRunning()) {
@@ -504,8 +502,8 @@ void ofApp::draw(){
         if (config.hasVideo) {
             float w = MO.getWidth();
             float h = MO.getHeight();
-            float hs = LED_HEIGHT;
-            float ws = LED_WIDTH;
+            float hs = ofGetHeight();
+            float ws = ofGetWidth();
             
             bool square = w > 0 && w / h > ws / hs ? true : false;
 
@@ -517,7 +515,7 @@ void ofApp::draw(){
             }
             
 
-            if (!MO.draw(left_offset + ((LED_WIDTH - ws) / 2), top_offset + ((LED_HEIGHT - hs) / 2), ws, hs)) {
+            if (!MO.draw(((ofGetWidth() - ws) / 2), ((ofGetHeight() - hs) / 2), ws, hs)) {
                 drawWaitForConfig("Waiting for Footage");
             }
         }
@@ -547,13 +545,13 @@ void ofApp::draw(){
     }
     
     /* Draw Sync Point */
-    if (ofGetElapsedTimeMillis() - SC.getSyncPoint() < 500) {
+/*    if (ofGetElapsedTimeMillis() - SC.getSyncPoint() < 500) {
         ofPushStyle();
         ofSetColor(255, 0, 0);
-        ofCircle(left_offset + 20, top_offset + 20, 15);
+        ofCircle(20, 20, 15);
         ofPopStyle();
     }
-
+*/
     #ifdef TARGET_OF_IPHONE
     if (config.verbose) {
         ofPushStyle();
@@ -580,6 +578,7 @@ void ofApp::touchDown(ofTouchEventArgs & touch){
 #else
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+    static bool _muted = false;
     switch (key) {
         case ' ':
             if (gui->isEnabled()) {
@@ -589,13 +588,18 @@ void ofApp::keyPressed(int key){
                 gui->enable();
             }
             break;
-        case 's':
-            SN.setMatrixEffect(0);
-            MO.setVolume(1 * sound_mix_video);
-            break;
         case 'm':
-            SN.setMatrixEffect(1);
-            MO.setVolume(0 * sound_mix_video);
+            if (_muted) {
+                std::cout << "Enable Sound" << endl;
+                SN.setMatrixEffect(sound_mix_maxvolume * sound_mix_audio);
+                MO.setVolume(sound_mix_maxvolume * sound_mix_video);
+            }
+            else {
+                std::cout << "Disable Sound" << endl;
+                SN.setMatrixEffect(sound_mix_minvolume * sound_mix_audio);
+                MO.setVolume(sound_mix_minvolume * sound_mix_video);
+            }
+            _muted = !_muted;
             break;
     }
 }
@@ -625,18 +629,19 @@ void ofApp::exit() {
 	std::cout  << "+ Exiting now" << endl;
     
     /* Kinekt Stuff */
-    device.stop();
-    device.waitForThread();
+    if (kinekt) {
+        device.stop();
+        device.waitForThread();
+    }
     
     if (gui->isEnabled())
         delete gui;
+
     // stop the threads
-	//if (MO.isThreadRunning()) {
-		MO.stop();
-    //    MO.waitForThread();
-        std::cout  << "- Movie Thread Stopped" << endl;
-	//}
-	if (TO.isThreadRunning()) {
+	MO.stop();
+    std::cout  << "- Movie Thread Stopped" << endl;
+
+    if (TO.isThreadRunning()) {
 		TO.stop();
         TO.waitForThread();
         std::cout  << "- Download Thread Stopped" << endl;
@@ -661,6 +666,3 @@ void ofApp::exit() {
 	std::cout  << "Bye Bye!" << endl;
     std::exit(0);
 }
-
-
-

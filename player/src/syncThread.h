@@ -35,7 +35,7 @@ class syncThread : public ofThread{
             
 			bool parsingSuccessful = reader.parse( s, root );
 			if ( !parsingSuccessful ) {
-				std::cout  << "Failed to parse JSON\n" << reader.getFormatedErrorMessages();
+				//std::cout  << "Failed to parse JSON\n" << reader.getFormatedErrorMessages();
 				return result;
 			}
 
@@ -90,8 +90,8 @@ class syncThread : public ofThread{
 						}
 
 						if ((root[index]["t"].asString()=="audio") && hasAudio)  {
-                            cout << "RECV AUDIO SIGNAL" << endl;
-                            cout << s << endl;
+                            //cout << "RECV AUDIO SIGNAL" << endl;
+                            //cout << s << endl;
 							if (available) {
                                
 								// Trigger or append
@@ -120,11 +120,12 @@ class syncThread : public ofThread{
 								bool _in = root[index]["fxin"].asString()=="FadeIn"?true:false;
 								bool _out = root[index]["fxout"].asString()=="FadeOut"?true:false;
                                 
-//                                cout << "VIDEO: " << root[index]["fxin"].asString() << "/" << root[index]["fxout"].asString() << "\n";
+  //                              cout << "VIDEO: " << root[index]["fxin"].asString() << "/" << root[index]["fxout"].asString() << "\n";
 //                                cout << "Bo: " << _in << "/" << _out << "\n";
 
                                 
 								// Trigger or append
+                                // cout << movieFile << endl;
 								if (root[index]["m"].asString() == "t") {
 									MO->loadMovie(movieFile, _in, _out);
 									ofLogVerbose() << "+ NET: loadMovie";
