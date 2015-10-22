@@ -241,7 +241,7 @@ int testApp::start(){
     // Some Defaults, normally done by Apprunner
     ofSeedRandom();
 	ofResetElapsedTimeCounter();
-	ofRestoreWorkingDirectoryToDefault();
+	ofSetWorkingDirectoryToDefault();
 	
     //signal(SIGSEGV, handler);   // install our handler
 	init();
