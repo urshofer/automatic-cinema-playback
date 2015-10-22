@@ -9,16 +9,16 @@
 	url = https://github.com/jefftimesten/ofxJSON
 [submodule "openframeworks/addons/ofxUI"]
 	path = openframeworks/addons/ofxUI
-	url = https://github.com/rezaali/ofxUI
+	url = https://github.com/urshofer/ofxUI
 [submodule "openframeworks/addons/ofxGaplessVideo"]
 	path = openframeworks/addons/ofxGaplessVideo
 	url = https://github.com/urshofer/ofxGaplessVideo
 [submodule "openframeworks/openFrameworks"]
 	path = openframeworks/openFrameworks
-	url = https://github.com/openframeworks/openFrameworks
+	url = https://github.com/urshofer/openFrameworks
 [submodule "openframeworks/addons/ofxGStreamer"]
 	path = openframeworks/addons/ofxGStreamer
 	url = https://github.com/arturoc/ofxGStreamer
 [submodule "openframeworks/addons/ofxAudioUnit"]
 	path = openframeworks/addons/ofxAudioUnit
-	url = https://github.com/admsyn/ofxAudioUnit
+	url = https://github.com/urshofer/ofxAudioUnit
